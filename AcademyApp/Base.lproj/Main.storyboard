@@ -51,18 +51,36 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="x4I-JS-jXu" firstAttribute="centerX" secondItem="CnS-Ty-5jA" secondAttribute="centerX" id="EeE-N5-8dL"/>
                                     <constraint firstItem="x4I-JS-jXu" firstAttribute="centerY" secondItem="CnS-Ty-5jA" secondAttribute="centerY" id="R0V-r3-keu"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Email  Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aPg-3E-XTX" customClass="TextFieldX" customModule="AcademyApp" customModuleProvider="target">
+                                <rect key="frame" x="62" y="423" width="290" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZG0-sq-zlY"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.038151716321243478" green="0.038151716321243478" blue="0.038151716321243478" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CnS-Ty-5jA" secondAttribute="trailing" id="6et-92-kSh"/>
+                            <constraint firstItem="aPg-3E-XTX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jmi-Fg-l5l"/>
                             <constraint firstItem="CnS-Ty-5jA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SVC-Im-Gex"/>
+                            <constraint firstItem="aPg-3E-XTX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="TaA-rU-PP8"/>
                             <constraint firstItem="CnS-Ty-5jA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="dLq-m4-GoW"/>
+                            <constraint firstItem="aPg-3E-XTX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mYB-ww-O4j"/>
                             <constraint firstItem="CnS-Ty-5jA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wnS-JS-6JJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
