@@ -14,9 +14,14 @@ class ViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        addObservers()
         setupUI()
     }
+
+    deinit {
+        removeObservers()
+    }
+    
     
     // MARK: - @IBOutlets
     
@@ -25,6 +30,28 @@ class ViewController: UIViewController
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var showLabel: UILabel!
     @IBOutlet weak var doneButton: UIButtonX!
+}
+
+// MARK: - Responding to keyboard notifications
+extension ViewController
+{
+    private func addObservers(){
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func removeObservers(){
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(notification: Notification){
+        print("KEYBOARD will SHOW : \(notification.name.rawValue)")
+    }
+    
+    @objc func keyboardWillHide(notification: Notification){
+        print("KEYBOARD will hide : \(notification.name.rawValue)")
+    }
 }
 
 // MARK: - UI Setup Methods
@@ -65,6 +92,7 @@ extension ViewController
                 ])
             
             $0.textColor = UIColor.white
+            $0.keyboardAppearance = .dark
         }
     }
     
