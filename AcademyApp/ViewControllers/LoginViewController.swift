@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class LoginViewController: UIViewController
 {
     // MARK: - View Controller's life cycle methods
     
@@ -43,7 +43,7 @@ class ViewController: UIViewController
 }
 
 // MARK - UITextField's delegate methods
-extension ViewController : UITextFieldDelegate
+extension LoginViewController : UITextFieldDelegate
 {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
@@ -52,7 +52,7 @@ extension ViewController : UITextFieldDelegate
 }
 
 // MARK: - Responding to keyboard notifications
-extension ViewController
+extension LoginViewController
 {
     private func addObservers(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -87,7 +87,7 @@ extension ViewController
 }
 
 // MARK: - UI Setup Methods
-extension ViewController
+extension LoginViewController
 {
     var textFields : [UITextField] {
         return [emailTextField, passwordTextField]

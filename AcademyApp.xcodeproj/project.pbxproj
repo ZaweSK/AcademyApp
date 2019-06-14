@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D0922DC722B37181003597EF /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DC622B37181003597EF /* UIButtonX.swift */; };
 		D0E73BAD22B2698300150481 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BAC22B2698300150481 /* AppDelegate.swift */; };
-		D0E73BAF22B2698300150481 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BAE22B2698300150481 /* ViewController.swift */; };
+		D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BAE22B2698300150481 /* LoginViewController.swift */; };
 		D0E73BB222B2698300150481 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB022B2698300150481 /* Main.storyboard */; };
 		D0E73BB422B2698400150481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB322B2698400150481 /* Assets.xcassets */; };
 		D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB522B2698400150481 /* LaunchScreen.storyboard */; };
@@ -20,7 +20,7 @@
 		D0922DC622B37181003597EF /* UIButtonX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
 		D0E73BA922B2698300150481 /* AcademyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcademyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E73BAC22B2698300150481 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0E73BAE22B2698300150481 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0E73BAE22B2698300150481 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D0E73BB122B2698300150481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0E73BB322B2698400150481 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0E73BB622B2698400150481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,14 @@
 			path = Designables;
 			sourceTree = "<group>";
 		};
+		D0922DCA22B3A871003597EF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0E73BAE22B2698300150481 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		D0E73BA022B2698300150481 = {
 			isa = PBXGroup;
 			children = (
@@ -66,10 +74,10 @@
 		D0E73BAB22B2698300150481 /* AcademyApp */ = {
 			isa = PBXGroup;
 			children = (
+				D0922DCA22B3A871003597EF /* ViewControllers */,
 				D0922DC522B37160003597EF /* Designables */,
 				D0E73BC722B291D300150481 /* Extensions */,
 				D0E73BAC22B2698300150481 /* AppDelegate.swift */,
-				D0E73BAE22B2698300150481 /* ViewController.swift */,
 				D0E73BB022B2698300150481 /* Main.storyboard */,
 				D0E73BB322B2698400150481 /* Assets.xcassets */,
 				D0E73BB522B2698400150481 /* LaunchScreen.storyboard */,
@@ -158,7 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0922DC722B37181003597EF /* UIButtonX.swift in Sources */,
-				D0E73BAF22B2698300150481 /* ViewController.swift in Sources */,
+				D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */,
 				D0E73BCA22B291F500150481 /* UIColor.swift in Sources */,
 				D0E73BAD22B2698300150481 /* AppDelegate.swift in Sources */,
 			);
