@@ -86,6 +86,10 @@
                                                         <state key="normal" title="SHOW">
                                                             <color key="titleColor" red="0.1215686277" green="0.1294117719" blue="0.1411764771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="hidePassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R5j-D5-GjK"/>
+                                                            <action selector="showPassword:" destination="BYZ-38-t0r" eventType="touchDown" id="6k1-cc-4NU"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>

@@ -46,6 +46,16 @@ class LoginViewController: UIViewController
             self.showButton.isHidden = sender.text!.count > 0 ? false : true
         }
     }
+    
+    // control event : touch down
+    @IBAction func showPassword(_ sender: UIButton) {
+        passwordTextField.isSecureTextEntry = false
+    }
+    
+    // control event : touch up inside
+    @IBAction func hidePassword(_ sender: UIButton) {
+        passwordTextField.isSecureTextEntry = true
+    }
 }
 
 // MARK - UITextField's delegate methods
