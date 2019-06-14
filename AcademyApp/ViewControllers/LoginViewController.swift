@@ -26,8 +26,14 @@ class LoginViewController: UIViewController
         removeObservers()
     }
     
-    // MARK: - Stored Properities
+    // MARK: - Stored Properities and methods
     var defaultDoneButtonBottomSpacing : CGFloat!
+    
+    func isValidEmail(possibleEmail text: String)->Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: text)
+    }
     
     // MARK: - @IBOutlets @IBActions
     @IBOutlet weak var doneButtonBottomConstraint: NSLayoutConstraint!
@@ -41,18 +47,25 @@ class LoginViewController: UIViewController
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
+    
+    @IBAction func emailTextFieldEditingDidChange(_ sender: UITextField) {
+        doneButton.isEnabled = isValidEmail(possibleEmail: sender.text!) && passwordTextField.text!.count > 0 ? true : false
+    }
+    
     @IBAction func passwordTextFieldEditingDidChange(_ sender: UITextField) {
         UIView.animate(withDuration: 0.2) {
             self.showButton.isHidden = sender.text!.count > 0 ? false : true
         }
+        
+        doneButton.isEnabled = isValidEmail(possibleEmail: emailTextField.text!) && passwordTextField.text!.count > 0 ? true : false
     }
     
-    // control event : touch down
+    // control event : touch down (hold)
     @IBAction func showPassword(_ sender: UIButton) {
         passwordTextField.isSecureTextEntry = false
     }
     
-    // control event : touch up inside
+    // control event : touch up inside (release)
     @IBAction func hidePassword(_ sender: UIButton) {
         passwordTextField.isSecureTextEntry = true
     }
@@ -65,8 +78,6 @@ extension LoginViewController : UITextFieldDelegate
         self.view.endEditing(true)
         return true
     }
-    
-   
 }
 
 // MARK: - Responding to keyboard notifications
