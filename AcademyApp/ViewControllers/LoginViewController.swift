@@ -40,6 +40,11 @@ class LoginViewController: UIViewController
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
+    @IBAction func passwordTextFieldEditingDidChange(_ sender: UITextField) {
+        UIView.animate(withDuration: 0.2) {
+            self.showLabel.isHidden = sender.text!.count > 0 ? false : true
+        }
+    }
 }
 
 // MARK - UITextField's delegate methods
@@ -49,6 +54,8 @@ extension LoginViewController : UITextFieldDelegate
         self.view.endEditing(true)
         return true
     }
+    
+   
 }
 
 // MARK: - Responding to keyboard notifications
