@@ -26,17 +26,20 @@ class ViewController: UIViewController
         removeObservers()
     }
     
-    
-    // MARK: - @IBOutlets
-    
+    // MARK: - Stored Properities
     var defaultDoneButtonBottomSpacing : CGFloat!
-    @IBOutlet weak var doneButtonBottomConstraint: NSLayoutConstraint!
     
+    // MARK: - @IBOutlets @IBActions
+    @IBOutlet weak var doneButtonBottomConstraint: NSLayoutConstraint!
     @IBOutlet var horizontalLineViews: [UIView]!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var showLabel: UILabel!
     @IBOutlet weak var doneButton: UIButtonX!
+    
+    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
 }
 
 // MARK - UITextField's delegate methods
