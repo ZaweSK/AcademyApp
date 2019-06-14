@@ -34,15 +34,16 @@ class LoginViewController: UIViewController
     @IBOutlet var horizontalLineViews: [UIView]!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var showLabel: UILabel!
     @IBOutlet weak var doneButton: UIButtonX!
+    
+    @IBOutlet weak var showButton: UIButton!
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
     @IBAction func passwordTextFieldEditingDidChange(_ sender: UITextField) {
         UIView.animate(withDuration: 0.2) {
-            self.showLabel.isHidden = sender.text!.count > 0 ? false : true
+            self.showButton.isHidden = sender.text!.count > 0 ? false : true
         }
     }
 }
@@ -137,18 +138,18 @@ extension LoginViewController
     
     private func showLabelSetup(){
         
-        showLabel.isHidden = true
+        showButton.isHidden = true
         
         let fontName = "MaisonNeue-Demi"
         let font = UIFont(name: fontName, size: 13) ?? UIFont(name: "Helvetica", size: 13)!
         
-        showLabel.attributedText = NSAttributedString(string: showLabel.text ?? "SHOW", attributes: [
+        let attributedTitle = NSAttributedString(string: showButton.title(for: .normal) ?? "SHOW", attributes: [
             NSAttributedString.Key.foregroundColor : UIColor.brownGray,
             NSAttributedString.Key.font : font,
             NSAttributedString.Key.kern : 1
             ])
         
-        showLabel.textAlignment = .right
+        showButton.setAttributedTitle(attributedTitle, for: .normal)
     }
     
     private func doneButtonSetup(){
