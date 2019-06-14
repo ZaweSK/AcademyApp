@@ -16,6 +16,10 @@ class ViewController: UIViewController
         super.viewDidLoad()
         addObservers()
         setupUI()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        defaultDoneButtonBottomSpacing = doneButtonBottomConstraint.constant
     }
 
     deinit {
@@ -25,11 +29,23 @@ class ViewController: UIViewController
     
     // MARK: - @IBOutlets
     
+    var defaultDoneButtonBottomSpacing : CGFloat!
+    @IBOutlet weak var doneButtonBottomConstraint: NSLayoutConstraint!
+    
     @IBOutlet var horizontalLineViews: [UIView]!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var showLabel: UILabel!
     @IBOutlet weak var doneButton: UIButtonX!
+}
+
+// MARK - UITextField's delegate methods
+extension ViewController : UITextFieldDelegate
+{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
+    }
 }
 
 // MARK: - Responding to keyboard notifications
@@ -46,11 +62,24 @@ extension ViewController
     }
     
     @objc func keyboardWillShow(notification: Notification){
-        print("KEYBOARD will SHOW : \(notification.name.rawValue)")
+            
+        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue  else {
+            return
+        }
+            
+        let keyboardHeight = keyboardRect.height
+        doneButtonBottomConstraint.constant =  keyboardHeight
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
     }
     
     @objc func keyboardWillHide(notification: Notification){
-        print("KEYBOARD will hide : \(notification.name.rawValue)")
+        
+        doneButtonBottomConstraint.constant =  defaultDoneButtonBottomSpacing
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
     }
 }
 
