@@ -1,4 +1,6 @@
 # AcademyApp
+![](logo.png)
+
 
 ## Resources 
 
