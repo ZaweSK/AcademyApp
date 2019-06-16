@@ -141,14 +141,11 @@ extension LoginViewController
     }
     
     private func textFieldsSetup(){
-        
-        let fontName = "MaisonNeue"
-        let font = UIFont(name: fontName, size: 16) ?? UIFont(name: "Helvetica", size: 16)!
-        
+
         textFields.forEach {
             $0.attributedPlaceholder = NSAttributedString(string: $0.placeholder ?? "", attributes: [
                 NSAttributedString.Key.foregroundColor : UIColor.brownGray,
-                NSAttributedString.Key.font : font,
+                NSAttributedString.Key.font : UIFont.showLabelFont,
                 NSAttributedString.Key.kern : 1
                 ])
             
@@ -158,15 +155,11 @@ extension LoginViewController
     }
     
     private func showLabelSetup(){
-        
         showButton.isHidden = true
-        
-        let fontName = "MaisonNeue-Demi"
-        let font = UIFont(name: fontName, size: 13) ?? UIFont(name: "Helvetica", size: 13)!
         
         let attributedTitle = NSAttributedString(string: showButton.title(for: .normal) ?? "SHOW", attributes: [
             NSAttributedString.Key.foregroundColor : UIColor.brownGray,
-            NSAttributedString.Key.font : font,
+            NSAttributedString.Key.font : UIFont.showLabelFont,
             NSAttributedString.Key.kern : 1
             ])
         
@@ -176,11 +169,8 @@ extension LoginViewController
     private func doneButtonSetup(){
         doneButton.isEnabled = false
         
-        let fontName = "MaisonNeue-Medium"
-        let font = UIFont(name: fontName, size: 16) ?? UIFont(name: "Helvetica", size: 16)!
-        
         let attributedTitle = NSAttributedString(string: doneButton.title(for: .normal) ?? "Done", attributes: [
-            NSAttributedString.Key.font : font,
+            NSAttributedString.Key.font : UIFont.doneButtonTitleFont,
             NSAttributedString.Key.foregroundColor : UIColor.white])
         
         doneButton.setAttributedTitle(attributedTitle, for: .normal)
