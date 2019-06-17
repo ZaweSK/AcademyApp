@@ -49,7 +49,7 @@ class LoginViewController: UIViewController
             return
         }
         
-        doneButton.isEnabled = isValidEmail(possibleEmail: emailText) && passwordText.count > 0 ? true : false
+        doneButton.isEnabled = String.isValidEmail(possibleEmail: emailText) && passwordText.count > 0 ? true : false
     }
     
     @IBAction func passwordTextFieldEditingDidChange(_ sender: UITextField) {
@@ -62,24 +62,13 @@ class LoginViewController: UIViewController
             self.showButton.isHidden = passwordText.count > 0 ? false : true
         }
         
-        doneButton.isEnabled = isValidEmail(possibleEmail: emailText) && passwordText.count > 0 ? true : false
+        doneButton.isEnabled = String.isValidEmail(possibleEmail: emailText) && passwordText.count > 0 ? true : false
     }
     
     @IBAction func showButtonTapped(_ sender: UIButton) {
         passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
     }
     
-}
-
-// MARK: - Email address validation
-
-private extension LoginViewController {
-    
-    func isValidEmail(possibleEmail text: String)->Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: text)
-    }
 }
 
 // MARK: - UITextField's delegate methods
