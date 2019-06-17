@@ -25,7 +25,7 @@ class LoginViewController: UIViewController
     
     // MARK: - Stored Properities and methods
     
-    var defaultDoneButtonBottomSpacing : CGFloat!
+    var defaultDoneButtonBottomSpacing : CGFloat = 0
     
     func isValidEmail(possibleEmail text: String)->Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+"
