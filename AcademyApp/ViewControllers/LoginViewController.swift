@@ -27,12 +27,6 @@ class LoginViewController: UIViewController
     
     var defaultDoneButtonBottomSpacing : CGFloat = 0
     
-    func isValidEmail(possibleEmail text: String)->Bool {
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: text)
-    }
-    
     
     // MARK: - @IBOutlets
     
@@ -43,7 +37,6 @@ class LoginViewController: UIViewController
     @IBOutlet weak var doneButton: RoundedCornersButton!
     @IBOutlet weak var showButton: UIButton!
     
-    
     // MARK: - @IBActions
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
@@ -51,6 +44,7 @@ class LoginViewController: UIViewController
     }
     
     @IBAction func emailTextFieldEditingDidChange(_ sender: UITextField) {
+        
         guard let emailText = emailTextField.text, let passwordText = passwordTextField.text  else {
             return
         }
@@ -75,6 +69,17 @@ class LoginViewController: UIViewController
         passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
     }
     
+}
+
+// MARK: - Email address validation
+
+private extension LoginViewController {
+    
+    func isValidEmail(possibleEmail text: String)->Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: text)
+    }
 }
 
 // MARK: - UITextField's delegate methods
