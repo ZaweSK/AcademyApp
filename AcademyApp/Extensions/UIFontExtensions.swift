@@ -9,11 +9,17 @@
 import Foundation
 import UIKit
 
+// MARK: - UIFont extension for handling app specific fonts
+
 extension UIFont
 {
+    // MARK: - Static methods
+    
     static func backUpFont(size: CGFloat)->UIFont {
         return UIFont(name: "Helvetica", size: size)!
     }
+    
+    // MARK: - Static properities
     
     static var textFieldPlaceholderFont: UIFont {
         let fontName = "MaisonNeue"

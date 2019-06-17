@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0922DC722B37181003597EF /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DC622B37181003597EF /* UIButtonX.swift */; };
+		D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DC622B37181003597EF /* RoundedCornersButton.swift */; };
 		D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCD22B67083003597EF /* UIFontExtensions.swift */; };
 		D0E73BAD22B2698300150481 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BAC22B2698300150481 /* AppDelegate.swift */; };
 		D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BAE22B2698300150481 /* LoginViewController.swift */; };
 		D0E73BB222B2698300150481 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB022B2698300150481 /* Main.storyboard */; };
 		D0E73BB422B2698400150481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB322B2698400150481 /* Assets.xcassets */; };
 		D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB522B2698400150481 /* LaunchScreen.storyboard */; };
-		D0E73BCA22B291F500150481 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BC922B291F500150481 /* UIColor.swift */; };
+		D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BC922B291F500150481 /* UIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D0922DC622B37181003597EF /* UIButtonX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
+		D0922DC622B37181003597EF /* RoundedCornersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersButton.swift; sourceTree = "<group>"; };
 		D0922DCD22B67083003597EF /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		D0E73BA922B2698300150481 /* AcademyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcademyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E73BAC22B2698300150481 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +27,7 @@
 		D0E73BB322B2698400150481 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0E73BB622B2698400150481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0E73BB822B2698400150481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D0E73BC922B291F500150481 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		D0E73BC922B291F500150481 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,7 @@
 		D0922DC522B37160003597EF /* Designables */ = {
 			isa = PBXGroup;
 			children = (
-				D0922DC622B37181003597EF /* UIButtonX.swift */,
+				D0922DC622B37181003597EF /* RoundedCornersButton.swift */,
 			);
 			path = Designables;
 			sourceTree = "<group>";
@@ -91,7 +91,7 @@
 		D0E73BC722B291D300150481 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D0E73BC922B291F500150481 /* UIColor.swift */,
+				D0E73BC922B291F500150481 /* UIColorExtensions.swift */,
 				D0922DCD22B67083003597EF /* UIFontExtensions.swift */,
 			);
 			path = Extensions;
@@ -168,9 +168,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0922DC722B37181003597EF /* UIButtonX.swift in Sources */,
+				D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */,
 				D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */,
-				D0E73BCA22B291F500150481 /* UIColor.swift in Sources */,
+				D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */,
 				D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */,
 				D0E73BAD22B2698300150481 /* AppDelegate.swift in Sources */,
 			);

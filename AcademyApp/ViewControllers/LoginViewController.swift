@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - View Controller for login scree
+
 class LoginViewController: UIViewController
 {
     // MARK: - View Controller's life cycle methods
@@ -21,12 +23,13 @@ class LoginViewController: UIViewController
         
         defaultDoneButtonBottomSpacing = doneButtonBottomConstraint.constant
     }
-
+    
     deinit {
         removeObservers()
     }
     
     // MARK: - Stored Properities and methods
+    
     var defaultDoneButtonBottomSpacing : CGFloat!
     
     func isValidEmail(possibleEmail text: String)->Bool {
@@ -35,14 +38,18 @@ class LoginViewController: UIViewController
         return emailTest.evaluate(with: text)
     }
     
-    // MARK: - @IBOutlets @IBActions
+    
+    // MARK: - @IBOutlets
+    
     @IBOutlet weak var doneButtonBottomConstraint: NSLayoutConstraint!
     @IBOutlet var horizontalLineViews: [UIView]!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var doneButton: UIButtonX!
-    
+    @IBOutlet weak var doneButton: RoundedCornersButton!
     @IBOutlet weak var showButton: UIButton!
+    
+    
+    // MARK: - @IBActions
     
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
@@ -71,7 +78,8 @@ class LoginViewController: UIViewController
     }
 }
 
-// MARK - UITextField's delegate methods
+// MARK: - UITextField's delegate methods
+
 extension LoginViewController : UITextFieldDelegate
 {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -81,24 +89,25 @@ extension LoginViewController : UITextFieldDelegate
 }
 
 // MARK: - Responding to keyboard notifications
-extension LoginViewController
+
+private extension LoginViewController
 {
-    private func addObservers(){
+    func addObservers(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    private func removeObservers(){
+    func removeObservers(){
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     @objc func keyboardWillShow(notification: Notification){
-            
+        
         guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue  else {
             return
         }
-            
+        
         let keyboardHeight = keyboardRect.height
         doneButtonBottomConstraint.constant =  keyboardHeight
         UIView.animate(withDuration: 0.5) {
@@ -116,13 +125,14 @@ extension LoginViewController
 }
 
 // MARK: - UI Setup Methods
-extension LoginViewController
+
+private extension LoginViewController
 {
     var textFields : [UITextField] {
         return [emailTextField, passwordTextField]
     }
     
-    private func setupUI(){
+    func setupUI(){
         backgroundColorSetup()
         textFieldsSetup()
         showLabelSetup()
@@ -130,18 +140,18 @@ extension LoginViewController
         doneButtonSetup()
     }
     
-    private func backgroundColorSetup(){
+    func backgroundColorSetup(){
         view.backgroundColor = UIColor.almostBlack
     }
     
-    private func horizontalLinesSetup(){
+    func horizontalLinesSetup(){
         horizontalLineViews.forEach {
             $0.backgroundColor = UIColor.blackish
         }
     }
     
-    private func textFieldsSetup(){
-
+    func textFieldsSetup(){
+        
         textFields.forEach {
             $0.attributedPlaceholder = NSAttributedString(string: $0.placeholder ?? "", attributes: [
                 NSAttributedString.Key.foregroundColor : UIColor.brownGray,
@@ -154,7 +164,7 @@ extension LoginViewController
         }
     }
     
-    private func showLabelSetup(){
+    func showLabelSetup(){
         showButton.isHidden = true
         
         let attributedTitle = NSAttributedString(string: showButton.title(for: .normal) ?? "SHOW", attributes: [
@@ -166,7 +176,7 @@ extension LoginViewController
         showButton.setAttributedTitle(attributedTitle, for: .normal)
     }
     
-    private func doneButtonSetup(){
+    func doneButtonSetup(){
         doneButton.isEnabled = false
         
         let attributedTitle = NSAttributedString(string: doneButton.title(for: .normal) ?? "Done", attributes: [

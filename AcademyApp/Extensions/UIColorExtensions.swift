@@ -9,8 +9,13 @@
 import Foundation
 import UIKit
 
+// MARK: - UIColor extension for handling app specific colors
+
 extension UIColor
 {
+    
+    // MARK: - Static properities
+    
     static var almostBlack : UIColor  {
         return UIColor(r: 17, g: 21, b: 23)
     }
@@ -30,6 +35,8 @@ extension UIColor
     static var pinkishRed : UIColor  {
         return UIColor(r: 239, g: 13, b: 51)
     }
+    
+    // MARK: - Conveniecne initalizers
     
     convenience init(r: CGFloat, g: CGFloat, b: CGFloat){
         let redValue = r / 255
