@@ -15,8 +15,8 @@ final class RoundedCornersButton: UIButton {
     
     // MARK: - Stored properities
     
-    var disabledColor = UIColor.greyishBrown
-    var enabledColor = UIColor.pinkishRed
+    private var disabledColor = UIColor.greyishBrown
+    private var enabledColor = UIColor.pinkishRed
     
     override var isEnabled: Bool {
         didSet {
