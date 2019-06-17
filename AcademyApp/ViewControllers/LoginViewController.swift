@@ -62,15 +62,10 @@ class LoginViewController: UIViewController
         doneButton.isEnabled = isValidEmail(possibleEmail: emailTextField.text!) && passwordTextField.text!.count > 0 ? true : false
     }
     
-    // control event : touch down (hold)
-    @IBAction func showPassword(_ sender: UIButton) {
-        passwordTextField.isSecureTextEntry = false
+    @IBAction func showButtonTapped(_ sender: UIButton) {
+        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
     }
     
-    // control event : touch up inside (release)
-    @IBAction func hidePassword(_ sender: UIButton) {
-        passwordTextField.isSecureTextEntry = true
-    }
 }
 
 // MARK: - UITextField's delegate methods
