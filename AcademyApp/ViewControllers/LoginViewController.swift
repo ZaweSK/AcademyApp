@@ -25,8 +25,7 @@ class LoginViewController: UIViewController
     
     // MARK: - Stored Properities and methods
     
-    var defaultDoneButtonBottomSpacing : CGFloat = 0
-    
+    private var defaultDoneButtonBottomSpacing : CGFloat = 0
     
     // MARK: - @IBOutlets
     
@@ -88,20 +87,22 @@ private extension LoginViewController
    
     @objc func keyboardWillShow(notification: Notification){
         
-        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue  else {
-            return
-        }
-        
-        let keyboardHeight = keyboardRect.height
-        doneButtonBottomConstraint.constant =  keyboardHeight
-        UIView.animate(withDuration: 0.5) {
-            self.view.layoutIfNeeded()
-        }
+        setKeyboardIsVisible(true, with: notification)
     }
     
     @objc func keyboardWillHide(notification: Notification){
         
-        doneButtonBottomConstraint.constant =  defaultDoneButtonBottomSpacing
+        setKeyboardIsVisible(false, with: notification)
+    }
+    
+    func setKeyboardIsVisible(_ isVisible : Bool, with notification: Notification){
+        
+        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue  else {
+            return
+        }
+        
+        doneButtonBottomConstraint.constant = isVisible ?  keyboardRect.height : defaultDoneButtonBottomSpacing
+        
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()
         }
