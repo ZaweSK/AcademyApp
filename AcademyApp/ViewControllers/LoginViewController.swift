@@ -16,12 +16,7 @@ class LoginViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addObservers()
-        setupUI()
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
-        
-        defaultDoneButtonBottomSpacing = doneButtonBottomConstraint.constant
+        setup()
     }
     
     deinit {
@@ -92,16 +87,7 @@ extension LoginViewController : UITextFieldDelegate
 
 private extension LoginViewController
 {
-    func addObservers(){
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    func removeObservers(){
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
+   
     @objc func keyboardWillShow(notification: Notification){
         
         guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue  else {
@@ -124,7 +110,7 @@ private extension LoginViewController
     }
 }
 
-// MARK: - UI Setup Methods
+// MARK: - Setup Methods
 
 private extension LoginViewController
 {
@@ -132,12 +118,41 @@ private extension LoginViewController
         return [emailTextField, passwordTextField]
     }
     
+    func setup() {
+        setupUI()
+        setDelegates()
+        addObservers()
+    }
+    
+    // MARK: - Notification Center Setup
+    
+    func addObservers(){
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func removeObservers(){
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    // MARK: - Delegation setup
+    
+    func setDelegates(){
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+    
+    // MARK: - UI Setup Methods
+    
     func setupUI(){
         backgroundColorSetup()
         textFieldsSetup()
         showLabelSetup()
         horizontalLinesSetup()
         doneButtonSetup()
+        
+        defaultDoneButtonBottomSpacing = doneButtonBottomConstraint.constant
     }
     
     func backgroundColorSetup(){
