@@ -7,21 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DC622B37181003597EF /* RoundedCornersButton.swift */; };
+		D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCD22B67083003597EF /* UIFontExtensions.swift */; };
+		D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCF22B789BB003597EF /* StringExtensions.swift */; };
 		D0E73BAD22B2698300150481 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BAC22B2698300150481 /* AppDelegate.swift */; };
-		D0E73BAF22B2698300150481 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BAE22B2698300150481 /* ViewController.swift */; };
+		D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BAE22B2698300150481 /* LoginViewController.swift */; };
 		D0E73BB222B2698300150481 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB022B2698300150481 /* Main.storyboard */; };
 		D0E73BB422B2698400150481 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB322B2698400150481 /* Assets.xcassets */; };
 		D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB522B2698400150481 /* LaunchScreen.storyboard */; };
+		D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BC922B291F500150481 /* UIColorExtensions.swift */; };
+		D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0922DC622B37181003597EF /* RoundedCornersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersButton.swift; sourceTree = "<group>"; };
+		D0922DCD22B67083003597EF /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
+		D0922DCF22B789BB003597EF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		D0E73BA922B2698300150481 /* AcademyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcademyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E73BAC22B2698300150481 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0E73BAE22B2698300150481 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0E73BAE22B2698300150481 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D0E73BB122B2698300150481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0E73BB322B2698400150481 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0E73BB622B2698400150481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0E73BB822B2698400150481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0E73BC922B291F500150481 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0922DC522B37160003597EF /* Designables */ = {
+			isa = PBXGroup;
+			children = (
+				D0922DC622B37181003597EF /* RoundedCornersButton.swift */,
+			);
+			path = Designables;
+			sourceTree = "<group>";
+		};
+		D0922DCA22B3A871003597EF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0E73BAE22B2698300150481 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		D0E73BA022B2698300150481 = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +80,27 @@
 		D0E73BAB22B2698300150481 /* AcademyApp */ = {
 			isa = PBXGroup;
 			children = (
+				D0922DCA22B3A871003597EF /* ViewControllers */,
+				D0922DC522B37160003597EF /* Designables */,
+				D0E73BC722B291D300150481 /* Extensions */,
 				D0E73BAC22B2698300150481 /* AppDelegate.swift */,
-				D0E73BAE22B2698300150481 /* ViewController.swift */,
 				D0E73BB022B2698300150481 /* Main.storyboard */,
 				D0E73BB322B2698400150481 /* Assets.xcassets */,
 				D0E73BB522B2698400150481 /* LaunchScreen.storyboard */,
 				D0E73BB822B2698400150481 /* Info.plist */,
 			);
 			path = AcademyApp;
+			sourceTree = "<group>";
+		};
+		D0E73BC722B291D300150481 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D0E73BC922B291F500150481 /* UIColorExtensions.swift */,
+				D0922DCD22B67083003597EF /* UIFontExtensions.swift */,
+				D0922DCF22B789BB003597EF /* StringExtensions.swift */,
+				D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +174,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0E73BAF22B2698300150481 /* ViewController.swift in Sources */,
+				D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */,
+				D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */,
+				D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */,
+				D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */,
+				D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */,
+				D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */,
 				D0E73BAD22B2698300150481 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
