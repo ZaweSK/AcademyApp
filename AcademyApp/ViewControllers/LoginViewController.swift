@@ -45,28 +45,21 @@ class LoginViewController: UIViewController
         self.view.endEditing(true)
     }
     
-    @IBAction func emailTextFieldEditingDidChange(_ sender: UITextField) {
+    @IBAction func textFieldEditingDidChange(_ sender: UITextField) {
         
         guard let emailText = emailTextField.text, let passwordText = passwordTextField.text  else {
             return
+        }
+        
+        if passwordText.count > 0 {
+            UIView.animate(withDuration: 0.2) {
+                self.showButton.isHidden = passwordText.count > 0 ? false : true
+            }
         }
         
         doneButton.isEnabled = String.isValidEmail(possibleEmail: emailText) && passwordText.count > 0 ? true : false
     }
     
-    @IBAction func passwordTextFieldEditingDidChange(_ sender: UITextField) {
-        
-        guard let emailText = emailTextField.text, let passwordText = passwordTextField.text  else {
-            return
-        }
-        
-        
-        UIView.animate(withDuration: 0.2) {
-            self.showButton.isHidden = passwordText.count > 0 ? false : true
-        }
-        
-        doneButton.isEnabled = String.isValidEmail(possibleEmail: emailText) && passwordText.count > 0 ? true : false
-    }
     
     @IBAction func showButtonTapped(_ sender: UIButton) {
         passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry

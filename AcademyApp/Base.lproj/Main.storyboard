@@ -42,7 +42,7 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="email"/>
                                                                         <connections>
-                                                                            <action selector="emailTextFieldEditingDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="nEd-6Y-Zls"/>
+                                                                            <action selector="textFieldEditingDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="U06-Hi-WSd"/>
                                                                         </connections>
                                                                     </textField>
                                                                 </subviews>
@@ -74,7 +74,7 @@
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
                                                                         <connections>
-                                                                            <action selector="passwordTextFieldEditingDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="59o-lI-Rg9"/>
+                                                                            <action selector="textFieldEditingDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="gtk-cX-y7s"/>
                                                                         </connections>
                                                                     </textField>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1u-t6-qy6">
