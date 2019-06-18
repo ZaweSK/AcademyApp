@@ -8,13 +8,13 @@
 
 import Foundation
 
-//MARK: - String extension for handling email address validation
+// MARK: - String extension for handling email address validation
 
 extension String {
 
-    static func isValidEmail(possibleEmail: String)->Bool {
+    static func isValidEmail(possibleEmail: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: possibleEmail)
     }
 }

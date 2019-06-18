@@ -8,30 +8,28 @@
 
 import UIKit
 
-//MARK: - Button with rounded corners, designable in storyboard
+// MARK: - Button with rounded corners, designable in storyboard
 
 @IBDesignable
 final class RoundedCornersButton: UIButton {
-    
+
     // MARK: - Stored properities
-    
+
     private var disabledColor = UIColor.greyishBrown
     private var enabledColor = UIColor.pinkishRed
-    
+
     override var isEnabled: Bool {
         didSet {
             self.backgroundColor = self.isEnabled ? enabledColor : disabledColor
         }
     }
-    
-    
+
     // MARK: - Inspectables
-    
+
     @IBInspectable
-    var cornerRadius : CGFloat = 0 {
+    var cornerRadius: CGFloat = 0 {
         didSet {
             self.layer.cornerRadius = cornerRadius
         }
     }
-    
 }

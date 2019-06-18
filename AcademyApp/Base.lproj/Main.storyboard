@@ -175,12 +175,12 @@
                     </view>
                     <connections>
                         <outlet property="doneButton" destination="rXY-AK-Eye" id="BT9-Qv-UsC"/>
-                        <outlet property="doneButtonLoginFormVerticalSpacingConstraint" destination="Yd3-4p-9VG" id="Rfn-HM-JhX"/>
                         <outlet property="emailTextField" destination="zgC-px-xyl" id="I1H-dh-NB4"/>
                         <outlet property="passwordTextField" destination="NR3-zY-cid" id="Vva-fa-kMm"/>
                         <outlet property="scrollView" destination="qyn-Kp-H5U" id="d3r-nL-YmL"/>
                         <outlet property="scrollViewBottomConstraint" destination="ilN-Tx-Ehm" id="ObC-UB-yvS"/>
                         <outlet property="showButton" destination="p1u-t6-qy6" id="1Ae-em-3td"/>
+                        <outlet property="verticalSpacingConstraint" destination="Yd3-4p-9VG" id="Rfn-HM-JhX"/>
                         <outletCollection property="horizontalLineViews" destination="Ywk-ys-QBv" collectionClass="NSMutableArray" id="q5m-bG-69p"/>
                         <outletCollection property="horizontalLineViews" destination="Hsq-p5-C8K" collectionClass="NSMutableArray" id="H4O-S7-IaV"/>
                     </connections>

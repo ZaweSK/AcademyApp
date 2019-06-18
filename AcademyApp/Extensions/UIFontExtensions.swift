@@ -11,29 +11,29 @@ import UIKit
 
 // MARK: - UIFont extension for handling app specific fonts
 
-extension UIFont
-{
+extension UIFont {
+
     // MARK: - Static methods
-    
-    static func backUpFont(size: CGFloat)->UIFont {
+
+    static func backUpFont(size: CGFloat) -> UIFont {
         return UIFont(name: "Helvetica", size: size)!
-        
+
     }
-    
+
     // MARK: - Static properities
-    
+
     static var textFieldPlaceholderFont: UIFont {
         let fontName = "MaisonNeue"
         let fontSize: CGFloat = 16
         return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
     }
-    
+
     static var showLabelFont: UIFont {
         let fontName = "MaisonNeue-Demi"
         let fontSize: CGFloat = 13
         return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
     }
-    
+
     static var doneButtonTitleFont: UIFont {
         let fontName = "MaisonNeue-Medium"
         let fontSize: CGFloat = 16

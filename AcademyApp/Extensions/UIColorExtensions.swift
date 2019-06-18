@@ -11,39 +11,37 @@ import UIKit
 
 // MARK: - UIColor extension for handling app specific colors
 
-extension UIColor
-{
-    
+extension UIColor {
+
     // MARK: - Static properities
-    
-    static var almostBlack : UIColor  {
-        return UIColor(r: 17, g: 21, b: 23)
+
+    static var almostBlack: UIColor {
+        return UIColor(red: 17, green: 21, blue: 23)
     }
-    
-    static var brownGray : UIColor  {
-        return UIColor(r: 128, g: 128, b: 128)
+
+    static var brownGray: UIColor {
+        return UIColor(red: 128, green: 128, blue: 128)
     }
-    
-    static var blackish : UIColor  {
-        return UIColor(r: 51, g: 51, b: 51)
+
+    static var blackish: UIColor {
+        return UIColor(red: 51, green: 51, blue: 51)
     }
-    
-    static var greyishBrown : UIColor  {
-        return UIColor(r: 64, g: 64, b: 64)
+
+    static var greyishBrown: UIColor {
+        return UIColor(red: 64, green: 64, blue: 64)
     }
-    
-    static var pinkishRed : UIColor  {
-        return UIColor(r: 239, g: 13, b: 51)
+
+    static var pinkishRed: UIColor {
+        return UIColor(red: 239, green: 13, blue: 51)
     }
-    
+
     // MARK: - Conveniecne initalizers
-    
-    convenience init(r: CGFloat, g: CGFloat, b: CGFloat){
-        let redValue = r / 255
-        let greenValue = g / 255
-        let blueValue = b / 255
-        
+
+    convenience init(red: CGFloat, green: CGFloat, blue: CGFloat) {
+        let redValue = red / 255
+        let greenValue = green / 255
+        let blueValue = blue / 255
+
         self.init(red: redValue, green: greenValue, blue: blueValue, alpha: 1)
     }
 }
-
