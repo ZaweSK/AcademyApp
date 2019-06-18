@@ -10,25 +10,25 @@ import UIKit
 
 // MARK: - View Controller for login scree
 
-class LoginViewController: UIViewController
-{
+class LoginViewController: UIViewController {
+
     // MARK: - View Controller's life cycle methods
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
-    
+
     deinit {
         removeObservers()
     }
-    
+
     // MARK: - Stored Properities
     
     var defaultDoneButtonLoginFormVerticalSpacingConstant : CGFloat = 0
     
     // MARK: - @IBOutlets
-    
+
     @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var doneButtonLoginFormVerticalSpacingConstraint: NSLayoutConstraint!
     
@@ -65,13 +65,11 @@ class LoginViewController: UIViewController
         passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
         setTitleForShowButton(for: passwordTextField.isSecureTextEntry)
     }
-    
 }
 
 // MARK: - UITextField's delegate methods
 
-extension LoginViewController : UITextFieldDelegate
-{
+extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
@@ -80,8 +78,7 @@ extension LoginViewController : UITextFieldDelegate
 
 // MARK: - UI methods
 
-private extension LoginViewController
-{
+private extension LoginViewController {
     
     func setTitleForShowButton(for secureTextState: Bool){
         
