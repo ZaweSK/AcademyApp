@@ -17,6 +17,7 @@ extension UIFont
     
     static func backUpFont(size: CGFloat)->UIFont {
         return UIFont(name: "Helvetica", size: size)!
+        
     }
     
     // MARK: - Static properities
@@ -24,13 +25,13 @@ extension UIFont
     static var textFieldPlaceholderFont: UIFont {
         let fontName = "MaisonNeue"
         let fontSize: CGFloat = 16
-        return UIFont(name: fontName, size: 16) ?? backUpFont(size: fontSize)
+        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
     }
     
     static var showLabelFont: UIFont {
         let fontName = "MaisonNeue-Demi"
         let fontSize: CGFloat = 13
-        return UIFont(name: fontName, size: 13) ?? backUpFont(size: fontSize)
+        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
     }
     
     static var doneButtonTitleFont: UIFont {

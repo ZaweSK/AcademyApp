@@ -23,18 +23,21 @@ class LoginViewController: UIViewController
         removeObservers()
     }
     
-    // MARK: - Stored Properities and methods
+    // MARK: - Stored Properities
     
-    private var defaultDoneButtonBottomSpacing : CGFloat = 0
+    var defaultDoneButtonLoginFormVerticalSpacingConstant : CGFloat = 0
     
     // MARK: - @IBOutlets
     
-    @IBOutlet weak var doneButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var doneButtonLoginFormVerticalSpacingConstraint: NSLayoutConstraint!
+    
     @IBOutlet var horizontalLineViews: [UIView]!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var doneButton: RoundedCornersButton!
     @IBOutlet weak var showButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     // MARK: - @IBActions
     
@@ -56,6 +59,7 @@ class LoginViewController: UIViewController
         guard let emailText = emailTextField.text, let passwordText = passwordTextField.text  else {
             return
         }
+        
         
         UIView.animate(withDuration: 0.2) {
             self.showButton.isHidden = passwordText.count > 0 ? false : true
@@ -101,20 +105,23 @@ private extension LoginViewController
             return
         }
         
-        doneButtonBottomConstraint.constant = isVisible ?  keyboardRect.height : defaultDoneButtonBottomSpacing
+        scrollViewBottomConstraint.constant = isVisible ?  -keyboardRect.height  : 0
+        doneButtonLoginFormVerticalSpacingConstraint.constant = isVisible ? 56 : defaultDoneButtonLoginFormVerticalSpacingConstant
         
-        UIView.animate(withDuration: 0.5) {
-            self.view.layoutIfNeeded()
-        }
+        
+        self.view.layoutIfNeeded()
+        
+        scrollView.scrollTo(direction: .bottom, animated: false)
     }
 }
+
 
 // MARK: - Setup Methods
 
 private extension LoginViewController
 {
     var textFields : [UITextField] {
-        return [emailTextField, passwordTextField]
+        return [emailTextField, passwordTextField ]
     }
     
     func setup() {
@@ -140,6 +147,7 @@ private extension LoginViewController
     func setDelegates(){
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        scrollView.delegate = self
     }
     
     // MARK: - UI Setup Methods
@@ -151,7 +159,8 @@ private extension LoginViewController
         horizontalLinesSetup()
         doneButtonSetup()
         
-        defaultDoneButtonBottomSpacing = doneButtonBottomConstraint.constant
+        defaultDoneButtonLoginFormVerticalSpacingConstant = doneButtonLoginFormVerticalSpacingConstraint.constant
+        
     }
     
     func backgroundColorSetup(){
