@@ -147,7 +147,6 @@ private extension LoginViewController
     func setDelegates(){
         emailTextField.delegate = self
         passwordTextField.delegate = self
-        scrollView.delegate = self
     }
     
     // MARK: - UI Setup Methods

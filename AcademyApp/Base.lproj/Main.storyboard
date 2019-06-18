@@ -117,21 +117,33 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="group" translatesAutoresizingMaskIntoConstraints="NO" id="hJ2-X2-KuL" userLabel="logo">
-                                                <rect key="frame" x="120" y="64" width="174" height="30"/>
-                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="saD-Rt-VHG">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="341"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" image="group" translatesAutoresizingMaskIntoConstraints="NO" id="hJ2-X2-KuL" userLabel="logo">
+                                                        <rect key="frame" x="120" y="155.5" width="174" height="30"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="hJ2-X2-KuL" firstAttribute="centerX" secondItem="saD-Rt-VHG" secondAttribute="centerX" id="7MZ-s0-jOg"/>
+                                                    <constraint firstItem="hJ2-X2-KuL" firstAttribute="centerY" secondItem="saD-Rt-VHG" secondAttribute="centerY" id="SdU-PZ-oqb"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="hJ2-X2-KuL" firstAttribute="top" secondItem="G26-NO-LeU" secondAttribute="top" constant="64" id="LnX-oy-Nzu"/>
-                                            <constraint firstItem="tnD-pf-1f3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hJ2-X2-KuL" secondAttribute="bottom" constant="63" id="SJB-Mn-xIB"/>
+                                            <constraint firstItem="tnD-pf-1f3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="saD-Rt-VHG" secondAttribute="bottom" constant="56" id="QUg-MS-y6D"/>
+                                            <constraint firstItem="saD-Rt-VHG" firstAttribute="height" secondItem="G26-NO-LeU" secondAttribute="height" multiplier="0.4" priority="750" id="UDs-hh-Jj7"/>
                                             <constraint firstItem="rXY-AK-Eye" firstAttribute="top" secondItem="tnD-pf-1f3" secondAttribute="bottom" constant="150" id="Yd3-4p-9VG"/>
                                             <constraint firstItem="tnD-pf-1f3" firstAttribute="leading" secondItem="G26-NO-LeU" secondAttribute="leading" constant="20" id="eQu-cU-2Yf"/>
                                             <constraint firstAttribute="bottom" secondItem="rXY-AK-Eye" secondAttribute="bottom" constant="47" id="ejb-eZ-ZPi"/>
+                                            <constraint firstAttribute="trailing" secondItem="saD-Rt-VHG" secondAttribute="trailing" id="fAu-Ck-mnE"/>
                                             <constraint firstItem="rXY-AK-Eye" firstAttribute="leading" secondItem="G26-NO-LeU" secondAttribute="leading" constant="20" id="hja-ap-Ug6"/>
-                                            <constraint firstItem="hJ2-X2-KuL" firstAttribute="centerX" secondItem="G26-NO-LeU" secondAttribute="centerX" id="k42-Gv-uQ4"/>
                                             <constraint firstAttribute="trailing" secondItem="rXY-AK-Eye" secondAttribute="trailing" constant="20" id="oN5-Gk-plT"/>
                                             <constraint firstAttribute="trailing" secondItem="tnD-pf-1f3" secondAttribute="trailing" constant="20" id="ssC-Mf-fRX"/>
+                                            <constraint firstItem="saD-Rt-VHG" firstAttribute="top" secondItem="G26-NO-LeU" secondAttribute="top" id="tJQ-qk-CHO"/>
+                                            <constraint firstItem="saD-Rt-VHG" firstAttribute="leading" secondItem="G26-NO-LeU" secondAttribute="leading" id="wOD-SJ-Atp"/>
                                         </constraints>
                                     </view>
                                 </subviews>
