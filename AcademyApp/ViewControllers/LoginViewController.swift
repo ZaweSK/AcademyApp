@@ -70,6 +70,7 @@ class LoginViewController: UIViewController
     
     @IBAction func showButtonTapped(_ sender: UIButton) {
         passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+        setTitleForShowButton(for: passwordTextField.isSecureTextEntry)
     }
     
 }
@@ -81,6 +82,20 @@ extension LoginViewController : UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
+    }
+}
+
+// MARK: - UI methods
+
+private extension LoginViewController
+{
+    
+    func setTitleForShowButton(for secureTextState: Bool){
+        
+        let attributes = showButton.attributedTitle(for: .normal)?.attributes(at: 0, effectiveRange: nil)
+        let title = secureTextState ? "SHOW" : "HIDE"
+        
+        showButton.setAttributedTitle(NSAttributedString(string: title, attributes: attributes), for: .normal)
     }
 }
 
