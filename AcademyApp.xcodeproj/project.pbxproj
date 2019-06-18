@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		91936EE080C60D7885873156 /* Pods_AcademyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1B489AE0C61C0425DCC86 /* Pods_AcademyApp.framework */; };
+		D08921F722B9175A005A7D4E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D08921F622B9175A005A7D4E /* Default-568h@2x.png */; };
 		D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DC622B37181003597EF /* RoundedCornersButton.swift */; };
 		D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCD22B67083003597EF /* UIFontExtensions.swift */; };
 		D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCF22B789BB003597EF /* StringExtensions.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		1B934978495AC9894A6754E5 /* Pods-AcademyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademyApp.debug.xcconfig"; path = "Target Support Files/Pods-AcademyApp/Pods-AcademyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4EC1B489AE0C61C0425DCC86 /* Pods_AcademyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AcademyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D08921F622B9175A005A7D4E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D0922DC622B37181003597EF /* RoundedCornersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersButton.swift; sourceTree = "<group>"; };
 		D0922DCD22B67083003597EF /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		D0922DCF22B789BB003597EF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -75,14 +77,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D08921F422B91687005A7D4E /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-				D0E73BB822B2698400150481 /* Info.plist */,
-			);
-			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
 		D08921F522B916CD005A7D4E /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +97,7 @@
 		D0E73BA022B2698300150481 = {
 			isa = PBXGroup;
 			children = (
+				D08921F622B9175A005A7D4E /* Default-568h@2x.png */,
 				D0E73BAB22B2698300150481 /* AcademyApp */,
 				D0E73BAA22B2698300150481 /* Products */,
 				30F3A164F91C78B12262FA98 /* Pods */,
@@ -124,10 +119,10 @@
 				D0E73BC722B291D300150481 /* Extensions */,
 				D08921F322B91654005A7D4E /* Resources */,
 				D08921F522B916CD005A7D4E /* Storyboards */,
-				D08921F422B91687005A7D4E /* SupportingFiles */,
 				D08921F222B915DB005A7D4E /* Views */,
 				D0922DCA22B3A871003597EF /* ViewControllers */,
 				D0E73BAC22B2698300150481 /* AppDelegate.swift */,
+				D0E73BB822B2698400150481 /* Info.plist */,
 			);
 			path = AcademyApp;
 			sourceTree = "<group>";
@@ -212,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */,
+				D08921F722B9175A005A7D4E /* Default-568h@2x.png in Resources */,
 				D0E73BB422B2698400150481 /* Assets.xcassets in Resources */,
 				D0E73BB222B2698300150481 /* Main.storyboard in Resources */,
 			);
