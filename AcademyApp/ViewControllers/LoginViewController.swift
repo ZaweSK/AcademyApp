@@ -120,12 +120,14 @@ private extension LoginViewController
             return
         }
         
-        scrollViewBottomConstraint.constant = isVisible ?  -keyboardRect.height  : 0
-        doneButtonLoginFormVerticalSpacingConstraint.constant = isVisible ? 56 : defaultDoneButtonLoginFormVerticalSpacingConstant
+        //adjusting vertical spacing of elements on login screen based on whether the keyboard is visible
         
+        scrollViewBottomConstraint.constant = isVisible ?  -keyboardRect.height  : 0
+        doneButtonLoginFormVerticalSpacingConstraint.constant = isVisible ? Config.adjustedDoneButtonLoginFormVerticalSpacing : defaultDoneButtonLoginFormVerticalSpacingConstant
+        
+        //call layoutIfNeeded() before scroll() otherwise aniamtion will break
         
         self.view.layoutIfNeeded()
-        
         scrollView.scrollTo(direction: .bottom, animated: false)
     }
 }
@@ -221,6 +223,15 @@ private extension LoginViewController
             NSAttributedString.Key.foregroundColor : UIColor.white])
         
         doneButton.setAttributedTitle(attributedTitle, for: .normal)
+    }
+}
+
+// MARK: - Constants
+
+private extension LoginViewController
+{
+    struct Config {
+        static let adjustedDoneButtonLoginFormVerticalSpacing : CGFloat = 56
     }
 }
 
