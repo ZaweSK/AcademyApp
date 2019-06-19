@@ -10,6 +10,7 @@ import UIKit
 
 class LecturesViewController: UIViewController {
 
+    var lectures = ["a", "b", "c", "d", "e", "f"]
 
     @IBOutlet weak var lecturesLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
@@ -22,7 +23,6 @@ class LecturesViewController: UIViewController {
 
 }
 
-
 private extension LecturesViewController {
 
     func setup() {
@@ -30,6 +30,26 @@ private extension LecturesViewController {
     }
 
     func delegatesSetup() {
-
+        tableView.delegate = self
+        tableView.dataSource = self
     }
+}
+
+extension LecturesViewController: UITableViewDelegate {
+
+}
+
+extension LecturesViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return lectures.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "lecturesTableViewCell", for: indexPath)
+        cell.imageView?.image = UIImage(named: "Swift I (Playground)")
+        return cell
+    }
+
 }

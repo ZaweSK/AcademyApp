@@ -10,7 +10,7 @@ import UIKit
 
 class LecturesTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var wlectureImageView: UIImageView!
+    @IBOutlet weak var lectureImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
