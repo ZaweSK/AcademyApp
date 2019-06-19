@@ -31,6 +31,7 @@ private extension TabBarViewController {
 
     func setup() {
         colorSetup()
+        shadowSetup()
         fontSetup()
         tabBarItemsPicturesSetup()
     }
@@ -39,6 +40,14 @@ private extension TabBarViewController {
         tabBar.barTintColor = UIColor.almostBlack
         tabBar.isTranslucent = false
         tabBar.unselectedItemTintColor = UIColor.brownGray
+    }
+
+    func shadowSetup() {
+        tabBar.layer.shadowOffset = CGSize(width: 0, height: -2)
+        tabBar.layer.shadowRadius = 10
+        tabBar.layer.shadowColor = UIColor.red.cgColor
+        tabBar.layer.shadowOpacity = 1
+        tabBar.layer.masksToBounds = false
     }
 
     func fontAttributes(tabIsSelected: Bool) -> [NSAttributedString.Key: Any] {
