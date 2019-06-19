@@ -11,6 +11,7 @@
 		D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DC622B37181003597EF /* RoundedCornersButton.swift */; };
 		D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCD22B67083003597EF /* UIFontExtensions.swift */; };
 		D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCF22B789BB003597EF /* StringExtensions.swift */; };
+		D0DA722222BA4AA500887039 /* UITabBarItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA722122BA4AA500887039 /* UITabBarItemExtensions.swift */; };
 		D0E73BAD22B2698300150481 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BAC22B2698300150481 /* AppDelegate.swift */; };
 		D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BAE22B2698300150481 /* LoginViewController.swift */; };
 		D0E73BB222B2698300150481 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB022B2698300150481 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		D0922DC622B37181003597EF /* RoundedCornersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersButton.swift; sourceTree = "<group>"; };
 		D0922DCD22B67083003597EF /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		D0922DCF22B789BB003597EF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		D0DA722122BA4AA500887039 /* UITabBarItemExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarItemExtensions.swift; sourceTree = "<group>"; };
 		D0E73BA922B2698300150481 /* AcademyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcademyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E73BAC22B2698300150481 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0E73BAE22B2698300150481 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				D0922DCD22B67083003597EF /* UIFontExtensions.swift */,
 				D0922DCF22B789BB003597EF /* StringExtensions.swift */,
 				D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */,
+				D0DA722122BA4AA500887039 /* UITabBarItemExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DA722222BA4AA500887039 /* UITabBarItemExtensions.swift in Sources */,
 				D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */,
 				D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */,
 				D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */,
