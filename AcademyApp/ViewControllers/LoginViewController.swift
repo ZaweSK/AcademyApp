@@ -17,6 +17,10 @@ class LoginViewController: UIViewController {
     // default vertical spacing constraint constant between doneButton and login form
     var defaultVerticalSpacingConstant: CGFloat = 0
 
+    var textFields: [UITextField] {
+        return [emailTextField, passwordTextField ]
+    }
+
     // MARK: - @IBOutlets
 
     @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
@@ -121,10 +125,6 @@ private extension LoginViewController {
 // MARK: - Setup Methods
 
 private extension LoginViewController {
-
-    var textFields: [UITextField] {
-        return [emailTextField, passwordTextField ]
-    }
 
     func setup() {
         setupUI()
