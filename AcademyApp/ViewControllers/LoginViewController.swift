@@ -12,17 +12,6 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    // MARK: - View Controller's life cycle methods
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setup()
-    }
-
-    deinit {
-        removeObservers()
-    }
-
     // MARK: - Stored Properities
 
     // default vertical spacing constraint constant between doneButton and login form
@@ -39,6 +28,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     // vertical spacing constraint between doneButton and login form
     @IBOutlet weak var verticalSpacingConstraint: NSLayoutConstraint!
+
+    // MARK: - View Controller's life cycle methods
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
+
+    deinit {
+        removeObservers()
+    }
 
     // MARK: - @IBActions
 
@@ -220,4 +220,3 @@ private extension LoginViewController {
         static let adjustedVerticalSpacing: CGFloat = 56
     }
 }
-

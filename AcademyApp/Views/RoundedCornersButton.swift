@@ -24,7 +24,7 @@ final class RoundedCornersButton: UIButton {
         }
     }
 
-    // MARK: - Inspectables
+    // MARK: - Inspectable properties
 
     @IBInspectable
     var cornerRadius: CGFloat = 0 {

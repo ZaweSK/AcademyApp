@@ -13,13 +13,6 @@ import UIKit
 
 extension UIFont {
 
-    // MARK: - Static methods
-
-    static func backUpFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "Helvetica", size: size)!
-
-    }
-
     // MARK: - Static properities
 
     static var textFieldPlaceholderFont: UIFont {
@@ -38,5 +31,12 @@ extension UIFont {
         let fontName = "MaisonNeue-Medium"
         let fontSize: CGFloat = 16
         return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
+    }
+
+    // MARK: - Static methods
+
+    static func backUpFont(size: CGFloat) -> UIFont {
+        return UIFont(name: "Helvetica", size: size)!
+
     }
 }
