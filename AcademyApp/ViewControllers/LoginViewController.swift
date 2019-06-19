@@ -53,15 +53,15 @@ class LoginViewController: UIViewController {
 
         if passwordText.count > 0 {
             UIView.animate(withDuration: 0.2) {
-                self.showButton.isHidden = passwordText.count > 0 ? false : true
+                self.showButton.isHidden = passwordText.isEmpty ? true : false
             }
         }
 
-        doneButton.isEnabled = String.isValidEmail(possibleEmail: emailText) && passwordText.count > 0 ? true : false
+        doneButton.isEnabled = String.isValidEmail(possibleEmail: emailText) && !passwordText.isEmpty ? true : false
     }
 
     @IBAction func showButtonTapped(_ sender: UIButton) {
-        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+        passwordTextField.isSecureTextEntry.toggle()
         setTitleForShowButton(for: passwordTextField.isSecureTextEntry)
     }
 }
