@@ -35,6 +35,11 @@ extension UIColor {
         return UIColor(red: 239, green: 13, blue: 51)
     }
 
+    // color for tab the tab bar shadow
+    static var black50: UIColor {
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+    }
+
     // MARK: - Conveniecne initalizers
 
     convenience init(red: CGFloat, green: CGFloat, blue: CGFloat) {
