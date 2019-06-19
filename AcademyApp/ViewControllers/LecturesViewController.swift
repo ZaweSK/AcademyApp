@@ -10,13 +10,26 @@ import UIKit
 
 class LecturesViewController: UIViewController {
 
+
+    @IBOutlet weak var lecturesLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setup()
     }
-    
 
-   
+}
 
+
+private extension LecturesViewController {
+
+    func setup() {
+        delegatesSetup()
+    }
+
+    func delegatesSetup() {
+
+    }
 }

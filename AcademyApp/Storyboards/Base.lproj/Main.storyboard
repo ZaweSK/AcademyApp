@@ -266,6 +266,10 @@
                         <viewLayoutGuide key="safeArea" id="N9v-YS-ymv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lectures" id="Z26-fD-xXF"/>
+                    <connections>
+                        <outlet property="lecturesLabel" destination="vin-A7-zH1" id="xHp-vh-5uP"/>
+                        <outlet property="tableView" destination="fFi-Ij-Zht" id="Oal-51-BTW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1w-nf-w8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
