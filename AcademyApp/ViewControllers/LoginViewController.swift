@@ -111,7 +111,7 @@ private extension LoginViewController {
         scrollViewBottomConstraint.constant = isVisible ?  -keyboardRect.height  : 0
         verticalSpacingConstraint.constant = isVisible ? Config.adjustedVerticalSpacing : defaultVerticalSpacingConstant
 
-        //call layoutIfNeeded() before scroll() otherwise aniamtion will break
+        //call layoutIfNeeded() before scrollView.scrollTo() otherwise animation will break
 
         self.view.layoutIfNeeded()
         scrollView.scrollTo(direction: .bottom, animated: false)
@@ -220,3 +220,4 @@ private extension LoginViewController {
         static let adjustedVerticalSpacing: CGFloat = 56
     }
 }
+
