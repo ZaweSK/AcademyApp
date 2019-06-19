@@ -6,6 +6,8 @@ target 'AcademyApp' do
   use_frameworks!
 
   # Pods for AcademyApp
-pod 'SwiftLint', '0.33.0'
+  
+#SwiftLint
+ pod 'SwiftLint', '0.33.0'
 
 end
