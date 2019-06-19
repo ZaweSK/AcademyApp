@@ -226,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="1896" y="-212"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="Iz5-d1-6i7">
             <objects>
-                <tabBarController id="htq-rL-U6K" sceneMemberID="viewController">
+                <tabBarController id="htq-rL-U6K" customClass="TabBarViewController" customModule="AcademyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YoJ-Xe-oIM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
