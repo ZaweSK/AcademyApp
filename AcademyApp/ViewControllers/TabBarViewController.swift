@@ -33,12 +33,11 @@ private extension TabBarViewController {
         colorSetup()
         fontSetup()
         tabBarItemsPicturesSetup()
-
-        tabBar.sizeThatFits( CGSize.zero)
     }
 
     func colorSetup() {
         tabBar.barTintColor = UIColor.almostBlack
+        tabBar.isTranslucent = false
         tabBar.unselectedItemTintColor = UIColor.brownGray
     }
 
@@ -68,7 +67,3 @@ private extension TabBarViewController {
     }
 
 }
-
-
-
-
