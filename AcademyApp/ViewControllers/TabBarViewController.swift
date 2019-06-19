@@ -37,15 +37,16 @@ private extension TabBarViewController {
     }
 
     func colorSetup() {
-        tabBar.barTintColor = UIColor.almostBlack
         tabBar.isTranslucent = false
+
+        tabBar.barTintColor = UIColor.almostBlack
         tabBar.unselectedItemTintColor = UIColor.brownGray
     }
 
     func shadowSetup() {
         tabBar.layer.shadowOffset = CGSize(width: 0, height: -2)
         tabBar.layer.shadowRadius = 10
-        tabBar.layer.shadowColor = UIColor.red.cgColor
+        tabBar.layer.shadowColor = UIColor.black50.cgColor
         tabBar.layer.shadowOpacity = 1
         tabBar.layer.masksToBounds = false
     }

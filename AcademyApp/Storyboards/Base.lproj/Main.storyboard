@@ -213,11 +213,42 @@
         <!--Lectures-->
         <scene sceneID="Qx7-4X-Soq">
             <objects>
-                <viewController id="quL-XZ-SJq" sceneMemberID="viewController">
+                <viewController id="quL-XZ-SJq" customClass="LecturesViewController" customModule="AcademyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B17-79-Rsq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LECTURES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vin-A7-zH1">
+                                <rect key="frame" x="20" y="57" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fFi-Ij-Zht">
+                                <rect key="frame" x="20" y="95" width="335" height="483"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lecturesTableViewCell" id="kRx-Dj-fE0">
+                                        <rect key="frame" x="0.0" y="28" width="335" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kRx-Dj-fE0" id="TEa-X9-Rcj">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="129.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fFi-Ij-Zht" firstAttribute="leading" secondItem="N9v-YS-ymv" secondAttribute="leading" constant="20" id="14d-1e-iWg"/>
+                            <constraint firstItem="N9v-YS-ymv" firstAttribute="trailing" secondItem="vin-A7-zH1" secondAttribute="trailing" constant="20" id="BU9-zM-fTI"/>
+                            <constraint firstItem="N9v-YS-ymv" firstAttribute="trailing" secondItem="fFi-Ij-Zht" secondAttribute="trailing" constant="20" id="LHt-FZ-d2g"/>
+                            <constraint firstItem="vin-A7-zH1" firstAttribute="leading" secondItem="N9v-YS-ymv" secondAttribute="leading" constant="20" id="YyS-t7-6Ea"/>
+                            <constraint firstItem="vin-A7-zH1" firstAttribute="top" secondItem="N9v-YS-ymv" secondAttribute="top" constant="37" id="d49-Qg-kzx"/>
+                            <constraint firstItem="fFi-Ij-Zht" firstAttribute="top" secondItem="vin-A7-zH1" secondAttribute="bottom" constant="17" id="ePQ-wi-qjv"/>
+                            <constraint firstItem="N9v-YS-ymv" firstAttribute="bottom" secondItem="fFi-Ij-Zht" secondAttribute="bottom" constant="40" id="uBY-pB-XUj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="N9v-YS-ymv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lectures" id="Z26-fD-xXF"/>
