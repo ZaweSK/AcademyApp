@@ -33,6 +33,12 @@ extension UIFont {
         return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
     }
 
+    static var tabBarFont : UIFont {
+        let fontName = "MaisonNeue-Medium"
+        let fontSize: CGFloat = 10
+        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
+    }
+
     // MARK: - Static methods
 
     static func backUpFont(size: CGFloat) -> UIFont {
