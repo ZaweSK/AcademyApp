@@ -14,6 +14,8 @@ class LecturesViewController: UIViewController {
 
     @IBOutlet weak var lecturesLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var collectionViewTrailingConstraint: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +29,9 @@ extension LecturesViewController: UICollectionViewDataSource {
         return lectures.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
+        -> UICollectionViewCell {
+
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "lecturesCollectionViewCell", for: indexPath)
             as? LecturesCollectionViewCell
             else {
@@ -37,11 +41,35 @@ extension LecturesViewController: UICollectionViewDataSource {
         cell.lectureImageView.image = UIImage(named: "Swift I (Playground)")
         return cell
     }
-
 }
 
 extension LecturesViewController: UICollectionViewDelegate {
 
+}
+
+extension LecturesViewController: UICollectionViewDelegateFlowLayout {
+
+    private struct FlowLayouConstants {
+        static let itemsVerticalSpacing: CGFloat = 10
+        static let  numberOfItemsInRow: CGFloat = 1
+    }
+
+    // holds the value of ratio - height to width of collection view cell based on original design
+    private var aspectRatio: CGFloat { return 130 / 335 }
+
+    private var totalItemHorizontalPadding: CGFloat {
+        return collectionViewLeadingConstraint.constant + collectionViewTrailingConstraint.constant
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return FlowLayouConstants.itemsVerticalSpacing
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let itemWidth = view.bounds.width - totalItemHorizontalPadding
+        let itemHeight = itemWidth * aspectRatio
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
 }
 
 // MARK: - Setup

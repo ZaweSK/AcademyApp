@@ -9,7 +9,7 @@
 import UIKit
 
 class LecturesCollectionViewCell: UICollectionViewCell {
-    
+
     @IBOutlet weak var lectureImageView: UIImageView!
 
     override func awakeFromNib() {

@@ -274,6 +274,8 @@
                     <tabBarItem key="tabBarItem" title="Lectures" id="Z26-fD-xXF"/>
                     <connections>
                         <outlet property="collectionView" destination="c99-hX-X43" id="pFH-6X-yq9"/>
+                        <outlet property="collectionViewLeadingConstraint" destination="a8b-rw-5zC" id="7Vg-aq-ieJ"/>
+                        <outlet property="collectionViewTrailingConstraint" destination="76S-RV-ylU" id="kpK-6X-pPy"/>
                         <outlet property="lecturesLabel" destination="ZfI-ms-aC6" id="L1Q-za-y6w"/>
                     </connections>
                 </viewController>
