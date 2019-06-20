@@ -21,9 +21,7 @@ class LecturesCollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 7
 
         setupLabel()
-        git 
 
-        print(lectureNameLabel)
         
 
         lectureNameLabel.constraints.forEach {
