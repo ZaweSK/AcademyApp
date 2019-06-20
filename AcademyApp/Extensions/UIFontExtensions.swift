@@ -39,6 +39,12 @@ extension UIFont {
         return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
     }
 
+    static var lecturesLabelFont: UIFont {
+        let fontName = "MaisonNeue-Bold"
+        let fontSize: CGFloat = 13
+        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
+    }
+
     // MARK: - Static methods
 
     static func backUpFont(size: CGFloat) -> UIFont {
