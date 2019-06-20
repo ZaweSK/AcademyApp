@@ -47,8 +47,12 @@ extension LecturesViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "lecturesTableViewCell", for: indexPath)
-        cell.imageView?.image = UIImage(named: "Swift I (Playground)")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "lecturesTableViewCell", for: indexPath)
+            as? LecturesTableViewCell
+            else {
+                return UITableViewCell()
+        }
+        cell.lectureImageView.image = UIImage(named: "Swift I (Playground)")
         return cell
     }
 

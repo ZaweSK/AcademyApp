@@ -2,7 +2,7 @@
 //  LecturesTableViewCell.swift
 //  AcademyApp
 //
-//  Created by Peter Sevcik on 19/06/2019.
+//  Created by Peter Sevcik on 20/06/2019.
 //  Copyright © 2019 Peter Sevcik. All rights reserved.
 //
 
@@ -14,7 +14,9 @@ class LecturesTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        self.layer.cornerRadius = 20
+        self.layer.masksToBounds = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
