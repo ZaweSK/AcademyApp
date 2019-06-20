@@ -21,6 +21,7 @@
 		D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BC922B291F500150481 /* UIColorExtensions.swift */; };
 		D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */; };
 		D0FCDF7622BB664D00A23D8E /* LecturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCDF7522BB664D00A23D8E /* LecturesCollectionViewCell.swift */; };
+		D0FCDF7A22BB9EDD00A23D8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF7922BB9EDD00A23D8E /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		D0E73BC922B291F500150481 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
 		D0FCDF7522BB664D00A23D8E /* LecturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0FCDF7922BB9EDD00A23D8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DABC6D1BD97525722761B5C4 /* Pods-AcademyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademyApp.release.xcconfig"; path = "Target Support Files/Pods-AcademyApp/Pods-AcademyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 		D08921F322B91654005A7D4E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0FCDF7922BB9EDD00A23D8E /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */,
+				D0FCDF7A22BB9EDD00A23D8E /* Assets.xcassets in Resources */,
 				D0E73BB222B2698300150481 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

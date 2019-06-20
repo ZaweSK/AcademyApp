@@ -22,8 +22,6 @@ class LecturesCollectionViewCell: UICollectionViewCell {
 
         setupLabel()
 
-        
-
         lectureNameLabel.constraints.forEach {
             print($0)
         }
