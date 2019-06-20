@@ -11,4 +11,9 @@ import UIKit
 class LecturesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var lectureImageView: UIImageView!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.layer.cornerRadius = 7
+    }
 }

@@ -65,6 +65,7 @@ extension LecturesViewController {
 
     func backgroundColorSetup() {
         view.backgroundColor = UIColor.almostBlack
+        collectionView.backgroundColor = UIColor.clear
     }
 
     func lecturesLabelSetup() {
