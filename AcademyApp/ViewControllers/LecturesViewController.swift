@@ -32,14 +32,14 @@ extension LecturesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
         -> UICollectionViewCell {
 
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "lecturesCollectionViewCell", for: indexPath)
-            as? LecturesCollectionViewCell
-            else {
-                return UICollectionViewCell()
-        }
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: "lecturesCollectionViewCell",
+                for: indexPath) as? LecturesCollectionViewCell else {
+                    return UICollectionViewCell()
+            }
 
-        cell.lectureImageView.image = UIImage(named: "Swift I (Playground)")
-        return cell
+            cell.lectureImageView.image = UIImage(named: "Swift I (Playground)")
+            return cell
     }
 }
 

@@ -16,7 +16,7 @@ extension UIFont {
     // MARK: - Static properities
 
     static var textFieldPlaceholderFont: UIFont {
-        let fontName = "MaisonNeue"
+        let fontName = "MaisonNeue-Medium"
         let fontSize: CGFloat = 16
         return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
     }

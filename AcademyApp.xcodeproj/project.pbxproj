@@ -22,6 +22,10 @@
 		D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */; };
 		D0FCDF7622BB664D00A23D8E /* LecturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCDF7522BB664D00A23D8E /* LecturesCollectionViewCell.swift */; };
 		D0FCDF7A22BB9EDD00A23D8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF7922BB9EDD00A23D8E /* Assets.xcassets */; };
+		D0FCDF8322BBA57E00A23D8E /* Maison_Neue_Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF7F22BBA57E00A23D8E /* Maison_Neue_Medium.otf */; };
+		D0FCDF8422BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF8022BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf */; };
+		D0FCDF8522BBA57E00A23D8E /* Maison_Neue_Demi.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF8122BBA57E00A23D8E /* Maison_Neue_Demi.otf */; };
+		D0FCDF8622BBA57E00A23D8E /* Maison_Neue_Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF8222BBA57E00A23D8E /* Maison_Neue_Book.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,11 @@
 		D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
 		D0FCDF7522BB664D00A23D8E /* LecturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0FCDF7922BB9EDD00A23D8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0FCDF7E22BBA55A00A23D8E /* Maison_Neue_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Bold.otf; sourceTree = "<group>"; };
+		D0FCDF7F22BBA57E00A23D8E /* Maison_Neue_Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Medium.otf; sourceTree = "<group>"; };
+		D0FCDF8022BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trump_Gothic_East_Bold.ttf; sourceTree = "<group>"; };
+		D0FCDF8122BBA57E00A23D8E /* Maison_Neue_Demi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Demi.otf; sourceTree = "<group>"; };
+		D0FCDF8222BBA57E00A23D8E /* Maison_Neue_Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Book.otf; sourceTree = "<group>"; };
 		DABC6D1BD97525722761B5C4 /* Pods-AcademyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademyApp.release.xcconfig"; path = "Target Support Files/Pods-AcademyApp/Pods-AcademyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +88,7 @@
 		D08921F322B91654005A7D4E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D0FCDF7D22BBA53A00A23D8E /* Fonts */,
 				D0FCDF7922BB9EDD00A23D8E /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -145,6 +155,18 @@
 				D0DA722122BA4AA500887039 /* UITabBarItemExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D0FCDF7D22BBA53A00A23D8E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D0FCDF8222BBA57E00A23D8E /* Maison_Neue_Book.otf */,
+				D0FCDF8122BBA57E00A23D8E /* Maison_Neue_Demi.otf */,
+				D0FCDF7F22BBA57E00A23D8E /* Maison_Neue_Medium.otf */,
+				D0FCDF8022BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf */,
+				D0FCDF7E22BBA55A00A23D8E /* Maison_Neue_Bold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		F8CB378600CF4F3B14E36D94 /* Frameworks */ = {
@@ -217,6 +239,10 @@
 			files = (
 				D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */,
 				D0FCDF7A22BB9EDD00A23D8E /* Assets.xcassets in Resources */,
+				D0FCDF8622BBA57E00A23D8E /* Maison_Neue_Book.otf in Resources */,
+				D0FCDF8522BBA57E00A23D8E /* Maison_Neue_Demi.otf in Resources */,
+				D0FCDF8422BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf in Resources */,
+				D0FCDF8322BBA57E00A23D8E /* Maison_Neue_Medium.otf in Resources */,
 				D0E73BB222B2698300150481 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
