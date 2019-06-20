@@ -45,6 +45,12 @@ extension UIFont {
         return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
     }
 
+    static var lectureNameFont: UIFont {
+        let fontName = "TrumpGothicEast-Bold"
+        let fontSize: CGFloat = 30
+        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
+    }
+
     // MARK: - Static methods
 
     static func backUpFont(size: CGFloat) -> UIFont {
