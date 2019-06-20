@@ -15,6 +15,10 @@ extension UIColor {
 
     // MARK: - Static properities
 
+    static var lectureNameTextColor: UIColor {
+        return UIColor.white
+    }
+
     static var almostBlack: UIColor {
         return UIColor(red: 17, green: 21, blue: 23)
     }
