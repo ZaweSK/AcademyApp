@@ -14,6 +14,7 @@ class LecturesCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var lectureImageView: UIImageView!
     @IBOutlet weak var lectureNameLabel: UILabel!
+    @IBOutlet weak var checkMarkImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
