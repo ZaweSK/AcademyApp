@@ -20,20 +20,8 @@ class LecturesViewController: UIViewController {
 
         setup()
     }
-
 }
 
-private extension LecturesViewController {
-
-    func setup() {
-        delegatesSetup()
-    }
-
-    func delegatesSetup() {
-        tableView.delegate = self
-        tableView.dataSource = self
-    }
-}
 
 extension LecturesViewController: UITableViewDelegate {
 
@@ -55,5 +43,37 @@ extension LecturesViewController: UITableViewDataSource {
         cell.lectureImageView.image = UIImage(named: "Swift I (Playground)")
         return cell
     }
+}
 
+// MARK: - Setup
+
+extension LecturesViewController {
+
+    func setup() {
+        delegatesSetup()
+        setupUI()
+    }
+
+    func delegatesSetup() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+
+    func setupUI() {
+        backgroundColorSetup()
+        lecturesLabelSetup()
+    }
+
+    func backgroundColorSetup() {
+        view.backgroundColor = UIColor.almostBlack
+    }
+
+    func lecturesLabelSetup() {
+
+        lecturesLabel.attributedText = NSAttributedString(string: lecturesLabel.text ?? "LECTURES", attributes: [
+            NSAttributedString.Key.foregroundColor: UIColor.brownGray,
+            NSAttributedString.Key.font: UIFont.lecturesLabelFont,
+            NSAttributedString.Key.kern: 1
+            ])
+    }
 }
