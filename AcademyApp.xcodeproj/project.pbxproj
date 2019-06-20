@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		91936EE080C60D7885873156 /* Pods_AcademyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1B489AE0C61C0425DCC86 /* Pods_AcademyApp.framework */; };
-		D021E42622BB595400BC0248 /* LecturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021E42522BB595400BC0248 /* LecturesTableViewCell.swift */; };
 		D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DC622B37181003597EF /* RoundedCornersButton.swift */; };
 		D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCD22B67083003597EF /* UIFontExtensions.swift */; };
 		D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCF22B789BB003597EF /* StringExtensions.swift */; };
@@ -22,12 +21,12 @@
 		D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB522B2698400150481 /* LaunchScreen.storyboard */; };
 		D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BC922B291F500150481 /* UIColorExtensions.swift */; };
 		D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */; };
+		D0FCDF7622BB664D00A23D8E /* LecturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FCDF7522BB664D00A23D8E /* LecturesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B934978495AC9894A6754E5 /* Pods-AcademyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademyApp.debug.xcconfig"; path = "Target Support Files/Pods-AcademyApp/Pods-AcademyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4EC1B489AE0C61C0425DCC86 /* Pods_AcademyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AcademyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D021E42522BB595400BC0248 /* LecturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesTableViewCell.swift; sourceTree = "<group>"; };
 		D0922DC622B37181003597EF /* RoundedCornersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersButton.swift; sourceTree = "<group>"; };
 		D0922DCD22B67083003597EF /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		D0922DCF22B789BB003597EF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -43,6 +42,7 @@
 		D0E73BB822B2698400150481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0E73BC922B291F500150481 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
+		D0FCDF7522BB664D00A23D8E /* LecturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesCollectionViewCell.swift; sourceTree = "<group>"; };
 		DABC6D1BD97525722761B5C4 /* Pods-AcademyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademyApp.release.xcconfig"; path = "Target Support Files/Pods-AcademyApp/Pods-AcademyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				D0922DC622B37181003597EF /* RoundedCornersButton.swift */,
-				D021E42522BB595400BC0248 /* LecturesTableViewCell.swift */,
+				D0FCDF7522BB664D00A23D8E /* LecturesCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,7 +281,7 @@
 				D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */,
 				D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */,
 				D0E73BAD22B2698300150481 /* AppDelegate.swift in Sources */,
-				D021E42622BB595400BC0248 /* LecturesTableViewCell.swift in Sources */,
+				D0FCDF7622BB664D00A23D8E /* LecturesCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

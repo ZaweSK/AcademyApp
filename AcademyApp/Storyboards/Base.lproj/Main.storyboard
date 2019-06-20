@@ -218,57 +218,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jSb-Ib-u3w">
-                                <rect key="frame" x="20" y="95" width="335" height="483"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lecturesTableViewCell" id="1fa-w2-ap4" customClass="LecturesTableViewCell" customModule="AcademyApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="335" height="100"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1fa-w2-ap4" id="iaM-uG-cxH">
-                                            <rect key="frame" x="0.0" y="0.0" width="335" height="99.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pk8-tl-jgA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="99.5"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Pk8-tl-jgA" secondAttribute="bottom" id="XBA-qo-GYJ"/>
-                                                <constraint firstItem="Pk8-tl-jgA" firstAttribute="leading" secondItem="iaM-uG-cxH" secondAttribute="leading" id="XEl-NK-FqX"/>
-                                                <constraint firstItem="Pk8-tl-jgA" firstAttribute="top" secondItem="iaM-uG-cxH" secondAttribute="top" id="Xee-pI-G1N"/>
-                                                <constraint firstAttribute="trailing" secondItem="Pk8-tl-jgA" secondAttribute="trailing" id="a3B-HF-9d5"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="lectureImageView" destination="Pk8-tl-jgA" id="VZs-Dv-phJ"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lectures" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfI-ms-aC6">
                                 <rect key="frame" x="20" y="57" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="c99-hX-X43">
+                                <rect key="frame" x="20" y="95" width="335" height="483"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DK0-Jw-L1m">
+                                    <size key="itemSize" width="335" height="130"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="lecturesCollectionViewCell" id="TJU-G0-XkF" customClass="LecturesCollectionViewCell" customModule="AcademyApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="130"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gae-87-xhj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="130"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="gae-87-xhj" secondAttribute="trailing" id="RSm-Kl-AyQ"/>
+                                            <constraint firstItem="gae-87-xhj" firstAttribute="leading" secondItem="TJU-G0-XkF" secondAttribute="leading" id="UUh-dl-FRO"/>
+                                            <constraint firstAttribute="bottom" secondItem="gae-87-xhj" secondAttribute="bottom" id="WWa-C4-zo3"/>
+                                            <constraint firstItem="gae-87-xhj" firstAttribute="top" secondItem="TJU-G0-XkF" secondAttribute="top" id="cDx-lW-1k1"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="lectureImageView" destination="gae-87-xhj" id="1zd-9g-jnI"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZfI-ms-aC6" firstAttribute="leading" secondItem="N9v-YS-ymv" secondAttribute="leading" constant="20" id="1ey-wD-0i3"/>
+                            <constraint firstItem="N9v-YS-ymv" firstAttribute="trailing" secondItem="c99-hX-X43" secondAttribute="trailing" constant="20" id="76S-RV-ylU"/>
+                            <constraint firstItem="N9v-YS-ymv" firstAttribute="bottom" secondItem="c99-hX-X43" secondAttribute="bottom" constant="40" id="Bs9-kE-FwD"/>
                             <constraint firstItem="ZfI-ms-aC6" firstAttribute="top" secondItem="N9v-YS-ymv" secondAttribute="top" constant="37" id="Goa-fw-ebx"/>
                             <constraint firstItem="N9v-YS-ymv" firstAttribute="trailing" secondItem="ZfI-ms-aC6" secondAttribute="trailing" constant="20" id="TIq-A5-G87"/>
-                            <constraint firstItem="N9v-YS-ymv" firstAttribute="bottom" secondItem="jSb-Ib-u3w" secondAttribute="bottom" constant="40" id="TX7-jU-0u7"/>
-                            <constraint firstItem="jSb-Ib-u3w" firstAttribute="top" secondItem="ZfI-ms-aC6" secondAttribute="bottom" constant="17" id="ThD-SO-z1n"/>
-                            <constraint firstItem="N9v-YS-ymv" firstAttribute="trailing" secondItem="jSb-Ib-u3w" secondAttribute="trailing" constant="20" id="drz-jg-BKg"/>
-                            <constraint firstItem="jSb-Ib-u3w" firstAttribute="leading" secondItem="N9v-YS-ymv" secondAttribute="leading" constant="20" id="kQT-iU-3c4"/>
+                            <constraint firstItem="c99-hX-X43" firstAttribute="leading" secondItem="N9v-YS-ymv" secondAttribute="leading" constant="20" id="a8b-rw-5zC"/>
+                            <constraint firstItem="c99-hX-X43" firstAttribute="top" secondItem="ZfI-ms-aC6" secondAttribute="bottom" constant="17" id="gJs-72-f39"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N9v-YS-ymv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lectures" id="Z26-fD-xXF"/>
                     <connections>
+                        <outlet property="collectionView" destination="c99-hX-X43" id="pFH-6X-yq9"/>
                         <outlet property="lecturesLabel" destination="ZfI-ms-aC6" id="L1Q-za-y6w"/>
-                        <outlet property="tableView" destination="jSb-Ib-u3w" id="4S5-Be-nOo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1w-nf-w8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
