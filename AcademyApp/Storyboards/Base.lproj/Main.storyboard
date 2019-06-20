@@ -244,9 +244,18 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gae-87-xhj">
                                                     <rect key="frame" x="0.0" y="0.0" width="335" height="130"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lecture Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgD-6B-WIV">
+                                                    <rect key="frame" x="15" y="85.5" width="182" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="hgD-6B-WIV" secondAttribute="bottom" constant="18" id="4Jl-b3-gYb"/>
+                                            <constraint firstItem="hgD-6B-WIV" firstAttribute="width" secondItem="TJU-G0-XkF" secondAttribute="width" multiplier="0.5433" id="DWJ-wK-9lJ"/>
+                                            <constraint firstItem="hgD-6B-WIV" firstAttribute="leading" secondItem="TJU-G0-XkF" secondAttribute="leading" constant="15" id="HiJ-BM-L2Z"/>
                                             <constraint firstAttribute="trailing" secondItem="gae-87-xhj" secondAttribute="trailing" id="RSm-Kl-AyQ"/>
                                             <constraint firstItem="gae-87-xhj" firstAttribute="leading" secondItem="TJU-G0-XkF" secondAttribute="leading" id="UUh-dl-FRO"/>
                                             <constraint firstAttribute="bottom" secondItem="gae-87-xhj" secondAttribute="bottom" id="WWa-C4-zo3"/>
@@ -254,6 +263,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="lectureImageView" destination="gae-87-xhj" id="1zd-9g-jnI"/>
+                                            <outlet property="lectureNameLabel" destination="hgD-6B-WIV" id="txc-4j-jq0"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

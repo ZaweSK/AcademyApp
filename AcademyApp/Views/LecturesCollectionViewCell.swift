@@ -10,10 +10,37 @@ import UIKit
 
 class LecturesCollectionViewCell: UICollectionViewCell {
 
+    var lectureName: String?
+
     @IBOutlet weak var lectureImageView: UIImageView!
+    @IBOutlet weak var lectureNameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.cornerRadius = 7
+
+        setupLabel()
+
+        print(lectureNameLabel)
+        
+
+        lectureNameLabel.constraints.forEach {
+            print($0)
+        }
+    }
+
+}
+
+private extension LecturesCollectionViewCell {
+
+    func setupLabel() {
+
+        let attributedLectureName = NSAttributedString(string: lectureName ?? "LECTURE", attributes: [
+            NSAttributedString.Key.foregroundColor: UIColor.lectureNameTextColor,
+            NSAttributedString.Key.font: UIFont.lectureNameFont,
+            NSAttributedString.Key.kern: 0
+            ])
+
+        lectureNameLabel.attributedText = attributedLectureName
     }
 }
