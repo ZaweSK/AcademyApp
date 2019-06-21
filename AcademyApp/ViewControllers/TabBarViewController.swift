@@ -75,5 +75,4 @@ private extension TabBarViewController {
         lecturesTabBarItem.setImages(selectedImageName: "components", unselectedImageName: "components_unselected")
         profileTabBarItem.setImages(selectedImageName: "profileCircle", unselectedImageName: "profileCircle_unselected")
     }
-
 }
