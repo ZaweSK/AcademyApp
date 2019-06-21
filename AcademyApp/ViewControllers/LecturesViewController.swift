@@ -78,12 +78,17 @@ extension LecturesViewController {
 
     func setup() {
         delegatesSetup()
+        registerCell()
         setupUI()
     }
 
     func delegatesSetup() {
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+
+    func registerCell() {
+        collectionView.register(UINib(nibName: "LecturesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "lecturesCollectionViewCell")
     }
 
     func setupUI() {

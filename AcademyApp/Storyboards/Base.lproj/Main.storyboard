@@ -240,37 +240,7 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gae-87-xhj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="130"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lecture Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgD-6B-WIV">
-                                                    <rect key="frame" x="15" y="85.5" width="182" height="26.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkMark" translatesAutoresizingMaskIntoConstraints="NO" id="TnX-jJ-Ito">
-                                                    <rect key="frame" x="298" y="88" width="22" height="22"/>
-                                                </imageView>
-                                            </subviews>
                                         </view>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="hgD-6B-WIV" secondAttribute="bottom" constant="18" id="4Jl-b3-gYb"/>
-                                            <constraint firstItem="hgD-6B-WIV" firstAttribute="width" secondItem="TJU-G0-XkF" secondAttribute="width" multiplier="0.5433" id="DWJ-wK-9lJ"/>
-                                            <constraint firstItem="hgD-6B-WIV" firstAttribute="leading" secondItem="TJU-G0-XkF" secondAttribute="leading" constant="15" id="HiJ-BM-L2Z"/>
-                                            <constraint firstAttribute="trailing" secondItem="gae-87-xhj" secondAttribute="trailing" id="RSm-Kl-AyQ"/>
-                                            <constraint firstItem="gae-87-xhj" firstAttribute="leading" secondItem="TJU-G0-XkF" secondAttribute="leading" id="UUh-dl-FRO"/>
-                                            <constraint firstAttribute="trailing" secondItem="TnX-jJ-Ito" secondAttribute="trailing" constant="15" id="VDB-Wf-xyf"/>
-                                            <constraint firstAttribute="bottom" secondItem="gae-87-xhj" secondAttribute="bottom" id="WWa-C4-zo3"/>
-                                            <constraint firstAttribute="bottom" secondItem="TnX-jJ-Ito" secondAttribute="bottom" constant="20" id="alS-Iw-8Oy"/>
-                                            <constraint firstItem="gae-87-xhj" firstAttribute="top" secondItem="TJU-G0-XkF" secondAttribute="top" id="cDx-lW-1k1"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="checkMarkImageView" destination="TnX-jJ-Ito" id="IBO-TC-hV5"/>
-                                            <outlet property="lectureImageView" destination="gae-87-xhj" id="1zd-9g-jnI"/>
-                                            <outlet property="lectureNameLabel" destination="hgD-6B-WIV" id="txc-4j-jq0"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -319,7 +289,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkMark" width="22" height="22"/>
         <image name="email" width="20" height="20"/>
         <image name="logo" width="174" height="30"/>
         <image name="password" width="20" height="20"/>

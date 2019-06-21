@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Trump_Gothic_East_Bold.ttf">
+            <string>TrumpGothicEast-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="lecturesCollectionViewCell" id="gTV-IL-0wX" customClass="LecturesCollectionViewCell" customModule="AcademyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="130"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Swift I (Playground)" translatesAutoresizingMaskIntoConstraints="NO" id="fRR-Ds-Pad">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="130"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lecture name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hM-vI-cp4">
+                        <rect key="frame" x="15" y="76" width="182" height="36"/>
+                        <fontDescription key="fontDescription" name="TrumpGothicEast-Bold" family="Trump Gothic East" pointSize="30"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkMark" translatesAutoresizingMaskIntoConstraints="NO" id="lGl-PA-OdS">
+                        <rect key="frame" x="298" y="88" width="22" height="22"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="fRR-Ds-Pad" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="10P-km-rbC"/>
+                <constraint firstAttribute="trailing" secondItem="fRR-Ds-Pad" secondAttribute="trailing" id="GHY-9d-0Y7"/>
+                <constraint firstAttribute="bottom" secondItem="0hM-vI-cp4" secondAttribute="bottom" constant="18" id="GgV-US-DMR"/>
+                <constraint firstAttribute="bottom" secondItem="fRR-Ds-Pad" secondAttribute="bottom" id="K5Z-xL-ZT5"/>
+                <constraint firstAttribute="bottom" secondItem="lGl-PA-OdS" secondAttribute="bottom" constant="20" id="KYC-in-kRP"/>
+                <constraint firstItem="0hM-vI-cp4" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" multiplier="0.5433" id="ULc-wM-lrJ"/>
+                <constraint firstItem="fRR-Ds-Pad" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="oWP-gS-yly"/>
+                <constraint firstItem="0hM-vI-cp4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="phQ-GA-wn1"/>
+                <constraint firstAttribute="trailing" secondItem="lGl-PA-OdS" secondAttribute="trailing" constant="15" id="yb8-i5-OR7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="332" height="136"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="23"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="checkmarkImageView" destination="lGl-PA-OdS" id="9hm-2D-6MP"/>
+                <outlet property="lectureImageView" destination="fRR-Ds-Pad" id="7fI-Lr-qga"/>
+                <outlet property="lectureNameLabel" destination="0hM-vI-cp4" id="hfz-DH-DUh"/>
+            </connections>
+            <point key="canvasLocation" x="223.91304347826087" y="139.28571428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Swift I (Playground)" width="335" height="130"/>
+        <image name="checkMark" width="22" height="22"/>
+    </resources>
+</document>
