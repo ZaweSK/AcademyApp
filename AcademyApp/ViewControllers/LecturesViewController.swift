@@ -32,12 +32,7 @@ extension LecturesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath)
         -> UICollectionViewCell {
 
-            guard let cell = collectionView.dequeueReusableCell(
-                withReuseIdentifier: "lecturesCollectionViewCell",
-                for: indexPath) as? LecturesCollectionViewCell else {
-                    return UICollectionViewCell()
-            }
-
+            let cell: LecturesCollectionViewCell = collectionView.dequeReusableCell(for: indexPath)
             cell.lectureImageView.image = UIImage(named: "Swift I (Playground)")
             return cell
     }
@@ -51,7 +46,7 @@ extension LecturesViewController: UICollectionViewDelegateFlowLayout {
 
     private struct FlowLayouConstants {
         static let itemsVerticalSpacing: CGFloat = 10
-        static let  numberOfItemsInRow: CGFloat = 1
+        static let numberOfItemsInRow: CGFloat = 1
     }
 
     // holds the value of ratio - height to width of collection view cell based on original design
@@ -61,11 +56,19 @@ extension LecturesViewController: UICollectionViewDelegateFlowLayout {
         return collectionViewLeadingConstraint.constant + collectionViewTrailingConstraint.constant
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+
         return FlowLayouConstants.itemsVerticalSpacing
     }
 
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath) -> CGSize {
+
         let itemWidth = view.bounds.width - totalItemHorizontalPadding
         let itemHeight = itemWidth * aspectRatio
         return CGSize(width: itemWidth, height: itemHeight)
@@ -88,7 +91,7 @@ extension LecturesViewController {
     }
 
     func registerCell() {
-        collectionView.register(UINib(nibName: "LecturesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "lecturesCollectionViewCell")
+        collectionView.register(LecturesCollectionViewCell.self)
     }
 
     func setupUI() {

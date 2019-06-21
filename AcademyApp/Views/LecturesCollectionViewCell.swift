@@ -50,3 +50,10 @@ private extension LecturesCollectionViewCell {
         self.layer.cornerRadius = 5
     }
 }
+
+extension LecturesCollectionViewCell: NibLoadableView {
+
+    static var cellIdentifier: String {
+        return self.defaultReuseIdentifier
+    }
+}

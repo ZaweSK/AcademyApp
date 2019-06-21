@@ -10,6 +10,8 @@
 		91936EE080C60D7885873156 /* Pods_AcademyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1B489AE0C61C0425DCC86 /* Pods_AcademyApp.framework */; };
 		D08B318922BCCEB400EBA8ED /* LecturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318722BCCEB400EBA8ED /* LecturesCollectionViewCell.swift */; };
 		D08B318A22BCCEB400EBA8ED /* LecturesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08B318822BCCEB400EBA8ED /* LecturesCollectionViewCell.xib */; };
+		D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */; };
+		D08B318F22BCE49300EBA8ED /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318E22BCE49300EBA8ED /* NibLoadableView.swift */; };
 		D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DC622B37181003597EF /* RoundedCornersButton.swift */; };
 		D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCD22B67083003597EF /* UIFontExtensions.swift */; };
 		D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCF22B789BB003597EF /* StringExtensions.swift */; };
@@ -34,6 +36,8 @@
 		4EC1B489AE0C61C0425DCC86 /* Pods_AcademyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AcademyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D08B318722BCCEB400EBA8ED /* LecturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesCollectionViewCell.swift; sourceTree = "<group>"; };
 		D08B318822BCCEB400EBA8ED /* LecturesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturesCollectionViewCell.xib; sourceTree = "<group>"; };
+		D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
+		D08B318E22BCE49300EBA8ED /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
 		D0922DC622B37181003597EF /* RoundedCornersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersButton.swift; sourceTree = "<group>"; };
 		D0922DCD22B67083003597EF /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		D0922DCF22B789BB003597EF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -106,6 +110,14 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		D08B318D22BCE47800EBA8ED /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D08B318E22BCE49300EBA8ED /* NibLoadableView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		D0922DCA22B3A871003597EF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +149,7 @@
 		D0E73BAB22B2698300150481 /* AcademyApp */ = {
 			isa = PBXGroup;
 			children = (
+				D08B318D22BCE47800EBA8ED /* Protocols */,
 				D0E73BC722B291D300150481 /* Extensions */,
 				D08921F322B91654005A7D4E /* Resources */,
 				D08921F522B916CD005A7D4E /* Storyboards */,
@@ -156,6 +169,7 @@
 				D0922DCF22B789BB003597EF /* StringExtensions.swift */,
 				D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */,
 				D0DA722122BA4AA500887039 /* UITabBarItemExtensions.swift */,
+				D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -305,10 +319,12 @@
 				D0DA722022BA387700887039 /* TabBarViewController.swift in Sources */,
 				D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */,
 				D0DA722422BA684E00887039 /* LecturesViewController.swift in Sources */,
+				D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */,
 				D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */,
 				D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */,
 				D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */,
 				D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */,
+				D08B318F22BCE49300EBA8ED /* NibLoadableView.swift in Sources */,
 				D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */,
 				D0E73BAD22B2698300150481 /* AppDelegate.swift in Sources */,
 				D08B318922BCCEB400EBA8ED /* LecturesCollectionViewCell.swift in Sources */,
