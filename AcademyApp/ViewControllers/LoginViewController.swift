@@ -110,7 +110,7 @@ private extension LoginViewController {
             return
         }
 
-        //adjusting vertical spacing of elements on login screen based on whether the keyboard is visible
+        // adjusting vertical spacing of elements on login screen based on whether the keyboard is visible
 
         scrollViewBottomConstraint.constant = isVisible ?  -keyboardRect.height  : 0
         verticalSpacingConstraint.constant = isVisible ? Config.adjustedVerticalSpacing : defaultVerticalSpacingConstant
