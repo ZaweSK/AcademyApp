@@ -208,10 +208,8 @@ private extension LoginViewController {
     func doneButtonSetup() {
         doneButton.isEnabled = false
 
-        let attributedTitle = NSAttributedString(string: doneButton.title(for: .normal) ?? "Done", attributes: [
-            NSAttributedString.Key.font: UIFont.doneButtonTitleFont,
-            NSAttributedString.Key.foregroundColor: UIColor.white])
-
-        doneButton.setAttributedTitle(attributedTitle, for: .normal)
+        doneButton.setTitle(doneButton.titleLabel?.text ?? "Done", for: .normal)
+        doneButton.titleLabel?.font = UIFont.doneButtonTitleFont
+        doneButton.titleLabel?.textColor = UIColor.white
     }
 }
