@@ -16,9 +16,9 @@ class LecturesCollectionViewCell: UICollectionViewCell {
         }
     }
 
-    @IBOutlet weak var lectureImageView: UIImageView!
-    @IBOutlet weak var lectureNameLabel: UILabel!
-    @IBOutlet weak var checkmarkImageView: UIImageView!
+    @IBOutlet private weak var lectureImageView: UIImageView!
+    @IBOutlet private weak var lectureNameLabel: UILabel!
+    @IBOutlet private weak var checkmarkImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,7 +26,15 @@ class LecturesCollectionViewCell: UICollectionViewCell {
     }
 }
 
-// MARK: - UI setup methods
+// MARK: - Public setup methods
+
+extension LecturesCollectionViewCell {
+    func configure() {
+        lectureImageView.image = UIImage(named: "Swift I (Playground)")
+    }
+}
+
+// MARK: - Private UI setup methods
 
 private extension LecturesCollectionViewCell {
 

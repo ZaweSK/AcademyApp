@@ -12,10 +12,10 @@ class LecturesViewController: UIViewController {
 
     var lectures = ["a", "b", "c", "d", "e", "f"]
 
-    @IBOutlet weak var lecturesLabel: UILabel!
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var collectionViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet weak var collectionViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var lecturesLabel: UILabel!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var collectionViewTrailingConstraint: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ extension LecturesViewController: UICollectionViewDataSource {
         -> UICollectionViewCell {
 
             let cell: LecturesCollectionViewCell = collectionView.dequeReusableCell(for: indexPath)
-            cell.lectureImageView.image = UIImage(named: "Swift I (Playground)")
+            cell.configure()
             return cell
     }
 }
@@ -44,7 +44,7 @@ extension LecturesViewController: UICollectionViewDelegate {
 
 extension LecturesViewController: UICollectionViewDelegateFlowLayout {
 
-    private struct FlowLayouConstants {
+    private enum FlowLayouConstants {
         static let itemsVerticalSpacing: CGFloat = 10
         static let numberOfItemsInRow: CGFloat = 1
     }
