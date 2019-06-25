@@ -162,7 +162,7 @@ private extension LoginViewController {
     func setupUI() {
         backgroundColorSetup()
         textFieldsSetup()
-        showLabelSetup()
+        showButtonSetup()
         horizontalLinesSetup()
         doneButtonSetup()
 
@@ -193,7 +193,7 @@ private extension LoginViewController {
         }
     }
 
-    func showLabelSetup() {
+    func showButtonSetup() {
         showButton.isHidden = true
 
         let attributedTitle = NSAttributedString(string: showButton.title(for: .normal) ?? "SHOW", attributes: [
