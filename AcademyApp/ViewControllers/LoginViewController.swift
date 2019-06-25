@@ -15,10 +15,14 @@ class LoginViewController: UIViewController {
     // MARK: - Stored Properities
 
     // default vertical spacing constraint constant between doneButton and login form
-    var defaultVerticalSpacingConstant: CGFloat = 0
+    private var defaultVerticalSpacingConstant: CGFloat = 0
 
-    var textFields: [UITextField] {
+    private var textFields: [UITextField] {
         return [emailTextField, passwordTextField ]
+    }
+
+    private enum Config {
+        static let adjustedVerticalSpacing: CGFloat = 56
     }
 
     // MARK: - @IBOutlets
@@ -55,7 +59,7 @@ class LoginViewController: UIViewController {
             return
         }
 
-        if passwordText.count > 0 {
+        if passwordText.isEmpty {
             UIView.animate(withDuration: 0.2) {
                 self.showButton.isHidden = passwordText.isEmpty ? true : false
             }
@@ -209,14 +213,5 @@ private extension LoginViewController {
             NSAttributedString.Key.foregroundColor: UIColor.white])
 
         doneButton.setAttributedTitle(attributedTitle, for: .normal)
-    }
-}
-
-// MARK: - Constants
-
-private extension LoginViewController {
-    struct Config {
-        // adjusted vertical spacing constraint constant between doneButton and login form
-        static let adjustedVerticalSpacing: CGFloat = 56
     }
 }
