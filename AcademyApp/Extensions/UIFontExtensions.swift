@@ -37,6 +37,5 @@ extension UIFont {
 
     static func backUpFont(size: CGFloat) -> UIFont {
         return UIFont(name: "Helvetica", size: size)!
-
     }
 }

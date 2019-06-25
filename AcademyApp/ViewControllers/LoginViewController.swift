@@ -23,15 +23,15 @@ class LoginViewController: UIViewController {
 
     // MARK: - @IBOutlets
 
-    @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet var horizontalLineViews: [UIView]!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var doneButton: RoundedCornersButton!
-    @IBOutlet weak var showButton: UIButton!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet private weak var scrollViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private var horizontalLineViews: [UIView]!
+    @IBOutlet private  weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var doneButton: RoundedCornersButton!
+    @IBOutlet private weak var showButton: UIButton!
+    @IBOutlet private weak var scrollView: UIScrollView!
     // vertical spacing constraint between doneButton and login form
-    @IBOutlet weak var verticalSpacingConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var verticalSpacingConstraint: NSLayoutConstraint!
 
     // MARK: - View Controller's life cycle methods
 
@@ -46,11 +46,11 @@ class LoginViewController: UIViewController {
 
     // MARK: - @IBActions
 
-    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+    @IBAction private func backgroundTapped(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
 
-    @IBAction func textFieldEditingDidChange(_ sender: UITextField) {
+    @IBAction private func textFieldEditingDidChange(_ sender: UITextField) {
         guard let emailText = emailTextField.text, let passwordText = passwordTextField.text  else {
             return
         }
@@ -64,7 +64,7 @@ class LoginViewController: UIViewController {
         doneButton.isEnabled = String.isValidEmail(possibleEmail: emailText) && !passwordText.isEmpty ? true : false
     }
 
-    @IBAction func showButtonTapped(_ sender: UIButton) {
+    @IBAction private func showButtonTapped(_ sender: UIButton) {
         passwordTextField.isSecureTextEntry.toggle()
         setTitleForShowButton(for: passwordTextField.isSecureTextEntry)
     }
@@ -115,7 +115,7 @@ private extension LoginViewController {
         scrollViewBottomConstraint.constant = isVisible ?  -keyboardRect.height  : 0
         verticalSpacingConstraint.constant = isVisible ? Config.adjustedVerticalSpacing : defaultVerticalSpacingConstant
 
-        //call layoutIfNeeded() before scrollView.scrollTo() otherwise animation will break
+        // call layoutIfNeeded() before scrollView.scrollTo() otherwise animation will break
 
         self.view.layoutIfNeeded()
         scrollView.scrollTo(direction: .bottom, animated: false)
