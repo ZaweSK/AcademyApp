@@ -9,30 +9,29 @@
 import Foundation
 import UIKit
 
-enum ScrollDirection {
+extension UIScrollView {
 
-    case bottom
-    case top
+    enum ScrollDirection {
+        case bottom
+        case top
+    }
 
-    fileprivate func contentOffset(with scrollView: UIScrollView) -> CGPoint {
+    private func contentOffset(to direction: ScrollDirection) -> CGPoint {
 
         var contentOffset = CGPoint.zero
 
-        switch self {
+        switch direction {
 
         case .bottom:
-            contentOffset = CGPoint(x: 0, y: scrollView.contentSize.height - scrollView.bounds.size.height)
+            contentOffset = CGPoint(x: 0, y: self.contentSize.height - self.bounds.size.height)
         case .top:
-            contentOffset = CGPoint(x: 0, y: -scrollView.contentInset.top)
+            contentOffset = CGPoint(x: 0, y: -self.contentInset.top)
         }
 
         return contentOffset
     }
-}
-
-extension UIScrollView {
 
     func scrollTo(direction: ScrollDirection, animated: Bool = true) {
-        self.setContentOffset(direction.contentOffset(with: self), animated: animated)
+        setContentOffset(self.contentOffset(to: direction), animated: animated)
     }
 }

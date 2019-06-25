@@ -54,7 +54,7 @@ extension UIFont {
     // MARK: - Static methods
 
     static func backUpFont(size: CGFloat) -> UIFont {
+        // swiftlint:disable:next force_unwrapping
         return UIFont(name: "Helvetica", size: size)!
-
     }
 }
