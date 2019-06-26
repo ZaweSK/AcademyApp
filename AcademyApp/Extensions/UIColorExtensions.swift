@@ -44,6 +44,15 @@ extension UIColor {
         return UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
     }
 
+    // returns clear color
+    static var firstColorForGradient: CGColor {
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
+    }
+
+    static var secondColorForGradient: CGColor {
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.8).cgColor
+    }
+
     // MARK: - Conveniecne initalizers
 
     convenience init(red: CGFloat, green: CGFloat, blue: CGFloat) {

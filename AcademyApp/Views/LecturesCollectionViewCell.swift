@@ -41,6 +41,7 @@ private extension LecturesCollectionViewCell {
     func setup() {
         setupLabel()
         setupCornerRadius()
+        setupGradientLayer()
     }
 
     func setupLabel() {
@@ -56,6 +57,14 @@ private extension LecturesCollectionViewCell {
 
     func setupCornerRadius() {
         self.layer.cornerRadius = 5
+    }
+
+    func setupGradientLayer() {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.contentView.bounds
+        gradientLayer.colors = [UIColor.firstColorForGradient, UIColor.secondColorForGradient]
+        gradientLayer.locations = [ 0 ]
+        contentView.layer.insertSublayer(gradientLayer, at: 1)
     }
 }
 
