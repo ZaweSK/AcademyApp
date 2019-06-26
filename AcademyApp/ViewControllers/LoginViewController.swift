@@ -10,68 +10,69 @@ import UIKit
 
 // MARK: - View Controller for login scree
 
-class LoginViewController: UIViewController
-{
+class LoginViewController: UIViewController {
+
+    // MARK: - Stored Properities
+
+    private var textFields: [UITextField] {
+        return [emailTextField, passwordTextField ]
+    }
+
+    private enum UIConfig {
+        // default vertical spacing constraint constant between doneButton and login form
+        static var defaultVerticalSpacingConstant: CGFloat = 0
+        static let adjustedVerticalSpacing: CGFloat = 56
+    }
+
+    // MARK: - @IBOutlets
+
+    @IBOutlet private weak var scrollViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet private var horizontalLineViews: [UIView]!
+    @IBOutlet private  weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
+    @IBOutlet private weak var doneButton: RoundedCornersButton!
+    @IBOutlet private weak var showButton: UIButton!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    // vertical spacing constraint between doneButton and login form
+    @IBOutlet private weak var verticalSpacingConstraint: NSLayoutConstraint!
+
     // MARK: - View Controller's life cycle methods
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
-    
+
     deinit {
         removeObservers()
     }
-    
-    // MARK: - Stored Properities
-    
-    var defaultDoneButtonLoginFormVerticalSpacingConstant : CGFloat = 0
-    
-    // MARK: - @IBOutlets
-    
-    @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
-    @IBOutlet weak var doneButtonLoginFormVerticalSpacingConstraint: NSLayoutConstraint!
-    
-    @IBOutlet var horizontalLineViews: [UIView]!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var doneButton: RoundedCornersButton!
-    @IBOutlet weak var showButton: UIButton!
-    @IBOutlet weak var scrollView: UIScrollView!
-    
+
     // MARK: - @IBActions
-    
-    @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
+
+    @IBAction private func backgroundTapped(_ sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
-    
-    @IBAction func textFieldEditingDidChange(_ sender: UITextField) {
-        
+
+    @IBAction private func textFieldEditingDidChange(_ sender: UITextField) {
         guard let emailText = emailTextField.text, let passwordText = passwordTextField.text  else {
             return
         }
-        
-        if passwordText.count > 0 {
-            UIView.animate(withDuration: 0.2) {
-                self.showButton.isHidden = passwordText.count > 0 ? false : true
-            }
+
+        UIView.animate(withDuration: 0.2) {
+            self.showButton.isHidden = passwordText.isEmpty ? true : false
         }
-        
-        doneButton.isEnabled = String.isValidEmail(possibleEmail: emailText) && passwordText.count > 0 ? true : false
+        doneButton.isEnabled = String.isValidEmail(possibleEmail: emailText) && !passwordText.isEmpty ? true : false
     }
-    
-    
-    @IBAction func showButtonTapped(_ sender: UIButton) {
-        passwordTextField.isSecureTextEntry = !passwordTextField.isSecureTextEntry
+
+    @IBAction private func showButtonTapped(_ sender: UIButton) {
+        passwordTextField.isSecureTextEntry.toggle()
         setTitleForShowButton(for: passwordTextField.isSecureTextEntry)
     }
-    
 }
 
 // MARK: - UITextField's delegate methods
 
-extension LoginViewController : UITextFieldDelegate
-{
+extension LoginViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
@@ -80,151 +81,131 @@ extension LoginViewController : UITextFieldDelegate
 
 // MARK: - UI methods
 
-private extension LoginViewController
-{
-    
-    func setTitleForShowButton(for secureTextState: Bool){
-        
+private extension LoginViewController {
+
+    func setTitleForShowButton(for secureTextState: Bool) {
         let attributes = showButton.attributedTitle(for: .normal)?.attributes(at: 0, effectiveRange: nil)
         let title = secureTextState ? "SHOW" : "HIDE"
-        
+
         showButton.setAttributedTitle(NSAttributedString(string: title, attributes: attributes), for: .normal)
     }
 }
 
 // MARK: - Responding to keyboard notifications
 
-private extension LoginViewController
-{
-   
-    @objc func keyboardWillShow(notification: Notification){
-        
+private extension LoginViewController {
+
+    @objc func keyboardWillShow(notification: Notification) {
         setKeyboardIsVisible(true, with: notification)
     }
-    
-    @objc func keyboardWillHide(notification: Notification){
-        
+
+    @objc func keyboardWillHide(notification: Notification) {
         setKeyboardIsVisible(false, with: notification)
     }
-    
-    func setKeyboardIsVisible(_ isVisible : Bool, with notification: Notification){
-        
-        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue  else {
+
+    func setKeyboardIsVisible(_ isVisible: Bool, with notification: Notification) {
+
+        guard let keyboardRect = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey]
+            as? NSValue)?.cgRectValue  else {
             return
         }
-        
-        //adjusting vertical spacing of elements on login screen based on whether the keyboard is visible
-        
+
+        // adjusting vertical spacing of elements on login screen based on whether the keyboard is visible
+
         scrollViewBottomConstraint.constant = isVisible ?  -keyboardRect.height  : 0
-        doneButtonLoginFormVerticalSpacingConstraint.constant = isVisible ? Config.adjustedDoneButtonLoginFormVerticalSpacing : defaultDoneButtonLoginFormVerticalSpacingConstant
-        
-        //call layoutIfNeeded() before scroll() otherwise aniamtion will break
-        
+        verticalSpacingConstraint.constant = isVisible ? UIConfig.adjustedVerticalSpacing : UIConfig.defaultVerticalSpacingConstant
+
+        // call layoutIfNeeded() before scrollView.scrollTo() otherwise animation will break
+
         self.view.layoutIfNeeded()
         scrollView.scrollTo(direction: .bottom, animated: false)
     }
 }
 
-
 // MARK: - Setup Methods
 
-private extension LoginViewController
-{
-    var textFields : [UITextField] {
-        return [emailTextField, passwordTextField ]
-    }
-    
+private extension LoginViewController {
+
     func setup() {
         setupUI()
         setDelegates()
         addObservers()
     }
-    
+
     // MARK: - Notification Center Setup
-    
-    func addObservers(){
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+
+    func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)),
+                                               name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)),
+                                               name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
-    func removeObservers(){
+
+    func removeObservers() {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
+
     // MARK: - Delegation setup
-    
-    func setDelegates(){
+
+    func setDelegates() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }
-    
+
     // MARK: - UI Setup Methods
-    
-    func setupUI(){
-        backgroundColorSetup()
-        textFieldsSetup()
-        showLabelSetup()
-        horizontalLinesSetup()
-        doneButtonSetup()
-        
-        defaultDoneButtonLoginFormVerticalSpacingConstant = doneButtonLoginFormVerticalSpacingConstraint.constant
-        
+
+    func setupUI() {
+        setupBackgroundColor()
+        setupTextFields()
+        setupShowButton()
+        setupHorizontalLines()
+        setupDoneButton()
+
+        UIConfig.defaultVerticalSpacingConstant = verticalSpacingConstraint.constant
     }
-    
-    func backgroundColorSetup(){
-        view.backgroundColor = UIColor.almostBlack
+
+    func setupBackgroundColor() {
+        view.backgroundColor = .almostBlack
     }
-    
-    func horizontalLinesSetup(){
+
+    func setupHorizontalLines() {
         horizontalLineViews.forEach {
-            $0.backgroundColor = UIColor.blackish
+            $0.backgroundColor = .blackish
         }
     }
-    
-    func textFieldsSetup(){
-        
+
+    func setupTextFields() {
+
         textFields.forEach {
             $0.attributedPlaceholder = NSAttributedString(string: $0.placeholder ?? "", attributes: [
-                NSAttributedString.Key.foregroundColor : UIColor.brownGray,
-                NSAttributedString.Key.font : UIFont.showLabelFont,
-                NSAttributedString.Key.kern : 1
+                NSAttributedString.Key.foregroundColor: UIColor.brownGray,
+                NSAttributedString.Key.font: UIFont.showLabelFont,
+                NSAttributedString.Key.kern: 1
                 ])
-            
-            $0.textColor = UIColor.white
+
+            $0.textColor = .white
             $0.keyboardAppearance = .dark
         }
     }
-    
-    func showLabelSetup(){
+
+    func setupShowButton() {
         showButton.isHidden = true
-        
+
         let attributedTitle = NSAttributedString(string: showButton.title(for: .normal) ?? "SHOW", attributes: [
-            NSAttributedString.Key.foregroundColor : UIColor.brownGray,
-            NSAttributedString.Key.font : UIFont.showLabelFont,
-            NSAttributedString.Key.kern : 1
+            NSAttributedString.Key.foregroundColor: UIColor.brownGray,
+            NSAttributedString.Key.font: UIFont.showLabelFont,
+            NSAttributedString.Key.kern: 1
             ])
-        
+
         showButton.setAttributedTitle(attributedTitle, for: .normal)
     }
-    
-    func doneButtonSetup(){
+
+    func setupDoneButton() {
         doneButton.isEnabled = false
-        
-        let attributedTitle = NSAttributedString(string: doneButton.title(for: .normal) ?? "Done", attributes: [
-            NSAttributedString.Key.font : UIFont.doneButtonTitleFont,
-            NSAttributedString.Key.foregroundColor : UIColor.white])
-        
-        doneButton.setAttributedTitle(attributedTitle, for: .normal)
+
+        doneButton.setTitle(doneButton.titleLabel?.text ?? "Done", for: .normal)
+        doneButton.titleLabel?.font = .doneButtonTitleFont
+        doneButton.titleLabel?.textColor = .white
     }
 }
-
-// MARK: - Constants
-
-private extension LoginViewController
-{
-    struct Config {
-        static let adjustedDoneButtonLoginFormVerticalSpacing : CGFloat = 56
-    }
-}
-

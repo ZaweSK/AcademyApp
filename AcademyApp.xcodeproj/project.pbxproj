@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91936EE080C60D7885873156 /* Pods_AcademyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1B489AE0C61C0425DCC86 /* Pods_AcademyApp.framework */; };
 		D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DC622B37181003597EF /* RoundedCornersButton.swift */; };
 		D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCD22B67083003597EF /* UIFontExtensions.swift */; };
 		D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCF22B789BB003597EF /* StringExtensions.swift */; };
@@ -20,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B934978495AC9894A6754E5 /* Pods-AcademyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademyApp.debug.xcconfig"; path = "Target Support Files/Pods-AcademyApp/Pods-AcademyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		4EC1B489AE0C61C0425DCC86 /* Pods_AcademyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AcademyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0922DC622B37181003597EF /* RoundedCornersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersButton.swift; sourceTree = "<group>"; };
 		D0922DCD22B67083003597EF /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		D0922DCF22B789BB003597EF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
@@ -32,6 +35,7 @@
 		D0E73BB822B2698400150481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0E73BC922B291F500150481 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
+		DABC6D1BD97525722761B5C4 /* Pods-AcademyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademyApp.release.xcconfig"; path = "Target Support Files/Pods-AcademyApp/Pods-AcademyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,18 +43,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91936EE080C60D7885873156 /* Pods_AcademyApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D0922DC522B37160003597EF /* Designables */ = {
+		30F3A164F91C78B12262FA98 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B934978495AC9894A6754E5 /* Pods-AcademyApp.debug.xcconfig */,
+				DABC6D1BD97525722761B5C4 /* Pods-AcademyApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D08921F222B915DB005A7D4E /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D0922DC622B37181003597EF /* RoundedCornersButton.swift */,
 			);
-			path = Designables;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D08921F322B91654005A7D4E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0E73BB322B2698400150481 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D08921F522B916CD005A7D4E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D0E73BB022B2698300150481 /* Main.storyboard */,
+				D0E73BB522B2698400150481 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		D0922DCA22B3A871003597EF /* ViewControllers */ = {
@@ -66,6 +97,8 @@
 			children = (
 				D0E73BAB22B2698300150481 /* AcademyApp */,
 				D0E73BAA22B2698300150481 /* Products */,
+				30F3A164F91C78B12262FA98 /* Pods */,
+				F8CB378600CF4F3B14E36D94 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,13 +113,12 @@
 		D0E73BAB22B2698300150481 /* AcademyApp */ = {
 			isa = PBXGroup;
 			children = (
-				D0922DCA22B3A871003597EF /* ViewControllers */,
-				D0922DC522B37160003597EF /* Designables */,
 				D0E73BC722B291D300150481 /* Extensions */,
+				D08921F322B91654005A7D4E /* Resources */,
+				D08921F522B916CD005A7D4E /* Storyboards */,
+				D08921F222B915DB005A7D4E /* Views */,
+				D0922DCA22B3A871003597EF /* ViewControllers */,
 				D0E73BAC22B2698300150481 /* AppDelegate.swift */,
-				D0E73BB022B2698300150481 /* Main.storyboard */,
-				D0E73BB322B2698400150481 /* Assets.xcassets */,
-				D0E73BB522B2698400150481 /* LaunchScreen.storyboard */,
 				D0E73BB822B2698400150481 /* Info.plist */,
 			);
 			path = AcademyApp;
@@ -103,6 +135,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		F8CB378600CF4F3B14E36D94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EC1B489AE0C61C0425DCC86 /* Pods_AcademyApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +150,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0E73BBB22B2698400150481 /* Build configuration list for PBXNativeTarget "AcademyApp" */;
 			buildPhases = (
+				D08921F122B8F3CA005A7D4E /* Run SwiftLint script */,
+				9C82A4A93943FACD7CBAF869 /* [CP] Check Pods Manifest.lock */,
 				D0E73BA522B2698300150481 /* Sources */,
 				D0E73BA622B2698300150481 /* Frameworks */,
 				D0E73BA722B2698300150481 /* Resources */,
@@ -168,6 +210,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C82A4A93943FACD7CBAF869 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AcademyApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D08921F122B8F3CA005A7D4E /* Run SwiftLint script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0E73BA522B2698300150481 /* Sources */ = {
@@ -324,9 +409,12 @@
 		};
 		D0E73BBC22B2698400150481 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B934978495AC9894A6754E5 /* Pods-AcademyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L478Y6AQTT;
 				INFOPLIST_FILE = AcademyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -334,6 +422,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = strv.AcademyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -341,9 +430,12 @@
 		};
 		D0E73BBD22B2698400150481 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DABC6D1BD97525722761B5C4 /* Pods-AcademyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L478Y6AQTT;
 				INFOPLIST_FILE = AcademyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -351,6 +443,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = strv.AcademyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
