@@ -14,14 +14,13 @@ class LoginViewController: UIViewController {
 
     // MARK: - Stored Properities
 
-    // default vertical spacing constraint constant between doneButton and login form
-    private var defaultVerticalSpacingConstant: CGFloat = 0
-
     private var textFields: [UITextField] {
         return [emailTextField, passwordTextField ]
     }
 
-    private enum Config {
+    private enum UIConfig {
+        // default vertical spacing constraint constant between doneButton and login form
+        static var defaultVerticalSpacingConstant: CGFloat = 0
         static let adjustedVerticalSpacing: CGFloat = 56
     }
 
@@ -117,7 +116,7 @@ private extension LoginViewController {
         // adjusting vertical spacing of elements on login screen based on whether the keyboard is visible
 
         scrollViewBottomConstraint.constant = isVisible ?  -keyboardRect.height  : 0
-        verticalSpacingConstraint.constant = isVisible ? Config.adjustedVerticalSpacing : defaultVerticalSpacingConstant
+        verticalSpacingConstraint.constant = isVisible ? UIConfig.adjustedVerticalSpacing : UIConfig.defaultVerticalSpacingConstant
 
         // call layoutIfNeeded() before scrollView.scrollTo() otherwise animation will break
 
@@ -166,7 +165,7 @@ private extension LoginViewController {
         horizontalLinesSetup()
         doneButtonSetup()
 
-        defaultVerticalSpacingConstant = verticalSpacingConstraint.constant
+        UIConfig.defaultVerticalSpacingConstant = verticalSpacingConstraint.constant
     }
 
     func backgroundColorSetup() {
