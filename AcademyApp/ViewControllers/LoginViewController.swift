@@ -159,26 +159,26 @@ private extension LoginViewController {
     // MARK: - UI Setup Methods
 
     func setupUI() {
-        backgroundColorSetup()
-        textFieldsSetup()
-        showButtonSetup()
-        horizontalLinesSetup()
-        doneButtonSetup()
+        setupBackgroundColor()
+        setupTextFields()
+        setupShowButton()
+        setupHorizontalLines()
+        setupDoneButton()
 
         UIConfig.defaultVerticalSpacingConstant = verticalSpacingConstraint.constant
     }
 
-    func backgroundColorSetup() {
+    func setupBackgroundColor() {
         view.backgroundColor = UIColor.almostBlack
     }
 
-    func horizontalLinesSetup() {
+    func setupHorizontalLines() {
         horizontalLineViews.forEach {
             $0.backgroundColor = UIColor.blackish
         }
     }
 
-    func textFieldsSetup() {
+    func setupTextFields() {
 
         textFields.forEach {
             $0.attributedPlaceholder = NSAttributedString(string: $0.placeholder ?? "", attributes: [
@@ -192,7 +192,7 @@ private extension LoginViewController {
         }
     }
 
-    func showButtonSetup() {
+    func setupShowButton() {
         showButton.isHidden = true
 
         let attributedTitle = NSAttributedString(string: showButton.title(for: .normal) ?? "SHOW", attributes: [
@@ -204,7 +204,7 @@ private extension LoginViewController {
         showButton.setAttributedTitle(attributedTitle, for: .normal)
     }
 
-    func doneButtonSetup() {
+    func setupDoneButton() {
         doneButton.isEnabled = false
 
         doneButton.setTitle(doneButton.titleLabel?.text ?? "Done", for: .normal)
