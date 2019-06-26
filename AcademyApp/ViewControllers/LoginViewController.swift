@@ -58,12 +58,9 @@ class LoginViewController: UIViewController {
             return
         }
 
-        if passwordText.isEmpty {
-            UIView.animate(withDuration: 0.2) {
-                self.showButton.isHidden = passwordText.isEmpty ? true : false
-            }
+        UIView.animate(withDuration: 0.2) {
+            self.showButton.isHidden = passwordText.isEmpty ? true : false
         }
-
         doneButton.isEnabled = String.isValidEmail(possibleEmail: emailText) && !passwordText.isEmpty ? true : false
     }
 
