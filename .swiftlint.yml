@@ -9,7 +9,6 @@
 # Rule identifiers to exclude from running.
 #
 disabled_rules:
-  - trailing_whitespace
 
 #
 # Some rules are only opt-in. Find all the available rules by running: swiftlint rules
@@ -74,9 +73,9 @@ trailing_whitespace:
   ignores_empty_lines: yes
 
 line_length:
-  ignores_function_declarations: yes
-  ignores_comments: yes
-  ignores_urls: yes
+  ignores_function_declarations: true
+  ignores_comments: true
+  ignores_urls: true
   error: 300
   warning: 200
 
