@@ -169,12 +169,12 @@ private extension LoginViewController {
     }
 
     func setupBackgroundColor() {
-        view.backgroundColor = UIColor.almostBlack
+        view.backgroundColor = .almostBlack
     }
 
     func setupHorizontalLines() {
         horizontalLineViews.forEach {
-            $0.backgroundColor = UIColor.blackish
+            $0.backgroundColor = .blackish
         }
     }
 
@@ -187,7 +187,7 @@ private extension LoginViewController {
                 NSAttributedString.Key.kern: 1
                 ])
 
-            $0.textColor = UIColor.white
+            $0.textColor = .white
             $0.keyboardAppearance = .dark
         }
     }
@@ -208,7 +208,7 @@ private extension LoginViewController {
         doneButton.isEnabled = false
 
         doneButton.setTitle(doneButton.titleLabel?.text ?? "Done", for: .normal)
-        doneButton.titleLabel?.font = UIFont.doneButtonTitleFont
-        doneButton.titleLabel?.textColor = UIColor.white
+        doneButton.titleLabel?.font = .doneButtonTitleFont
+        doneButton.titleLabel?.textColor = .white
     }
 }
