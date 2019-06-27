@@ -42,7 +42,7 @@ extension LecturesViewController: UICollectionViewDelegate {
 
 extension LecturesViewController: UICollectionViewDelegateFlowLayout {
 
-    private enum FlowLayouConstants {
+    private enum FlowLayoutConstants {
         static let itemsVerticalSpacing: CGFloat = 10
     }
 
@@ -54,7 +54,7 @@ extension LecturesViewController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return FlowLayouConstants.itemsVerticalSpacing
+        return FlowLayoutConstants.itemsVerticalSpacing
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -90,8 +90,8 @@ extension LecturesViewController {
     }
 
     func backgroundColorSetup() {
-        view.backgroundColor = UIColor.almostBlack
-        collectionView.backgroundColor = UIColor.clear
+        view.backgroundColor = .almostBlack
+        collectionView.backgroundColor = .clear
     }
 
     func lecturesLabelSetup() {

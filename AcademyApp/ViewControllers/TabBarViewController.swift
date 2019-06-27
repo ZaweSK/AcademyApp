@@ -39,8 +39,8 @@ private extension TabBarViewController {
     func colorSetup() {
         tabBar.isTranslucent = false
 
-        tabBar.barTintColor = UIColor.almostBlack
-        tabBar.unselectedItemTintColor = UIColor.brownGray
+        tabBar.barTintColor = .almostBlack
+        tabBar.unselectedItemTintColor = .brownGray
     }
 
     func shadowSetup() {
@@ -52,7 +52,7 @@ private extension TabBarViewController {
     }
 
     func fontAttributes(tabIsSelected: Bool) -> [NSAttributedString.Key: Any] {
-        let fontColor = tabIsSelected ? UIColor.white : UIColor.brownGray
+        let fontColor: UIColor = tabIsSelected ? .white : .brownGray
         let attributes: [NSAttributedString.Key: Any] =  [
             NSAttributedString.Key.foregroundColor: fontColor,
             NSAttributedString.Key.font: UIFont.tabBarFont,
@@ -67,11 +67,10 @@ private extension TabBarViewController {
     }
 
     func tabBarItemsPicturesSetup() {
-
-        guard let lecturesTabBarItem = lecturesTabBarItem, let profileTabBarItem = profileTabBarItem else {
+        guard let lecturesTabBarItem = lecturesTabBarItem,
+            let profileTabBarItem = profileTabBarItem else {
             return
         }
-
         lecturesTabBarItem.setImages(selectedImageName: "components", unselectedImageName: "components_unselected")
         profileTabBarItem.setImages(selectedImageName: "profileCircle", unselectedImageName: "profileCircle_unselected")
     }
