@@ -14,14 +14,13 @@ class LoginViewController: UIViewController {
 
     // MARK: - Stored Properities
 
-    // default vertical spacing constraint constant between doneButton and login form
-    private var defaultVerticalSpacingConstant: CGFloat = 0
-
     private var textFields: [UITextField] {
         return [emailTextField, passwordTextField ]
     }
 
-    private enum Config {
+    private enum UIConfig {
+        // default vertical spacing constraint constant between doneButton and login form
+        static var defaultVerticalSpacingConstant: CGFloat = 0
         static let adjustedVerticalSpacing: CGFloat = 56
     }
 
@@ -59,12 +58,9 @@ class LoginViewController: UIViewController {
             return
         }
 
-        if passwordText.isEmpty {
-            UIView.animate(withDuration: 0.2) {
-                self.showButton.isHidden = passwordText.isEmpty ? true : false
-            }
+        UIView.animate(withDuration: 0.2) {
+            self.showButton.isHidden = passwordText.isEmpty ? true : false
         }
-
         doneButton.isEnabled = String.isValidEmail(possibleEmail: emailText) && !passwordText.isEmpty ? true : false
     }
 
@@ -117,7 +113,7 @@ private extension LoginViewController {
         // adjusting vertical spacing of elements on login screen based on whether the keyboard is visible
 
         scrollViewBottomConstraint.constant = isVisible ?  -keyboardRect.height  : 0
-        verticalSpacingConstraint.constant = isVisible ? Config.adjustedVerticalSpacing : defaultVerticalSpacingConstant
+        verticalSpacingConstraint.constant = isVisible ? UIConfig.adjustedVerticalSpacing : UIConfig.defaultVerticalSpacingConstant
 
         // call layoutIfNeeded() before scrollView.scrollTo() otherwise animation will break
 
@@ -160,26 +156,26 @@ private extension LoginViewController {
     // MARK: - UI Setup Methods
 
     func setupUI() {
-        backgroundColorSetup()
-        textFieldsSetup()
-        showButtonSetup()
-        horizontalLinesSetup()
-        doneButtonSetup()
+        setupBackgroundColor()
+        setupTextFields()
+        setupShowButton()
+        setupHorizontalLines()
+        setupDoneButton()
 
-        defaultVerticalSpacingConstant = verticalSpacingConstraint.constant
+        UIConfig.defaultVerticalSpacingConstant = verticalSpacingConstraint.constant
     }
 
-    func backgroundColorSetup() {
-        view.backgroundColor = UIColor.almostBlack
+    func setupBackgroundColor() {
+        view.backgroundColor = .almostBlack
     }
 
-    func horizontalLinesSetup() {
+    func setupHorizontalLines() {
         horizontalLineViews.forEach {
-            $0.backgroundColor = UIColor.blackish
+            $0.backgroundColor = .blackish
         }
     }
 
-    func textFieldsSetup() {
+    func setupTextFields() {
 
         textFields.forEach {
             $0.attributedPlaceholder = NSAttributedString(string: $0.placeholder ?? "", attributes: [
@@ -188,12 +184,12 @@ private extension LoginViewController {
                 NSAttributedString.Key.kern: 1
                 ])
 
-            $0.textColor = UIColor.white
+            $0.textColor = .white
             $0.keyboardAppearance = .dark
         }
     }
 
-    func showButtonSetup() {
+    func setupShowButton() {
         showButton.isHidden = true
 
         let attributedTitle = NSAttributedString(string: showButton.title(for: .normal) ?? "SHOW", attributes: [
@@ -205,11 +201,11 @@ private extension LoginViewController {
         showButton.setAttributedTitle(attributedTitle, for: .normal)
     }
 
-    func doneButtonSetup() {
+    func setupDoneButton() {
         doneButton.isEnabled = false
 
         doneButton.setTitle(doneButton.titleLabel?.text ?? "Done", for: .normal)
-        doneButton.titleLabel?.font = UIFont.doneButtonTitleFont
-        doneButton.titleLabel?.textColor = UIColor.white
+        doneButton.titleLabel?.font = .doneButtonTitleFont
+        doneButton.titleLabel?.textColor = .white
     }
 }
