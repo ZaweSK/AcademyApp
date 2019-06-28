@@ -23,6 +23,8 @@
 		D0E73BB222B2698300150481 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB022B2698300150481 /* Main.storyboard */; };
 		D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB522B2698400150481 /* LaunchScreen.storyboard */; };
 		D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BC922B291F500150481 /* UIColorExtensions.swift */; };
+		D0F20D4022C61B5200970102 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F20D3F22C61B5200970102 /* Lecture.swift */; };
+		D0F20D4222C61C9100970102 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F20D4122C61C9100970102 /* MockData.swift */; };
 		D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */; };
 		D0FCDF7A22BB9EDD00A23D8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF7922BB9EDD00A23D8E /* Assets.xcassets */; };
 		D0FCDF8322BBA57E00A23D8E /* Maison_Neue_Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF7F22BBA57E00A23D8E /* Maison_Neue_Medium.otf */; };
@@ -51,6 +53,8 @@
 		D0E73BB622B2698400150481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0E73BB822B2698400150481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0E73BC922B291F500150481 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		D0F20D3F22C61B5200970102 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
+		D0F20D4122C61C9100970102 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
 		D0FCDF7922BB9EDD00A23D8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0FCDF7E22BBA55A00A23D8E /* Maison_Neue_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Bold.otf; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 		D0E73BAB22B2698300150481 /* AcademyApp */ = {
 			isa = PBXGroup;
 			children = (
+				D0F20D3E22C61B2500970102 /* Model */,
 				D08B318D22BCE47800EBA8ED /* Protocols */,
 				D0E73BC722B291D300150481 /* Extensions */,
 				D08921F322B91654005A7D4E /* Resources */,
@@ -172,6 +177,15 @@
 				D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D0F20D3E22C61B2500970102 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0F20D3F22C61B5200970102 /* Lecture.swift */,
+				D0F20D4122C61C9100970102 /* MockData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D0FCDF7D22BBA53A00A23D8E /* Fonts */ = {
@@ -319,7 +333,9 @@
 				D0DA722022BA387700887039 /* TabBarViewController.swift in Sources */,
 				D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */,
 				D0DA722422BA684E00887039 /* LecturesViewController.swift in Sources */,
+				D0F20D4222C61C9100970102 /* MockData.swift in Sources */,
 				D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */,
+				D0F20D4022C61B5200970102 /* Lecture.swift in Sources */,
 				D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */,
 				D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */,
 				D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */,

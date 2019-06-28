@@ -29,8 +29,9 @@ class LecturesCollectionViewCell: UICollectionViewCell {
 // MARK: - Public setup methods
 
 extension LecturesCollectionViewCell {
-    func configure() {
-        lectureImageView.image = UIImage(named: "Swift I (Playground)")
+    func configure(with lecture: Lecture) {
+        lectureImageView.image = lecture.lectureCellImage
+        lectureNameLabel.text = lecture.lectureName
     }
 }
 

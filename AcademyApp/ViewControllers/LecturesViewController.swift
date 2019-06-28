@@ -10,7 +10,7 @@ import UIKit
 
 class LecturesViewController: UIViewController {
 
-    var lectures = ["a", "b", "c", "d", "e", "f"]
+    var lectures = MockData.lectures()
 
     @IBOutlet private weak var lecturesLabel: UILabel!
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -29,9 +29,9 @@ extension LecturesViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
         let cell: LecturesCollectionViewCell = collectionView.dequeReusableCell(for: indexPath)
-        cell.configure()
+        let lecture = lectures[indexPath.row]
+        cell.configure(with: lecture)
         return cell
     }
 }
