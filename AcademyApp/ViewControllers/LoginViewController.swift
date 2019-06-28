@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - View Controller for login scree
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     // MARK: - Stored Properities
 

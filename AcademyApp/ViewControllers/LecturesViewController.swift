@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LecturesViewController: UIViewController {
+final class LecturesViewController: UIViewController {
 
     var lectures = MockData.lectures()
 

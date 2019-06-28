@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabBarViewController: UITabBarController {
+final class TabBarViewController: UITabBarController {
 
     var lecturesTabBarItem: UITabBarItem? {
         return tabBar.items?[0]
