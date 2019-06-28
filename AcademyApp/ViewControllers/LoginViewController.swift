@@ -68,6 +68,11 @@ class LoginViewController: UIViewController {
         passwordTextField.isSecureTextEntry.toggle()
         setTitleForShowButton(for: passwordTextField.isSecureTextEntry)
     }
+
+    @IBAction private func doneButtonTapped(_ sender: UIButton) {
+       // get user
+        performSegue(withIdentifier: "goToTabBarViewController", sender: self)
+    }
 }
 
 // MARK: - UITextField's delegate methods
