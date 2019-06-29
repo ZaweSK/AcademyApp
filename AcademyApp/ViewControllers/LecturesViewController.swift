@@ -32,10 +32,7 @@ extension LecturesViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "lectureTableViewCell", for: indexPath) as? LectureTableViewCell  else {
-            return UITableViewCell()
-        }
-
+        let cell: LectureTableViewCell = tableView.dequeReusableCell(for: indexPath)
         cell.configure(with: lectures[indexPath.row])
 
         return cell
@@ -56,7 +53,7 @@ extension LecturesViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .almostBlack
-        tableView.register(UINib(nibName: "LectureTableViewCell", bundle: nil), forCellReuseIdentifier: "lectureTableViewCell")
+        tableView.registerCell(LectureTableViewCell.self)
         tableView.separatorStyle = .none
     }
 }

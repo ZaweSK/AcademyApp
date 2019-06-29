@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LectureTableViewCell: UITableViewCell {
+class LectureTableViewCell: UITableViewCell, NibLoadableView {
 
     @IBOutlet private weak var cellView: UIView!
     @IBOutlet private weak var lectureImageView: UIImageView!

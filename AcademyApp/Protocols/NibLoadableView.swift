@@ -9,12 +9,18 @@
 import Foundation
 import UIKit
 
+// MARK: - NibLoadableView protocol
+
 protocol NibLoadableView: class {
     static var nibName: String { get }
     static var defaultReuseIdentifier: String { get }
 }
 
 extension NibLoadableView where Self: UIView {
+
+    // Static methods which return the name of the xib file - name. This name serves as a
+    // cell identifier later on.
+
     static var nibName: String {
         return String(describing: self)
     }
