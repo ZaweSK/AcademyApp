@@ -12,10 +12,7 @@ final class LecturesViewController: UIViewController {
 
     var lectures = MockData.lectures()
 
-    @IBOutlet private weak var lecturesLabel: UILabel!
-    @IBOutlet private weak var collectionView: UICollectionView!
-    @IBOutlet private weak var collectionViewLeadingConstraint: NSLayoutConstraint!
-    @IBOutlet private weak var collectionViewTrailingConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,83 +20,43 @@ final class LecturesViewController: UIViewController {
     }
 }
 
-extension LecturesViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension LecturesViewController: UITableViewDelegate {
+
+}
+
+extension LecturesViewController: UITableViewDataSource {
+
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lectures.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: LecturesCollectionViewCell = collectionView.dequeReusableCell(for: indexPath)
-        let lecture = lectures[indexPath.row]
-        cell.configure(with: lecture)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "lectureTableViewCell", for: indexPath) as? LectureTableViewCell  else {
+            return UITableViewCell()
+        }
+
+        cell.configure(with: lectures[indexPath.row])
+
         return cell
     }
 }
 
-extension LecturesViewController: UICollectionViewDelegate {
-
-}
-
-extension LecturesViewController: UICollectionViewDelegateFlowLayout {
-
-    private enum FlowLayoutConstants {
-        static let itemsVerticalSpacing: CGFloat = 10
-    }
-
-    // holds the value of ratio - height to width of collection view cell based on original design
-    private var aspectRatio: CGFloat { return 130 / 335 }
-
-    private var totalItemHorizontalPadding: CGFloat {
-        return collectionViewLeadingConstraint.constant + collectionViewTrailingConstraint.constant
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return FlowLayoutConstants.itemsVerticalSpacing
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-        let itemWidth = view.bounds.width - totalItemHorizontalPadding
-        let itemHeight = itemWidth * aspectRatio
-        return CGSize(width: itemWidth, height: itemHeight)
-    }
-}
 
 // MARK: - Setup
 
 extension LecturesViewController {
 
     func setup() {
-        delegatesSetup()
-        registerCell()
-        setupUI()
-    }
-
-    func delegatesSetup() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
-    }
-
-    func registerCell() {
-        collectionView.register(LecturesCollectionViewCell.self)
-    }
-
-    func setupUI() {
-        backgroundColorSetup()
-        lecturesLabelSetup()
-    }
-
-    func backgroundColorSetup() {
         view.backgroundColor = .almostBlack
-        collectionView.backgroundColor = .clear
+        setupTableView()
     }
 
-    func lecturesLabelSetup() {
-
-        lecturesLabel.attributedText = NSAttributedString(string: lecturesLabel.text ?? "LECTURES", attributes: [
-            NSAttributedString.Key.foregroundColor: UIColor.brownGray,
-            NSAttributedString.Key.font: UIFont.lecturesLabelFont,
-            NSAttributedString.Key.kern: 1
-            ])
+    func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.backgroundColor = .almostBlack
+        tableView.register(UINib(nibName: "LectureTableViewCell", bundle: nil), forCellReuseIdentifier: "lectureTableViewCell")
+        tableView.separatorStyle = .none
     }
 }

@@ -222,42 +222,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lectures" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfI-ms-aC6">
-                                <rect key="frame" x="20" y="57" width="335" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="c99-hX-X43">
-                                <rect key="frame" x="20" y="95" width="335" height="483"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DK0-Jw-L1m">
-                                    <size key="itemSize" width="335" height="130"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S05-DK-5wN">
+                                <rect key="frame" x="0.0" y="57" width="375" height="521"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZfI-ms-aC6" firstAttribute="leading" secondItem="N9v-YS-ymv" secondAttribute="leading" constant="20" id="1ey-wD-0i3"/>
-                            <constraint firstItem="N9v-YS-ymv" firstAttribute="trailing" secondItem="c99-hX-X43" secondAttribute="trailing" constant="20" id="76S-RV-ylU"/>
-                            <constraint firstItem="N9v-YS-ymv" firstAttribute="bottom" secondItem="c99-hX-X43" secondAttribute="bottom" constant="40" id="Bs9-kE-FwD"/>
-                            <constraint firstItem="ZfI-ms-aC6" firstAttribute="top" secondItem="N9v-YS-ymv" secondAttribute="top" constant="37" id="Goa-fw-ebx"/>
-                            <constraint firstItem="N9v-YS-ymv" firstAttribute="trailing" secondItem="ZfI-ms-aC6" secondAttribute="trailing" constant="20" id="TIq-A5-G87"/>
-                            <constraint firstItem="c99-hX-X43" firstAttribute="leading" secondItem="N9v-YS-ymv" secondAttribute="leading" constant="20" id="a8b-rw-5zC"/>
-                            <constraint firstItem="c99-hX-X43" firstAttribute="top" secondItem="ZfI-ms-aC6" secondAttribute="bottom" constant="17" id="gJs-72-f39"/>
+                            <constraint firstItem="S05-DK-5wN" firstAttribute="top" secondItem="N9v-YS-ymv" secondAttribute="top" constant="37" id="3id-H7-WKi"/>
+                            <constraint firstItem="N9v-YS-ymv" firstAttribute="trailing" secondItem="S05-DK-5wN" secondAttribute="trailing" id="NzM-Bf-kUA"/>
+                            <constraint firstItem="N9v-YS-ymv" firstAttribute="bottom" secondItem="S05-DK-5wN" secondAttribute="bottom" constant="40" id="g8x-GQ-5cI"/>
+                            <constraint firstItem="S05-DK-5wN" firstAttribute="leading" secondItem="N9v-YS-ymv" secondAttribute="leading" id="xCt-JA-Z5I"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N9v-YS-ymv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lectures" id="Z26-fD-xXF"/>
                     <connections>
-                        <outlet property="collectionView" destination="c99-hX-X43" id="pFH-6X-yq9"/>
-                        <outlet property="collectionViewLeadingConstraint" destination="a8b-rw-5zC" id="7Vg-aq-ieJ"/>
-                        <outlet property="collectionViewTrailingConstraint" destination="76S-RV-ylU" id="kpK-6X-pPy"/>
-                        <outlet property="lecturesLabel" destination="ZfI-ms-aC6" id="L1Q-za-y6w"/>
+                        <outlet property="tableView" destination="S05-DK-5wN" id="8Lf-LN-q8Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1w-nf-w8G" userLabel="First Responder" sceneMemberID="firstResponder"/>

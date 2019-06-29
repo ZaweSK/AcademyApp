@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Trump_Gothic_East_Bold.ttf">
+            <string>TrumpGothicEast-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lectureTableViewCell" id="KGk-i7-Jjw" customClass="LectureTableViewCell" customModule="AcademyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="355" height="139.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiY-og-oWe">
+                        <rect key="frame" x="20" y="10" width="315" height="129.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mockCellImage" translatesAutoresizingMaskIntoConstraints="NO" id="dwi-Xg-m7F">
+                                <rect key="frame" x="0.0" y="0.0" width="315" height="129.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8J0-Ez-5bZ">
+                                <rect key="frame" x="15" y="75.5" width="170" height="36"/>
+                                <fontDescription key="fontDescription" name="TrumpGothicEast-Bold" family="Trump Gothic East" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkMark" translatesAutoresizingMaskIntoConstraints="NO" id="bXc-Qa-JXk">
+                                <rect key="frame" x="278" y="87.5" width="22" height="22"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dwi-Xg-m7F" secondAttribute="trailing" id="0j6-J3-jP8"/>
+                            <constraint firstAttribute="bottom" secondItem="8J0-Ez-5bZ" secondAttribute="bottom" constant="18" id="5As-MI-fBq"/>
+                            <constraint firstAttribute="bottom" secondItem="dwi-Xg-m7F" secondAttribute="bottom" id="K8d-7a-30d"/>
+                            <constraint firstAttribute="trailing" secondItem="bXc-Qa-JXk" secondAttribute="trailing" constant="15" id="UKY-jg-AhO"/>
+                            <constraint firstItem="8J0-Ez-5bZ" firstAttribute="leading" secondItem="WiY-og-oWe" secondAttribute="leading" constant="15" id="Us1-Dp-RNQ"/>
+                            <constraint firstItem="8J0-Ez-5bZ" firstAttribute="width" secondItem="WiY-og-oWe" secondAttribute="width" multiplier="0.54" id="WVB-6I-TqR"/>
+                            <constraint firstItem="dwi-Xg-m7F" firstAttribute="leading" secondItem="WiY-og-oWe" secondAttribute="leading" id="c13-Qg-Sdd"/>
+                            <constraint firstItem="dwi-Xg-m7F" firstAttribute="top" secondItem="WiY-og-oWe" secondAttribute="top" id="hpr-Sb-688"/>
+                            <constraint firstAttribute="bottom" secondItem="bXc-Qa-JXk" secondAttribute="bottom" constant="20" id="lxQ-8F-kAK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="WiY-og-oWe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Btd-9Y-2sc"/>
+                    <constraint firstAttribute="trailing" secondItem="WiY-og-oWe" secondAttribute="trailing" constant="20" id="eKa-Yq-atZ"/>
+                    <constraint firstItem="WiY-og-oWe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="o0d-Vq-hWL"/>
+                    <constraint firstAttribute="bottom" secondItem="WiY-og-oWe" secondAttribute="bottom" id="ozm-mx-vAN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cellView" destination="WiY-og-oWe" id="kJM-yS-ESH"/>
+                <outlet property="lectureImageView" destination="dwi-Xg-m7F" id="e8d-qi-qfQ"/>
+                <outlet property="lectureNameLabel" destination="8J0-Ez-5bZ" id="o1v-mr-T2N"/>
+            </connections>
+            <point key="canvasLocation" x="-336.95652173913044" y="76.339285714285708"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="checkMark" width="22" height="22"/>
+        <image name="mockCellImage" width="335" height="130"/>
+    </resources>
+</document>

@@ -25,6 +25,8 @@
 		D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BC922B291F500150481 /* UIColorExtensions.swift */; };
 		D0F20D4022C61B5200970102 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F20D3F22C61B5200970102 /* Lecture.swift */; };
 		D0F20D4222C61C9100970102 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F20D4122C61C9100970102 /* MockData.swift */; };
+		D0F20D4D22C6505800970102 /* LectureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F20D4B22C6505800970102 /* LectureTableViewCell.swift */; };
+		D0F20D4E22C6505800970102 /* LectureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F20D4C22C6505800970102 /* LectureTableViewCell.xib */; };
 		D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */; };
 		D0FCDF7A22BB9EDD00A23D8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF7922BB9EDD00A23D8E /* Assets.xcassets */; };
 		D0FCDF8322BBA57E00A23D8E /* Maison_Neue_Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF7F22BBA57E00A23D8E /* Maison_Neue_Medium.otf */; };
@@ -55,6 +57,8 @@
 		D0E73BC922B291F500150481 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		D0F20D3F22C61B5200970102 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
 		D0F20D4122C61C9100970102 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		D0F20D4B22C6505800970102 /* LectureTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureTableViewCell.swift; sourceTree = "<group>"; };
+		D0F20D4C22C6505800970102 /* LectureTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LectureTableViewCell.xib; sourceTree = "<group>"; };
 		D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
 		D0FCDF7922BB9EDD00A23D8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0FCDF7E22BBA55A00A23D8E /* Maison_Neue_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Bold.otf; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 		D08921F222B915DB005A7D4E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D0F20D4422C6446E00970102 /* Lecture */,
 				D0922DC622B37181003597EF /* RoundedCornersButton.swift */,
 				D08B318722BCCEB400EBA8ED /* LecturesCollectionViewCell.swift */,
 			);
@@ -188,6 +193,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D0F20D4422C6446E00970102 /* Lecture */ = {
+			isa = PBXGroup;
+			children = (
+				D0F20D4B22C6505800970102 /* LectureTableViewCell.swift */,
+				D0F20D4C22C6505800970102 /* LectureTableViewCell.xib */,
+			);
+			path = Lecture;
+			sourceTree = "<group>";
+		};
 		D0FCDF7D22BBA53A00A23D8E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +285,7 @@
 				D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */,
 				D0FCDF7A22BB9EDD00A23D8E /* Assets.xcassets in Resources */,
 				D0FCDF8622BBA57E00A23D8E /* Maison_Neue_Book.otf in Resources */,
+				D0F20D4E22C6505800970102 /* LectureTableViewCell.xib in Resources */,
 				D0FCDF8522BBA57E00A23D8E /* Maison_Neue_Demi.otf in Resources */,
 				D0FCDF8422BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf in Resources */,
 				D08B318A22BCCEB400EBA8ED /* LecturesCollectionViewCell.xib in Resources */,
@@ -341,6 +356,7 @@
 				D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */,
 				D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */,
 				D08B318F22BCE49300EBA8ED /* NibLoadableView.swift in Sources */,
+				D0F20D4D22C6505800970102 /* LectureTableViewCell.swift in Sources */,
 				D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */,
 				D0E73BAD22B2698300150481 /* AppDelegate.swift in Sources */,
 				D08B318922BCCEB400EBA8ED /* LecturesCollectionViewCell.swift in Sources */,
