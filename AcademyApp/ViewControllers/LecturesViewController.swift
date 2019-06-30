@@ -20,10 +20,6 @@ final class LecturesViewController: UIViewController {
     }
 }
 
-extension LecturesViewController: UITableViewDelegate {
-
-}
-
 extension LecturesViewController: UITableViewDataSource {
 
 
@@ -32,9 +28,8 @@ extension LecturesViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: LectureTableViewCell = tableView.dequeReusableCell(for: indexPath)
+        let cell: LecturesTableViewCell = tableView.dequeReusableCell(for: indexPath)
         cell.configure(with: lectures[indexPath.row])
-
         return cell
     }
 }
@@ -50,10 +45,9 @@ extension LecturesViewController {
     }
 
     func setupTableView() {
-        tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .almostBlack
-        tableView.registerCell(LectureTableViewCell.self)
+        tableView.registerCell(LecturesTableViewCell.self)
         tableView.separatorStyle = .none
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LectureTableViewCell: UITableViewCell, NibLoadableView {
+class LecturesTableViewCell: UITableViewCell, NibLoadableView {
 
     @IBOutlet private weak var cellView: UIView!
     @IBOutlet private weak var lectureImageView: UIImageView!
@@ -22,7 +22,7 @@ class LectureTableViewCell: UITableViewCell, NibLoadableView {
 
 // MARK: - Public methods
 
-extension LectureTableViewCell {
+extension LecturesTableViewCell {
 
     func configure(with lecture: Lecture) {
         lectureImageView.image = lecture.lectureCellImage
@@ -30,7 +30,7 @@ extension LectureTableViewCell {
     }
 }
 
-private extension LectureTableViewCell {
+private extension LecturesTableViewCell {
 
     func setup() {
         setupCornerRadius()
