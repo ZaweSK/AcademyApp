@@ -20,7 +20,7 @@ final class LecturesViewController: UIViewController {
     }
 }
 
-extension LecturesViewController: UITableViewDataSource {
+extension LecturesViewController: UITableViewDataSource, UITableViewDelegate {
 
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,6 +31,17 @@ extension LecturesViewController: UITableViewDataSource {
         let cell: LecturesTableViewCell = tableView.dequeReusableCell(for: indexPath)
         cell.configure(with: lectures[indexPath.row])
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header: LecturesTableViewHeader = tableView.dequeReusableHeader()
+        return header
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        // TODO: Reuturn headerView's intrinsic size
+        return 30
+
     }
 }
 
@@ -46,8 +57,10 @@ extension LecturesViewController {
 
     func setupTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.backgroundColor = .almostBlack
-        tableView.registerCell(LecturesTableViewCell.self)
         tableView.separatorStyle = .none
+        tableView.registerHeader(LecturesTableViewHeader.self)
+        tableView.registerCell(LecturesTableViewCell.self)
     }
 }

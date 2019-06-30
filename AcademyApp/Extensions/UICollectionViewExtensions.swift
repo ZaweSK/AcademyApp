@@ -13,7 +13,7 @@ import UIKit
 
 extension UICollectionView {
 
-    // Method registers a cell for tableView with it's nib name. Registered cell
+    // Method registers a cell for collectionView with it's nib name. Registered cell
     // must conform to NibLoadableView protocol.
 
     func register<T: UICollectionViewCell>(_: T.Type) where T: NibLoadableView {
@@ -23,7 +23,7 @@ extension UICollectionView {
         register(nib, forCellWithReuseIdentifier: T.defaultReuseIdentifier)
     }
 
-    // Method deques a reusable cell for tableView. Cell's nib name is used as a reuse
+    // Method deques a reusable cell for collectionView. Cell's nib name is used as a reuse
     // identifier. Cell must conform to NibLoadableView protocol.
 
     func dequeReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T where T: NibLoadableView {

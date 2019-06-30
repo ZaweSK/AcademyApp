@@ -8,14 +8,36 @@
 
 import UIKit
 
-class LecturesTableViewHeader: UITableViewHeaderFooterView {
+class LecturesTableViewHeader: UITableViewHeaderFooterView, NibLoadableView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBOutlet private weak var lecturesLabel: UILabel!
+    @IBOutlet private weak var headerContentView: UIView!
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setup()
     }
-    */
 
+    var headerHeight: CGFloat {
+        return headerContentView.frame.height
+    }
+}
+
+private extension LecturesTableViewHeader {
+    func setup() {
+        headerContentView.backgroundColor = .almostBlack
+        setupLecturesLabel()
+
+        // TODO: Set headerView height to intrinsic size of label
+//        lecturesLabel.sizeToFit()
+//        self.frame.size.height = lecturesLabel.frame.height
+    }
+
+    func setupLecturesLabel() {
+        lecturesLabel.attributedText = NSAttributedString(string: lecturesLabel.text ?? "LECTURES", attributes: [
+            NSAttributedString.Key.foregroundColor: UIColor.brownGray,
+            NSAttributedString.Key.kern: 1,
+            NSAttributedString.Key.font: UIFont.lecturesLabelFont
+            ])
+    }
 }

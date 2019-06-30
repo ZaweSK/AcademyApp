@@ -17,6 +17,7 @@
 		D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0922DCF22B789BB003597EF /* StringExtensions.swift */; };
 		D0B8633B22C7933300A67320 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8633A22C7933300A67320 /* UITableViewExtensions.swift */; };
 		D0B8633D22C8B80200A67320 /* LecturesTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B8633C22C8B80200A67320 /* LecturesTableViewHeader.swift */; };
+		D0B8633F22C8B88600A67320 /* LecturesTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B8633E22C8B88600A67320 /* LecturesTableViewHeader.xib */; };
 		D0DA722022BA387700887039 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA721F22BA387700887039 /* TabBarViewController.swift */; };
 		D0DA722222BA4AA500887039 /* UITabBarItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA722122BA4AA500887039 /* UITabBarItemExtensions.swift */; };
 		D0DA722422BA684E00887039 /* LecturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA722322BA684E00887039 /* LecturesViewController.swift */; };
@@ -49,6 +50,7 @@
 		D0922DCF22B789BB003597EF /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		D0B8633A22C7933300A67320 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
 		D0B8633C22C8B80200A67320 /* LecturesTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesTableViewHeader.swift; sourceTree = "<group>"; };
+		D0B8633E22C8B88600A67320 /* LecturesTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturesTableViewHeader.xib; sourceTree = "<group>"; };
 		D0DA721F22BA387700887039 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D0DA722122BA4AA500887039 /* UITabBarItemExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarItemExtensions.swift; sourceTree = "<group>"; };
 		D0DA722322BA684E00887039 /* LecturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				D0F20D4B22C6505800970102 /* LecturesTableViewCell.swift */,
 				D0F20D4C22C6505800970102 /* LecturesTableViewCell.xib */,
 				D0B8633C22C8B80200A67320 /* LecturesTableViewHeader.swift */,
+				D0B8633E22C8B88600A67320 /* LecturesTableViewHeader.xib */,
 			);
 			path = Lecture;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				D08B318A22BCCEB400EBA8ED /* LecturesCollectionViewCell.xib in Resources */,
 				D0FCDF8322BBA57E00A23D8E /* Maison_Neue_Medium.otf in Resources */,
 				D0E73BB222B2698300150481 /* Main.storyboard in Resources */,
+				D0B8633F22C8B88600A67320 /* LecturesTableViewHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

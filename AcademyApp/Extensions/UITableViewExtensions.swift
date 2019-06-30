@@ -13,7 +13,7 @@ import UIKit
 
 extension UITableView {
 
-    // Method registers a cell for collectionView with it's nib name. Registered cell
+    // Method registers a cell for tableView with it's nib name. Registered cell
     // must conform to NibLoadableView protocol.
 
     func registerCell<T: UITableViewCell>(_: T.Type) where T: NibLoadableView {
@@ -23,7 +23,7 @@ extension UITableView {
         register(nib, forCellReuseIdentifier: T.defaultReuseIdentifier)
     }
 
-    // Method deques a reusable cell for collectionView. Cell's nib name is used as a reuse
+    // Method deques a reusable cell for tableView. Cell's nib name is used as a reuse
     // identifier. Cell must conform to NibLoadableView protocol.
 
     func dequeReusableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T where T: NibLoadableView {
@@ -32,4 +32,27 @@ extension UITableView {
         }
         return cell
     }
+
+    // Method registers a header for tableView with it's nib name. Registered headerView
+    // must conform to NibLoadableView protocol.
+
+    func registerHeader<T: UITableViewHeaderFooterView>(_: T.Type) where T: NibLoadableView {
+        let bundle = Bundle(for: T.self)
+        let nib = UINib(nibName: T.nibName, bundle: bundle)
+
+        register(nib, forHeaderFooterViewReuseIdentifier: T.defaultReuseIdentifier)
+    }
+
+
+    // Method deques a reusable header/footer for tableView. Header's nib name is used as a reuse
+    // identifier. Cell must conform to NibLoadableView protocol.
+    
+    func dequeReusableHeader<T: UITableViewHeaderFooterView>() -> T where T: NibLoadableView {
+        guard let header = dequeueReusableHeaderFooterView(withIdentifier: T.defaultReuseIdentifier) as? T else {
+            fatalError("Could not deque header with identifier \(T.defaultReuseIdentifier)")
+        }
+        return header
+    }
+
+
 }
