@@ -32,6 +32,11 @@ class LecturesTableViewCell: UITableViewCell, NibLoadableView {
         super.layoutSubviews()
         gradientLayer.frame = cellView.bounds
     }
+
+    override func prepareForReuse() {
+        lectureImageView.image = nil
+        lectureNameLabel.text = nil
+    }
 }
 
 // MARK: - Public methods
