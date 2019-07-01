@@ -46,7 +46,7 @@ extension UITableView {
 
     // Method deques a reusable header/footer for tableView. Header's nib name is used as a reuse
     // identifier. Cell must conform to NibLoadableView protocol.
-    
+
     func dequeReusableHeader<T: UITableViewHeaderFooterView>() -> T where T: NibLoadableView {
         guard let header = dequeueReusableHeaderFooterView(withIdentifier: T.defaultReuseIdentifier) as? T else {
             fatalError("Could not deque header with identifier \(T.defaultReuseIdentifier)")

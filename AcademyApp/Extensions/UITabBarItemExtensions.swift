@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 extension UITabBarItem {
+
+    // Sets images for tabBaritem's states: selected & unselected
     func setImages(selectedImageName: String, unselectedImageName: String) {
         self.selectedImage = UIImage(named: selectedImageName)?.withRenderingMode(.alwaysOriginal)
         self.image = UIImage(named: unselectedImageName)?.withRenderingMode(.alwaysOriginal)

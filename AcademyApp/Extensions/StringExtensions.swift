@@ -12,6 +12,7 @@ import Foundation
 
 extension String {
 
+    // Method validates whether string matches regex representation of email address
     static func isValidEmail(possibleEmail: String) -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]+"
         let emailTest = NSPredicate(format: "SELF MATCHES %@", emailRegEx)

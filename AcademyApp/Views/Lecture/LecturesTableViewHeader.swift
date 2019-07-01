@@ -10,8 +10,12 @@ import UIKit
 
 class LecturesTableViewHeader: UITableViewHeaderFooterView, NibLoadableView {
 
+    // MARK: - @IBOutlets
+
     @IBOutlet private weak var lecturesLabel: UILabel!
     @IBOutlet private weak var headerContentView: UIView!
+
+    // MARK: - LifeCycle methods
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +26,8 @@ class LecturesTableViewHeader: UITableViewHeaderFooterView, NibLoadableView {
         return headerContentView.frame.height
     }
 }
+
+// MARK: - Private Setup methods
 
 private extension LecturesTableViewHeader {
     func setup() {

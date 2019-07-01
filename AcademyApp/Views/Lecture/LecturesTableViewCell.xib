@@ -17,63 +17,62 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LecturesTableViewCell" customModule="AcademyApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="355" height="140"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="147" id="KGk-i7-Jjw" customClass="LecturesTableViewCell" customModule="AcademyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="341" height="147"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="355" height="139.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="341" height="146.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WiY-og-oWe">
-                        <rect key="frame" x="20" y="10" width="315" height="129.5"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUq-6W-6h2">
+                        <rect key="frame" x="20" y="10" width="301" height="136.5"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mockCellImage" translatesAutoresizingMaskIntoConstraints="NO" id="dwi-Xg-m7F">
-                                <rect key="frame" x="0.0" y="0.0" width="315" height="129.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qIS-Sc-Hmy">
+                                <rect key="frame" x="0.0" y="0.0" width="301" height="136.5"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8J0-Ez-5bZ">
-                                <rect key="frame" x="15" y="76.5" width="170" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lecture" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yho-yR-Pci">
+                                <rect key="frame" x="15" y="82.5" width="162.5" height="36"/>
                                 <fontDescription key="fontDescription" name="TrumpGothicEast-Bold" family="Trump Gothic East" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkMark" translatesAutoresizingMaskIntoConstraints="NO" id="bXc-Qa-JXk">
-                                <rect key="frame" x="284" y="93.5" width="16" height="16"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkMark" translatesAutoresizingMaskIntoConstraints="NO" id="AKB-d0-vaz">
+                                <rect key="frame" x="259" y="99.5" width="22" height="22"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="dwi-Xg-m7F" secondAttribute="trailing" id="0j6-J3-jP8"/>
-                            <constraint firstAttribute="bottom" secondItem="8J0-Ez-5bZ" secondAttribute="bottom" constant="18" id="5As-MI-fBq"/>
-                            <constraint firstAttribute="bottom" secondItem="dwi-Xg-m7F" secondAttribute="bottom" id="K8d-7a-30d"/>
-                            <constraint firstAttribute="trailing" secondItem="bXc-Qa-JXk" secondAttribute="trailing" constant="15" id="UKY-jg-AhO"/>
-                            <constraint firstItem="8J0-Ez-5bZ" firstAttribute="leading" secondItem="WiY-og-oWe" secondAttribute="leading" constant="15" id="Us1-Dp-RNQ"/>
-                            <constraint firstItem="8J0-Ez-5bZ" firstAttribute="width" secondItem="WiY-og-oWe" secondAttribute="width" multiplier="0.54" id="WVB-6I-TqR"/>
-                            <constraint firstItem="dwi-Xg-m7F" firstAttribute="leading" secondItem="WiY-og-oWe" secondAttribute="leading" id="c13-Qg-Sdd"/>
-                            <constraint firstItem="dwi-Xg-m7F" firstAttribute="top" secondItem="WiY-og-oWe" secondAttribute="top" id="hpr-Sb-688"/>
-                            <constraint firstAttribute="bottom" secondItem="bXc-Qa-JXk" secondAttribute="bottom" constant="20" id="lxQ-8F-kAK"/>
+                            <constraint firstAttribute="trailing" secondItem="qIS-Sc-Hmy" secondAttribute="trailing" id="Asf-sf-hNv"/>
+                            <constraint firstItem="Yho-yR-Pci" firstAttribute="width" secondItem="UUq-6W-6h2" secondAttribute="width" multiplier="0.54" id="Bcd-bE-r2o"/>
+                            <constraint firstAttribute="bottom" secondItem="qIS-Sc-Hmy" secondAttribute="bottom" id="GPK-Pu-eMP"/>
+                            <constraint firstAttribute="trailing" secondItem="AKB-d0-vaz" secondAttribute="trailing" constant="20" id="Oc3-qr-B2O"/>
+                            <constraint firstAttribute="bottom" secondItem="AKB-d0-vaz" secondAttribute="bottom" constant="15" id="V15-eh-cEd"/>
+                            <constraint firstItem="qIS-Sc-Hmy" firstAttribute="leading" secondItem="UUq-6W-6h2" secondAttribute="leading" id="b2D-zk-hHh"/>
+                            <constraint firstAttribute="bottom" secondItem="Yho-yR-Pci" secondAttribute="bottom" constant="18" id="fIG-Xs-rHH"/>
+                            <constraint firstItem="Yho-yR-Pci" firstAttribute="leading" secondItem="UUq-6W-6h2" secondAttribute="leading" constant="15" id="iLM-kU-63q"/>
+                            <constraint firstItem="qIS-Sc-Hmy" firstAttribute="top" secondItem="UUq-6W-6h2" secondAttribute="top" id="nmA-8s-Z1s"/>
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="WiY-og-oWe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Btd-9Y-2sc"/>
-                    <constraint firstAttribute="trailing" secondItem="WiY-og-oWe" secondAttribute="trailing" constant="20" id="eKa-Yq-atZ"/>
-                    <constraint firstItem="WiY-og-oWe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="o0d-Vq-hWL"/>
-                    <constraint firstAttribute="bottom" secondItem="WiY-og-oWe" secondAttribute="bottom" id="ozm-mx-vAN"/>
+                    <constraint firstItem="UUq-6W-6h2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="As0-Jc-CyJ"/>
+                    <constraint firstAttribute="trailing" secondItem="UUq-6W-6h2" secondAttribute="trailing" constant="20" id="Bqp-Rm-DHd"/>
+                    <constraint firstAttribute="bottom" secondItem="UUq-6W-6h2" secondAttribute="bottom" id="Zmg-Yr-geJ"/>
+                    <constraint firstItem="UUq-6W-6h2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="b92-3F-tZa"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="cellView" destination="WiY-og-oWe" id="kJM-yS-ESH"/>
-                <outlet property="lectureImageView" destination="dwi-Xg-m7F" id="e8d-qi-qfQ"/>
-                <outlet property="lectureNameLabel" destination="8J0-Ez-5bZ" id="o1v-mr-T2N"/>
+                <outlet property="cellView" destination="UUq-6W-6h2" id="Ufd-8l-Wdi"/>
+                <outlet property="checkmarkImageView" destination="AKB-d0-vaz" id="CXx-FY-Py2"/>
+                <outlet property="lectureImageView" destination="qIS-Sc-Hmy" id="dDQ-dx-APd"/>
+                <outlet property="lectureNameLabel" destination="Yho-yR-Pci" id="blf-Ac-ynJ"/>
             </connections>
-            <point key="canvasLocation" x="-336.95652173913044" y="76.339285714285708"/>
+            <point key="canvasLocation" x="63.04347826086957" y="69.308035714285708"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="checkMark" width="22" height="22"/>
-        <image name="mockCellImage" width="335" height="130"/>
     </resources>
 </document>

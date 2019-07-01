@@ -1,8 +1,8 @@
 //
-//  LectureTableViewCell.swift
+//  LecturesTableViewCell.swift
 //  AcademyApp
 //
-//  Created by Peter Sevcik on 28/06/2019.
+//  Created by Peter Sevcik on 01/07/2019.
 //  Copyright © 2019 Peter Sevcik. All rights reserved.
 //
 
@@ -10,13 +10,27 @@ import UIKit
 
 class LecturesTableViewCell: UITableViewCell, NibLoadableView {
 
+    // MARK: - Stored Properties
+
+    let gradientLayer = CAGradientLayer()
+
+    // MARK: - @IBOutlets
+
     @IBOutlet private weak var cellView: UIView!
-    @IBOutlet private weak var lectureImageView: UIImageView!
     @IBOutlet private weak var lectureNameLabel: UILabel!
+    @IBOutlet private weak var checkmarkImageView: UIImageView!
+    @IBOutlet private weak var lectureImageView: UIImageView!
+
+    // LifeCycle methods
 
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        gradientLayer.frame = cellView.bounds
     }
 }
 
@@ -25,17 +39,20 @@ class LecturesTableViewCell: UITableViewCell, NibLoadableView {
 extension LecturesTableViewCell {
 
     func configure(with lecture: Lecture) {
-        lectureImageView.image = lecture.lectureCellImage
         lectureNameLabel.text = lecture.lectureName
+        lectureImageView.image = lecture.lectureCellImage
+        addGradientLayer()
     }
 }
+
+// MARK: - Private Setup methods
 
 private extension LecturesTableViewCell {
 
     func setup() {
-        setupCornerRadius()
         setupGradientLayer()
-
+        setupCornerRadius()
+        setupLectureNameLabel()
         selectionStyle = .none
     }
 
@@ -44,11 +61,15 @@ private extension LecturesTableViewCell {
         cellView.layer.masksToBounds = true
     }
 
+    func setupLectureNameLabel() {
+        lectureNameLabel.font = UIFont.lectureNameFont
+    }
+
     func setupGradientLayer() {
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = cellView.bounds
         gradientLayer.colors = [UIColor.firstColorForGradient, UIColor.secondColorForGradient]
-        gradientLayer.locations = [ -0.3]
-        cellView.layer.insertSublayer(gradientLayer, at: 1 )
+    }
+
+    func addGradientLayer() {
+        lectureImageView.layer.addSublayer(gradientLayer)
     }
 }

@@ -222,23 +222,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="130" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="S05-DK-5wN">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="cNE-Ay-cft">
                                 <rect key="frame" x="0.0" y="57" width="375" height="521"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="S05-DK-5wN" firstAttribute="top" secondItem="N9v-YS-ymv" secondAttribute="top" constant="37" id="3id-H7-WKi"/>
-                            <constraint firstItem="N9v-YS-ymv" firstAttribute="trailing" secondItem="S05-DK-5wN" secondAttribute="trailing" id="NzM-Bf-kUA"/>
-                            <constraint firstItem="N9v-YS-ymv" firstAttribute="bottom" secondItem="S05-DK-5wN" secondAttribute="bottom" constant="40" id="g8x-GQ-5cI"/>
-                            <constraint firstItem="S05-DK-5wN" firstAttribute="leading" secondItem="N9v-YS-ymv" secondAttribute="leading" id="xCt-JA-Z5I"/>
+                            <constraint firstItem="N9v-YS-ymv" firstAttribute="bottom" secondItem="cNE-Ay-cft" secondAttribute="bottom" constant="40" id="GMh-Dz-H8u"/>
+                            <constraint firstItem="N9v-YS-ymv" firstAttribute="trailing" secondItem="cNE-Ay-cft" secondAttribute="trailing" id="RMV-RI-AsZ"/>
+                            <constraint firstItem="cNE-Ay-cft" firstAttribute="leading" secondItem="N9v-YS-ymv" secondAttribute="leading" id="Yl3-hd-tZ0"/>
+                            <constraint firstItem="cNE-Ay-cft" firstAttribute="top" secondItem="N9v-YS-ymv" secondAttribute="top" constant="37" id="fX2-Ph-2ll"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N9v-YS-ymv"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lectures" id="Z26-fD-xXF"/>
                     <connections>
-                        <outlet property="tableView" destination="S05-DK-5wN" id="8Lf-LN-q8Q"/>
+                        <outlet property="tableView" destination="cNE-Ay-cft" id="yrS-qV-zTu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1w-nf-w8G" userLabel="First Responder" sceneMemberID="firstResponder"/>

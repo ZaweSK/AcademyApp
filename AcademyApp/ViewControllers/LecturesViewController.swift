@@ -18,6 +18,14 @@ final class LecturesViewController: UIViewController {
         super.viewDidLoad()
         setup()
     }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+
+
+        print(tableView.sectionHeaderHeight)
+    }
 }
 
 extension LecturesViewController: UITableViewDataSource, UITableViewDelegate {
@@ -41,7 +49,6 @@ extension LecturesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         // TODO: Reuturn headerView's intrinsic size
         return 30
-
     }
 }
 
@@ -62,5 +69,8 @@ extension LecturesViewController {
         tableView.separatorStyle = .none
         tableView.registerHeader(LecturesTableViewHeader.self)
         tableView.registerCell(LecturesTableViewCell.self)
+
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 28 
     }
 }
