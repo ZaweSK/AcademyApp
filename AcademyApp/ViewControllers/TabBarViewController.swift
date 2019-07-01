@@ -10,6 +10,8 @@ import UIKit
 
 final class TabBarViewController: UITabBarController {
 
+    // Computed Properties
+
     var lecturesTabBarItem: UITabBarItem? {
         return tabBar.items?[0]
     }
@@ -17,6 +19,8 @@ final class TabBarViewController: UITabBarController {
     var profileTabBarItem: UITabBarItem? {
         return tabBar.items?[1]
     }
+
+    // MARK: - LifeCycle methods
 
     override func viewDidLoad() {
         super.viewDidLoad()

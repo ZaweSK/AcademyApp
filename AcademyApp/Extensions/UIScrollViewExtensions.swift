@@ -16,6 +16,8 @@ extension UIScrollView {
         case top
     }
 
+    // Method calculates offset used to scroll to one of ScrollView's edges
+
     private func contentOffset(to direction: ScrollDirection) -> CGPoint {
 
         var contentOffset = CGPoint.zero
@@ -30,6 +32,8 @@ extension UIScrollView {
 
         return contentOffset
     }
+
+    // Method scrolls to the edge of scrollView specified by the direction (top/bottom etc)
 
     func scrollTo(direction: ScrollDirection, animated: Bool = true) {
         setContentOffset(self.contentOffset(to: direction), animated: animated)
