@@ -70,7 +70,6 @@ private extension LecturesViewController {
         tableView.separatorStyle = .none
         tableView.registerHeader(LecturesTableViewHeader.self)
         tableView.registerCell(LecturesTableViewCell.self)
-
         tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 28
     }

@@ -62,8 +62,14 @@ private extension TabBarViewController {
     }
 
     func fontSetup() {
-        UITabBarItem.appearance().setTitleTextAttributes(fontAttributes(tabIsSelected: true), for: .selected)
-        UITabBarItem.appearance().setTitleTextAttributes(fontAttributes(tabIsSelected: false), for: .normal)
+        guard let tabBarItems = tabBar.items else {
+            return
+        }
+
+        tabBarItems.forEach {
+            $0.setTitleTextAttributes(fontAttributes(tabIsSelected: true), for: .selected)
+            $0.setTitleTextAttributes(fontAttributes(tabIsSelected: false), for: .normal)
+        }
     }
 
     func tabBarItemsPicturesSetup() {
