@@ -35,6 +35,8 @@ private extension LecturesTableViewCell {
     func setup() {
         setupCornerRadius()
         setupGradientLayer()
+
+        selectionStyle = .none
     }
 
     func setupCornerRadius() {
