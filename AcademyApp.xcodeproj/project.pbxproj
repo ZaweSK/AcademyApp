@@ -35,7 +35,6 @@
 		D0FCDF8322BBA57E00A23D8E /* Maison_Neue_Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF7F22BBA57E00A23D8E /* Maison_Neue_Medium.otf */; };
 		D0FCDF8422BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF8022BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf */; };
 		D0FCDF8522BBA57E00A23D8E /* Maison_Neue_Demi.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF8122BBA57E00A23D8E /* Maison_Neue_Demi.otf */; };
-		D0FCDF8622BBA57E00A23D8E /* Maison_Neue_Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0FCDF8222BBA57E00A23D8E /* Maison_Neue_Book.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,7 +70,6 @@
 		D0FCDF7F22BBA57E00A23D8E /* Maison_Neue_Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Medium.otf; sourceTree = "<group>"; };
 		D0FCDF8022BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trump_Gothic_East_Bold.ttf; sourceTree = "<group>"; };
 		D0FCDF8122BBA57E00A23D8E /* Maison_Neue_Demi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Demi.otf; sourceTree = "<group>"; };
-		D0FCDF8222BBA57E00A23D8E /* Maison_Neue_Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Book.otf; sourceTree = "<group>"; };
 		DABC6D1BD97525722761B5C4 /* Pods-AcademyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademyApp.release.xcconfig"; path = "Target Support Files/Pods-AcademyApp/Pods-AcademyApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,7 +212,6 @@
 		D0FCDF7D22BBA53A00A23D8E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				D0FCDF8222BBA57E00A23D8E /* Maison_Neue_Book.otf */,
 				D0FCDF8122BBA57E00A23D8E /* Maison_Neue_Demi.otf */,
 				D0FCDF7F22BBA57E00A23D8E /* Maison_Neue_Medium.otf */,
 				D0FCDF8022BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf */,
@@ -294,7 +291,6 @@
 				D0CD5CB522CA06C5003BDD15 /* LecturesTableViewCell.xib in Resources */,
 				D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */,
 				D0FCDF7A22BB9EDD00A23D8E /* Assets.xcassets in Resources */,
-				D0FCDF8622BBA57E00A23D8E /* Maison_Neue_Book.otf in Resources */,
 				D0FCDF8522BBA57E00A23D8E /* Maison_Neue_Demi.otf in Resources */,
 				D0FCDF8422BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf in Resources */,
 				D08B318A22BCCEB400EBA8ED /* LecturesCollectionViewCell.xib in Resources */,
