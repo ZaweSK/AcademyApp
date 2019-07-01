@@ -21,10 +21,6 @@ class LecturesTableViewHeader: UITableViewHeaderFooterView, NibLoadableView {
         super.awakeFromNib()
         setup()
     }
-
-    var headerHeight: CGFloat {
-        return headerContentView.frame.height
-    }
 }
 
 // MARK: - Private Setup methods
@@ -33,10 +29,6 @@ private extension LecturesTableViewHeader {
     func setup() {
         headerContentView.backgroundColor = .almostBlack
         setupLecturesLabel()
-
-        // TODO: Set headerView height to intrinsic size of label
-//        lecturesLabel.sizeToFit()
-//        self.frame.size.height = lecturesLabel.frame.height
     }
 
     func setupLecturesLabel() {

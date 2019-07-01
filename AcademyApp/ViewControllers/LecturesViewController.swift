@@ -10,11 +10,13 @@ import UIKit
 
 final class LecturesViewController: UIViewController {
 
+    // MARK: - Constants
+
     private enum TableViewConfig {
         static let headerHeight: CGFloat = 30
 
         // sum of leading and trailing padding constant of cellContent
-        static let cellTotalhorizontalPadding: CGFloat = 40
+        static let cellContentTotalhorizontalPadding: CGFloat = 40
 
         // vertical inset between cells in table view
         static let cellVerticalInset: CGFloat = 10
@@ -23,16 +25,14 @@ final class LecturesViewController: UIViewController {
         static let imageAspectRatio: CGFloat = 0.39
     }
 
-
     // MARK: - Stored properties
 
-    var lectures = MockData.lectures()
+    private var lectures = MockData.lectures()
 
     // MARK: - Computed Properities
 
-    private var cellWidth: CGFloat {
-        print(tableView.frame.width - TableViewConfig.cellTotalhorizontalPadding)
-        return tableView.frame.width - TableViewConfig.cellTotalhorizontalPadding
+    private var cellContentWidth: CGFloat {
+        return tableView.frame.width - TableViewConfig.cellContentTotalhorizontalPadding
     }
 
     // MARK: - @IBOutletes
@@ -48,7 +48,7 @@ final class LecturesViewController: UIViewController {
 }
 
 
-// MARK: - UITableViewDataSource & UITableViewDelegate methods
+// MARK: - UITableViewDataSource methods
 
 extension LecturesViewController: UITableViewDataSource {
 
@@ -64,6 +64,8 @@ extension LecturesViewController: UITableViewDataSource {
 
 }
 
+// MARK: - UITableViewDelegate methods
+
 extension LecturesViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -76,7 +78,7 @@ extension LecturesViewController: UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let cellContentHeight = cellWidth * TableViewConfig.imageAspectRatio
+        let cellContentHeight = cellContentWidth * TableViewConfig.imageAspectRatio
         return cellContentHeight + TableViewConfig.cellVerticalInset
     }
 }

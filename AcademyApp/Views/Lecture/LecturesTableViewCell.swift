@@ -12,7 +12,7 @@ class LecturesTableViewCell: UITableViewCell, NibLoadableView {
 
     // MARK: - Stored Properties
 
-    let gradientLayer = CAGradientLayer()
+    private let gradientLayer = CAGradientLayer()
 
     // MARK: - @IBOutlets
 
@@ -46,7 +46,6 @@ extension LecturesTableViewCell {
     func configure(with lecture: Lecture) {
         lectureNameLabel.text = lecture.lectureName
         lectureImageView.image = lecture.lectureCellImage
-        addGradientLayer()
     }
 }
 
@@ -72,9 +71,6 @@ private extension LecturesTableViewCell {
 
     func setupGradientLayer() {
         gradientLayer.colors = [UIColor.firstColorForGradient, UIColor.secondColorForGradient]
-    }
-
-    func addGradientLayer() {
         lectureImageView.layer.addSublayer(gradientLayer)
     }
 }
