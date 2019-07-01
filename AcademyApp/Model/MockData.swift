@@ -11,7 +11,7 @@ import UIKit
 
 enum MockData {
 
-    // Mocked array of Lecture objects 
+    // Mocked array of Lecture objects
     static func lectures() -> [Lecture] {
         let mockCellImageName = "mockCellImage"
 

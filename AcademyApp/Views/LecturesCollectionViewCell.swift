@@ -48,7 +48,7 @@ private extension LecturesCollectionViewCell {
     func setupLabel() {
 
         let attributedLectureName = NSAttributedString(string: lectureName ?? "LECTURE", attributes: [
-            NSAttributedString.Key.foregroundColor: UIColor.lectureNameTextColor,
+            NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: UIFont.lectureNameFont,
             NSAttributedString.Key.kern: 0
             ])

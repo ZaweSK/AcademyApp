@@ -10,23 +10,24 @@ import UIKit
 
 final class LecturesViewController: UIViewController {
 
+    // MARK: - Stored properties
+
     var lectures = MockData.lectures()
 
+    // MARK: - @IBOutletes
+
     @IBOutlet private weak var tableView: UITableView!
+
+    // MARK: - LifeCycle  methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-
-
-
-        print(tableView.sectionHeaderHeight)
-    }
 }
+
+
+// MARK: - UITableViewDataSource & UITableViewDelegate methods
 
 extension LecturesViewController: UITableViewDataSource, UITableViewDelegate {
 
@@ -53,9 +54,9 @@ extension LecturesViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 
-// MARK: - Setup
+// MARK: - Private Setup methods
 
-extension LecturesViewController {
+private extension LecturesViewController {
 
     func setup() {
         view.backgroundColor = .almostBlack
@@ -71,6 +72,6 @@ extension LecturesViewController {
         tableView.registerCell(LecturesTableViewCell.self)
 
         tableView.sectionHeaderHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 28 
+        tableView.estimatedRowHeight = 28
     }
 }
