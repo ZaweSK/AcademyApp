@@ -27,8 +27,16 @@ extension UIColor {
         return UIColor(red: 51, green: 51, blue: 51)
     }
 
+    static var black10: UIColor {
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+    }
+
     static var greyishBrown: UIColor {
         return UIColor(red: 64, green: 64, blue: 64)
+    }
+
+    static var greyishBrownTwo: UIColor {
+        return UIColor(red: 72, green: 72, blue: 72)
     }
 
     static var pinkishRed: UIColor {

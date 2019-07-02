@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3zc-Gv-3eb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -197,6 +197,47 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-706" y="136"/>
+        </scene>
+        <!--Lecture Detail View Controller-->
+        <scene sceneID="FOr-Dd-2Jy">
+            <objects>
+                <viewController id="3zc-Gv-3eb" customClass="LectureDetailViewController" customModule="AcademyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zTd-Ds-Hph">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5NJ-YY-UQc">
+                                <rect key="frame" x="40" y="160" width="295" height="29"/>
+                                <segments>
+                                    <segment title="About"/>
+                                    <segment title="Assignment"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zEM-Mj-DaO">
+                                <rect key="frame" x="163" y="318" width="51" height="31"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="onTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zEM-Mj-DaO" firstAttribute="centerX" secondItem="zTd-Ds-Hph" secondAttribute="centerX" id="SPl-zF-Ggq"/>
+                            <constraint firstItem="5NJ-YY-UQc" firstAttribute="leading" secondItem="IqW-f7-NJ5" secondAttribute="leading" constant="40" id="jtU-Kp-k0q"/>
+                            <constraint firstItem="zEM-Mj-DaO" firstAttribute="centerY" secondItem="zTd-Ds-Hph" secondAttribute="centerY" id="l8S-nh-8dC"/>
+                            <constraint firstItem="zEM-Mj-DaO" firstAttribute="top" secondItem="5NJ-YY-UQc" secondAttribute="bottom" constant="130" id="vnA-vL-wCd"/>
+                            <constraint firstItem="IqW-f7-NJ5" firstAttribute="trailing" secondItem="5NJ-YY-UQc" secondAttribute="trailing" constant="40" id="y2d-7L-y25"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IqW-f7-NJ5"/>
+                    </view>
+                    <connections>
+                        <outlet property="attendanceSwitch" destination="zEM-Mj-DaO" id="PqY-YK-X0w"/>
+                        <outlet property="segmentedControl" destination="5NJ-YY-UQc" id="CPk-F2-J7Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iuh-gN-lwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-221.59999999999999" y="830.73463268365822"/>
         </scene>
         <!--Profile-->
         <scene sceneID="XZP-2j-qXB">

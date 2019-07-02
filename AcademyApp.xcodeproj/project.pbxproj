@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		91936EE080C60D7885873156 /* Pods_AcademyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1B489AE0C61C0425DCC86 /* Pods_AcademyApp.framework */; };
+		D00AB23922CB32500077C7C5 /* LectureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AB23822CB32500077C7C5 /* LectureDetailViewController.swift */; };
 		D08B318922BCCEB400EBA8ED /* LecturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318722BCCEB400EBA8ED /* LecturesCollectionViewCell.swift */; };
 		D08B318A22BCCEB400EBA8ED /* LecturesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08B318822BCCEB400EBA8ED /* LecturesCollectionViewCell.xib */; };
 		D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		1B934978495AC9894A6754E5 /* Pods-AcademyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademyApp.debug.xcconfig"; path = "Target Support Files/Pods-AcademyApp/Pods-AcademyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4EC1B489AE0C61C0425DCC86 /* Pods_AcademyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AcademyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00AB23822CB32500077C7C5 /* LectureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureDetailViewController.swift; sourceTree = "<group>"; };
 		D08B318722BCCEB400EBA8ED /* LecturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesCollectionViewCell.swift; sourceTree = "<group>"; };
 		D08B318822BCCEB400EBA8ED /* LecturesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturesCollectionViewCell.xib; sourceTree = "<group>"; };
 		D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
@@ -134,9 +136,10 @@
 		D0922DCA22B3A871003597EF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D0DA721F22BA387700887039 /* TabBarViewController.swift */,
 				D0E73BAE22B2698300150481 /* LoginViewController.swift */,
 				D0DA722322BA684E00887039 /* LecturesViewController.swift */,
-				D0DA721F22BA387700887039 /* TabBarViewController.swift */,
+				D00AB23822CB32500077C7C5 /* LectureDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */,
 				D0B8633B22C7933300A67320 /* UITableViewExtensions.swift in Sources */,
 				D0F20D4022C61B5200970102 /* Lecture.swift in Sources */,
+				D00AB23922CB32500077C7C5 /* LectureDetailViewController.swift in Sources */,
 				D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */,
 				D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */,
 				D0CD5CB422CA06C5003BDD15 /* LecturesTableViewCell.swift in Sources */,
