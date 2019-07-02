@@ -11,7 +11,6 @@ import UIKit
 class LectureDetailViewController: UIViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-
     @IBOutlet weak var attendanceSwitch: UISwitch!
 
     override func viewDidLoad() {
@@ -28,16 +27,20 @@ class LectureDetailViewController: UIViewController {
         attendanceSwitch.layer.cornerRadius = attendanceSwitch.frame.height / 2
     }
 
-    func setupSegmentedControl() {
-        segmentedControl.backgroundColor = .clear
-        segmentedControl.tintColor = .pinkishRed
-
-        let attributes: [NSAttributedString.Key : Any] = [
+    func fontAttributes(controlIsSelected: Bool) -> [NSAttributedString.Key: Any] {
+        let fontColor: UIColor = controlIsSelected ? .white : .pinkishRed
+        let attributes: [NSAttributedString.Key: Any] =  [
+            NSAttributedString.Key.foregroundColor: fontColor,
             NSAttributedString.Key.font: UIFont.segmentedControlFont,
             NSAttributedString.Key.kern: 1
         ]
+        return attributes
+    }
 
-        segmentedControl.setTitleTextAttributes(attributes, for: .normal)
-        segmentedControl.setTitleTextAttributes(attributes, for: .selected)
+    func setupSegmentedControl() {
+        segmentedControl.backgroundColor = .clear
+        segmentedControl.tintColor = .pinkishRed
+        segmentedControl.setTitleTextAttributes(fontAttributes(controlIsSelected: false), for: .normal)
+        segmentedControl.setTitleTextAttributes(fontAttributes(controlIsSelected: true), for: .selected)
     }
 }
