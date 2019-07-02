@@ -10,14 +10,9 @@ import UIKit
 
 class LectureDetailViewController: UIViewController {
 
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
-    @IBOutlet weak var attendanceSwitch: UISwitch!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSwitch()
-        setupSegmentedControl()
-        // Do any additional setup after loading the view.
     }
 
     func setupSwitch() {

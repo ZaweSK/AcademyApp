@@ -81,6 +81,26 @@ extension LecturesViewController: UITableViewDelegate {
         let cellContentHeight = cellContentWidth * TableViewConfig.imageAspectRatio
         return cellContentHeight + TableViewConfig.cellVerticalInset
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToLectureDetailViewController", sender: self)
+    }
+}
+
+// MARK: - Navigation
+
+extension LecturesViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToLectureDetailViewController" {
+
+            // to be used later on ...
+
+//            guard let indexPath = tableView.indexPathForSelectedRow,
+//                let detailVC = segue.destination as? LectureDetailViewController else {
+//                return
+//            }
+        }
+    }
 }
 
 
