@@ -63,6 +63,12 @@ extension UIFont {
         return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
     }
 
+    static var descriptionLabelFont: UIFont {
+        let fontName = "MaisonNeue-Medium"
+        let fontSize: CGFloat = 13
+        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
+    }
+
     // MARK: - Static methods
 
     static func backUpFont(size: CGFloat) -> UIFont {

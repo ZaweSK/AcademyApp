@@ -13,7 +13,7 @@ class LectureDetailViewController: UIViewController {
     private enum Sections: Int, CaseIterable {
         case header = 0
         case buttons
-//        case content
+        case content
     }
 
     @IBOutlet private weak var collectionView: UICollectionView!
@@ -42,8 +42,9 @@ extension LectureDetailViewController: UICollectionViewDataSource {
         case .buttons:
             let cell: AttendenceCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
             return cell
-//        case .content:
-//            return UICollectionViewCell()
+        case .content:
+            let cell: LectureDescriptionCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
+            return cell
         }
     }
 }
@@ -64,6 +65,7 @@ private extension LectureDetailViewController {
         collectionView.dataSource = self
         collectionView.register(OverviewCollectionViewCell.self)
         collectionView.register(AttendenceCollectionViewCell.self)
+        collectionView.register(LectureDescriptionCollectionViewCell.self )
 
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = CGSize(width: 50, height: 50)

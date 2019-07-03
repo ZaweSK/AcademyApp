@@ -70,6 +70,6 @@ private extension OverviewCollectionViewCell {
 
     func setupGradientLayer() {
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black90.cgColor]
-        gradientLayerView.layer.insertSublayer(gradientLayer, at:0)
+        gradientLayerView.layer.insertSublayer(gradientLayer, at: 0)
     }
 }
