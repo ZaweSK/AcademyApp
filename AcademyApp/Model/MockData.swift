@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// MARK: - Mocked data used before real networking layer is prepared
+
 enum MockData {
 
     // Mocked array of Lecture objects
