@@ -67,6 +67,8 @@ private extension LectureDetailViewController {
         collectionView.register(AttendenceCollectionViewCell.self)
         collectionView.register(LectureDescriptionCollectionViewCell.self )
 
+        collectionView.backgroundColor = .almostBlack
+
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = CGSize(width: 50, height: 50)
         }

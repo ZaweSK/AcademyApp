@@ -36,23 +36,22 @@ class LectureDescriptionCollectionViewCell: UICollectionViewCell, NibLoadableVie
 private extension LectureDescriptionCollectionViewCell {
 
     func setup() {
-
         containerView.backgroundColor = .almostBlack
         setupDescriptionLabel()
-
     }
 
     func setupDescriptionLabel() {
         descriptionLabel.textColor = .white
         descriptionLabel.font = .descriptionLabelFont
         descriptionLabel.text = """
-        START fdfdf df dfd fdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfd
-        fdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfd
-        fdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfd
-        fdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfd
-        fdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfd
-        fdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfdfdfdf df dfd
-        END
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+        officia deserunt mollit anim id est laborum.
         """
+        descriptionLabel.setLineHeight(lineHeight: 12)
     }
 }
+
