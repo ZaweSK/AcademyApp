@@ -24,10 +24,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lP-fO-BeR">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lP-fO-BeR" userLabel="Container View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IJB-Yd-982">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mockDetailImage" translatesAutoresizingMaskIntoConstraints="NO" id="IJB-Yd-982">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJ2-Ak-d9s">
@@ -80,9 +80,11 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="IJB-Yd-982" secondAttribute="trailing" id="AK8-wD-yg3"/>
                             <constraint firstItem="BJ2-Ak-d9s" firstAttribute="height" secondItem="1lP-fO-BeR" secondAttribute="height" multiplier="0.6" id="BUT-Eq-Fst"/>
+                            <constraint firstAttribute="height" constant="400" id="GDP-22-dLa"/>
                             <constraint firstItem="IJB-Yd-982" firstAttribute="leading" secondItem="1lP-fO-BeR" secondAttribute="leading" id="KL0-DR-n6n"/>
                             <constraint firstItem="h5Y-jP-x1p" firstAttribute="leading" secondItem="1lP-fO-BeR" secondAttribute="leading" constant="9" id="Zrc-IH-zTV"/>
                             <constraint firstAttribute="trailing" secondItem="BJ2-Ak-d9s" secondAttribute="trailing" id="agk-1r-8Iu"/>
+                            <constraint firstAttribute="width" constant="375" id="apq-Jo-7eL"/>
                             <constraint firstItem="BJ2-Ak-d9s" firstAttribute="leading" secondItem="1lP-fO-BeR" secondAttribute="leading" id="cUF-xf-Jy3"/>
                             <constraint firstAttribute="bottom" secondItem="IJB-Yd-982" secondAttribute="bottom" id="f2p-Up-qYr"/>
                             <constraint firstItem="IJB-Yd-982" firstAttribute="top" secondItem="1lP-fO-BeR" secondAttribute="top" id="gdR-0v-dCX"/>
@@ -101,14 +103,18 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="375" height="400"/>
             <connections>
+                <outlet property="containerView" destination="1lP-fO-BeR" id="jw8-fH-DUt"/>
+                <outlet property="heightConstraint" destination="GDP-22-dLa" id="1AL-TK-hSG"/>
                 <outlet property="lectureImageView" destination="IJB-Yd-982" id="yc5-gx-5iS"/>
                 <outlet property="lectureNameLabel" destination="vpC-Hg-TcM" id="DuO-dW-1fS"/>
                 <outlet property="segmentedControl" destination="9bH-Mh-g1D" id="zbj-B4-KrY"/>
+                <outlet property="widthConstraint" destination="apq-Jo-7eL" id="emq-P8-GIr"/>
             </connections>
             <point key="canvasLocation" x="-112.31884057971016" y="41.517857142857139"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="backArrow" width="12" height="22"/>
+        <image name="mockDetailImage" width="752" height="800"/>
     </resources>
 </document>

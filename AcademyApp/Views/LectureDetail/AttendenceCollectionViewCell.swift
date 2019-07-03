@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AttendenceCollectionViewCell: UICollectionViewCell {
+class AttendenceCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
     // MARK: - @IBOutlets
 

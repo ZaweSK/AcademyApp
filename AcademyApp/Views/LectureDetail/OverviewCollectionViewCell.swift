@@ -12,6 +12,9 @@ class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
     // MARK: - @IBOutlets
 
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet private weak var lectureNameLabel: UILabel!
     @IBOutlet private weak var lectureImageView: UIImageView!
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
@@ -20,6 +23,7 @@ class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        setup()
     }
 }
 
@@ -28,6 +32,12 @@ class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
 private extension OverviewCollectionViewCell {
 
     func setup() {
+        self.contentView.translatesAutoresizingMaskIntoConstraints = false
+        let screenWidth = UIScreen.main.bounds.width
+        widthConstraint.constant = screenWidth
+        heightConstraint.constant = 400
+
+
         setupSegmentedControl()
     }
 

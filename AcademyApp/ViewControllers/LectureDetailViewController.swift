@@ -10,12 +10,83 @@ import UIKit
 
 class LectureDetailViewController: UIViewController {
 
-
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    private enum Sections: Int, CaseIterable {
+        case header = 0
+//        case buttons
+//        case content
     }
 
+    @IBOutlet weak var collectionView: UICollectionView!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
+}
+
+extension LectureDetailViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Sections.allCases.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let section = Sections.init(rawValue: indexPath.row) else {
+            fatalError("Unable to detec section from initializer ")
+        }
+
+        switch section {
+
+        case .header:
+            let cell: OverviewCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
+            return cell
+//        case .buttons:
+//            let cell: AttendenceCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
+//            return cell
+//        case .content:
+//            return UICollectionViewCell()
+        }
+    }
+}
+
+extension LectureDetailViewController: UICollectionViewDelegate {
+
+}
+
+extension LectureDetailViewController: UICollectionViewDelegateFlowLayout {
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//
+//        guard let section = Sections.init(rawValue: indexPath.row) else {
+//            fatalError("Unable to detec section from initializer ")
+//        }
+//
+//        switch section {
+//
+//        case .header:
+//            return collectionView.dequeReusableCell(for: indexPath) as OverviewCollectionViewCell
+//        case .buttons:
+//            return collectionView.dequeReusableCell(for: indexPath) as AttendenceCollectionViewCell
+//        case .content:
+//            return UICollectionViewCell()
+//        }
+//    }
+}
+
+// MARK: - Private setup methods
+
+private extension LectureDetailViewController {
+    func setup() {
+        setupCollectionView()
+    }
+
+    func setupCollectionView() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(OverviewCollectionViewCell.self)
+        collectionView.register(AttendenceCollectionViewCell.self)
+
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.estimatedItemSize = CGSize(width: 1, height: 1)
+        }
+
+    }
 }

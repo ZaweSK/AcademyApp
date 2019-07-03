@@ -25,6 +25,8 @@
 		D0CD5CB522CA06C5003BDD15 /* LecturesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CD5CB322CA06C5003BDD15 /* LecturesTableViewCell.xib */; };
 		D0D2286D22CC8C5700519201 /* AttendenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D2286B22CC8C5700519201 /* AttendenceCollectionViewCell.swift */; };
 		D0D2286E22CC8C5700519201 /* AttendenceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D2286C22CC8C5700519201 /* AttendenceCollectionViewCell.xib */; };
+		D0D2287222CCBECF00519201 /* TestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D2287022CCBECF00519201 /* TestCollectionViewCell.swift */; };
+		D0D2287322CCBECF00519201 /* TestCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D2287122CCBECF00519201 /* TestCollectionViewCell.xib */; };
 		D0DA722022BA387700887039 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA721F22BA387700887039 /* TabBarViewController.swift */; };
 		D0DA722222BA4AA500887039 /* UITabBarItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA722122BA4AA500887039 /* UITabBarItemExtensions.swift */; };
 		D0DA722422BA684E00887039 /* LecturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA722322BA684E00887039 /* LecturesViewController.swift */; };
@@ -62,6 +64,8 @@
 		D0CD5CB322CA06C5003BDD15 /* LecturesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturesTableViewCell.xib; sourceTree = "<group>"; };
 		D0D2286B22CC8C5700519201 /* AttendenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendenceCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0D2286C22CC8C5700519201 /* AttendenceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendenceCollectionViewCell.xib; sourceTree = "<group>"; };
+		D0D2287022CCBECF00519201 /* TestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0D2287122CCBECF00519201 /* TestCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0DA721F22BA387700887039 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D0DA722122BA4AA500887039 /* UITabBarItemExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarItemExtensions.swift; sourceTree = "<group>"; };
 		D0DA722322BA684E00887039 /* LecturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 				D00AB23C22CB78FF0077C7C5 /* OverviewCollectionViewCell.xib */,
 				D0D2286B22CC8C5700519201 /* AttendenceCollectionViewCell.swift */,
 				D0D2286C22CC8C5700519201 /* AttendenceCollectionViewCell.xib */,
+				D0D2287022CCBECF00519201 /* TestCollectionViewCell.swift */,
+				D0D2287122CCBECF00519201 /* TestCollectionViewCell.xib */,
 			);
 			path = LectureDetail;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 			files = (
 				D0CD5CB522CA06C5003BDD15 /* LecturesTableViewCell.xib in Resources */,
 				D00AB23E22CB78FF0077C7C5 /* OverviewCollectionViewCell.xib in Resources */,
+				D0D2287322CCBECF00519201 /* TestCollectionViewCell.xib in Resources */,
 				D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */,
 				D0FCDF7A22BB9EDD00A23D8E /* Assets.xcassets in Resources */,
 				D0D2286E22CC8C5700519201 /* AttendenceCollectionViewCell.xib in Resources */,
@@ -387,6 +394,7 @@
 				D0DA722022BA387700887039 /* TabBarViewController.swift in Sources */,
 				D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */,
 				D0DA722422BA684E00887039 /* LecturesViewController.swift in Sources */,
+				D0D2287222CCBECF00519201 /* TestCollectionViewCell.swift in Sources */,
 				D0F20D4222C61C9100970102 /* MockData.swift in Sources */,
 				D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */,
 				D00AB23D22CB78FF0077C7C5 /* OverviewCollectionViewCell.swift in Sources */,
