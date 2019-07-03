@@ -52,25 +52,6 @@ extension LectureDetailViewController: UICollectionViewDelegate {
 
 }
 
-extension LectureDetailViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        guard let section = Sections.init(rawValue: indexPath.row) else {
-//            fatalError("Unable to detec section from initializer ")
-//        }
-//
-//        switch section {
-//
-//        case .header:
-//            return collectionView.dequeReusableCell(for: indexPath) as OverviewCollectionViewCell
-//        case .buttons:
-//            return collectionView.dequeReusableCell(for: indexPath) as AttendenceCollectionViewCell
-//        case .content:
-//            return UICollectionViewCell()
-//        }
-//    }
-}
-
 // MARK: - Private setup methods
 
 private extension LectureDetailViewController {
@@ -85,7 +66,7 @@ private extension LectureDetailViewController {
         collectionView.register(AttendenceCollectionViewCell.self)
 
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.estimatedItemSize = CGSize(width: 1, height: 1)
+            layout.estimatedItemSize = CGSize(width: 50, height: 50)
         }
 
     }

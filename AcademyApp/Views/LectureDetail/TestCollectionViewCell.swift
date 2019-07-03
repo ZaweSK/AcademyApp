@@ -8,14 +8,17 @@
 
 import UIKit
 
-class TestCollectionViewCell: UICollectionViewCell {
+class TestCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet private weak var widthConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var containerView: UIView!
 
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        let screenWidth = UIScreen.main.bounds.width
+        widthConstraint.constant = screenWidth
     }
 
 }

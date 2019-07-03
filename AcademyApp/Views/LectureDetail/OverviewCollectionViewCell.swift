@@ -11,10 +11,7 @@ import UIKit
 class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
     // MARK: - @IBOutlets
-
-    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var containerView: UIView!
-    @IBOutlet private weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet private weak var lectureNameLabel: UILabel!
     @IBOutlet private weak var lectureImageView: UIImageView!
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
@@ -25,6 +22,14 @@ class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
         super.awakeFromNib()
         setup()
     }
+
+
+    // needs to be implemented in order for autoresizing of cell to work correctly
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        layoutAttributes.bounds.size.width = UIScreen.main.bounds.width
+        layoutAttributes.bounds.size.height = containerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+        return layoutAttributes
+    }
 }
 
 // MAKR: - Private setup methods
@@ -32,12 +37,6 @@ class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
 private extension OverviewCollectionViewCell {
 
     func setup() {
-        self.contentView.translatesAutoresizingMaskIntoConstraints = false
-        let screenWidth = UIScreen.main.bounds.width
-        widthConstraint.constant = screenWidth
-        heightConstraint.constant = 400
-
-
         setupSegmentedControl()
     }
 
