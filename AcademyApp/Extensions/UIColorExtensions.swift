@@ -41,11 +41,11 @@ extension UIColor {
     }
 
     // returns clear color
-    static var firstColorForGradient: CGColor {
+    static var black0: CGColor {
         return UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
     }
 
-    static var secondColorForGradient: CGColor {
+    static var black80: CGColor {
         return UIColor(red: 0, green: 0, blue: 0, alpha: 0.8).cgColor
     }
 
