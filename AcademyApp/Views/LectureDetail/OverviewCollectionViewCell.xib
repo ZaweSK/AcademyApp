@@ -94,6 +94,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="375" height="400"/>
+            <connections>
+                <outlet property="lectureImageView" destination="IJB-Yd-982" id="yc5-gx-5iS"/>
+                <outlet property="lectureNameLabel" destination="vpC-Hg-TcM" id="DuO-dW-1fS"/>
+                <outlet property="segmentedControl" destination="9bH-Mh-g1D" id="zbj-B4-KrY"/>
+            </connections>
             <point key="canvasLocation" x="-112.31884057971016" y="41.517857142857139"/>
         </collectionViewCell>
     </objects>
