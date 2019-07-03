@@ -105,6 +105,7 @@
             <size key="customSize" width="375" height="400"/>
             <connections>
                 <outlet property="containerView" destination="1lP-fO-BeR" id="jw8-fH-DUt"/>
+                <outlet property="gradientLayerView" destination="BJ2-Ak-d9s" id="ANw-RG-2WZ"/>
                 <outlet property="lectureImageView" destination="IJB-Yd-982" id="yc5-gx-5iS"/>
                 <outlet property="lectureNameLabel" destination="vpC-Hg-TcM" id="DuO-dW-1fS"/>
                 <outlet property="segmentedControl" destination="9bH-Mh-g1D" id="zbj-B4-KrY"/>

@@ -27,10 +27,6 @@ extension UIColor {
         return UIColor(red: 51, green: 51, blue: 51)
     }
 
-    static var black10: UIColor {
-        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
-    }
-
     static var greyishBrown: UIColor {
         return UIColor(red: 64, green: 64, blue: 64)
     }
@@ -43,9 +39,16 @@ extension UIColor {
         return UIColor(red: 239, green: 13, blue: 51)
     }
 
-    // color for tab the tab bar shadow
+    static var black10: UIColor {
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+    }
+
     static var black50: UIColor {
         return UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+    }
+
+    static var black90: UIColor {
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.9)
     }
 
     // returns clear color

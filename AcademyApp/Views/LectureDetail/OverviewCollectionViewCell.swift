@@ -10,7 +10,13 @@ import UIKit
 
 class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
+    // MARK: - Stored Properties
+
+    private var gradientLayer = CAGradientLayer()
+
     // MARK: - @IBOutlets
+
+    @IBOutlet private weak var gradientLayerView: UIView!
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var lectureNameLabel: UILabel!
     @IBOutlet private weak var lectureImageView: UIImageView!
@@ -23,6 +29,10 @@ class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
         setup()
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        gradientLayer.frame = gradientLayerView.bounds
+    }
 
     // needs to be implemented in order for autoresizing of cell to work correctly
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
@@ -38,6 +48,7 @@ private extension OverviewCollectionViewCell {
 
     func setup() {
         setupSegmentedControl()
+        setupGradientLayer()
     }
 
     func fontAttributes(controlIsSelected: Bool) -> [NSAttributedString.Key: Any] {
@@ -55,5 +66,10 @@ private extension OverviewCollectionViewCell {
         segmentedControl.tintColor = .pinkishRed
         segmentedControl.setTitleTextAttributes(fontAttributes(controlIsSelected: false), for: .normal)
         segmentedControl.setTitleTextAttributes(fontAttributes(controlIsSelected: true), for: .selected)
+    }
+
+    func setupGradientLayer() {
+        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black90.cgColor]
+        gradientLayerView.layer.insertSublayer(gradientLayer, at:0)
     }
 }

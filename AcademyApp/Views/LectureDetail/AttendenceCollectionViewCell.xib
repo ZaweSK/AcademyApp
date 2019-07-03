@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLz-Rr-mbU">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLz-Rr-mbU" userLabel="Container View">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qxS-gT-CYC">
@@ -33,8 +33,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="51" id="ICQ-cr-FVd"/>
                             <constraint firstItem="iSe-gz-375" firstAttribute="leading" secondItem="wLz-Rr-mbU" secondAttribute="leading" constant="20" id="Q1V-t3-Oit"/>
                             <constraint firstAttribute="trailing" secondItem="qxS-gT-CYC" secondAttribute="trailing" constant="16" id="mY7-a8-sTp"/>
                             <constraint firstItem="qxS-gT-CYC" firstAttribute="centerY" secondItem="wLz-Rr-mbU" secondAttribute="centerY" id="o5A-qD-biJ"/>
@@ -54,6 +55,7 @@
             <connections>
                 <outlet property="attendanceSwitch" destination="qxS-gT-CYC" id="Rwk-5L-XGb"/>
                 <outlet property="attendedLabel" destination="iSe-gz-375" id="mXI-6a-gC7"/>
+                <outlet property="containerView" destination="wLz-Rr-mbU" id="nOQ-iB-9tV"/>
             </connections>
             <point key="canvasLocation" x="308" y="146"/>
         </collectionViewCell>

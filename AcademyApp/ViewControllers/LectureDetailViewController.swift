@@ -12,11 +12,11 @@ class LectureDetailViewController: UIViewController {
 
     private enum Sections: Int, CaseIterable {
         case header = 0
-//        case buttons
+        case buttons
 //        case content
     }
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +39,9 @@ extension LectureDetailViewController: UICollectionViewDataSource {
         case .header:
             let cell: OverviewCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
             return cell
-//        case .buttons:
-//            let cell: AttendenceCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
-//            return cell
+        case .buttons:
+            let cell: AttendenceCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
+            return cell
 //        case .content:
 //            return UICollectionViewCell()
         }

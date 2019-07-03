@@ -12,14 +12,22 @@ class AttendenceCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
     // MARK: - @IBOutlets
 
-    @IBOutlet weak var attendanceSwitch: UISwitch!
-    @IBOutlet weak var attendedLabel: UILabel!
+    @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var attendanceSwitch: UISwitch!
+    @IBOutlet private weak var attendedLabel: UILabel!
 
-    // MARK:: - LifeCycle methods
+    // MARK: - LifeCycle methods
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setup()
+    }
+
+    // needs to be implemented in order for autoresizing of cell to work correctly
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        layoutAttributes.bounds.size.width = UIScreen.main.bounds.width
+        layoutAttributes.bounds.size.height = containerView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+        return layoutAttributes
     }
 }
 
@@ -30,6 +38,7 @@ private extension AttendenceCollectionViewCell {
     func setup() {
         setupAttendanceSwitch()
         setupAttendedLabel()
+        containerView.backgroundColor = .almostBlack
     }
 
     func setupAttendanceSwitch() {
