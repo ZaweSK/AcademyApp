@@ -23,6 +23,8 @@
 		D0B8633F22C8B88600A67320 /* LecturesTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B8633E22C8B88600A67320 /* LecturesTableViewHeader.xib */; };
 		D0CD5CB422CA06C5003BDD15 /* LecturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD5CB222CA06C5003BDD15 /* LecturesTableViewCell.swift */; };
 		D0CD5CB522CA06C5003BDD15 /* LecturesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CD5CB322CA06C5003BDD15 /* LecturesTableViewCell.xib */; };
+		D0D2286D22CC8C5700519201 /* AttendenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D2286B22CC8C5700519201 /* AttendenceCollectionViewCell.swift */; };
+		D0D2286E22CC8C5700519201 /* AttendenceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D2286C22CC8C5700519201 /* AttendenceCollectionViewCell.xib */; };
 		D0DA722022BA387700887039 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA721F22BA387700887039 /* TabBarViewController.swift */; };
 		D0DA722222BA4AA500887039 /* UITabBarItemExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA722122BA4AA500887039 /* UITabBarItemExtensions.swift */; };
 		D0DA722422BA684E00887039 /* LecturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DA722322BA684E00887039 /* LecturesViewController.swift */; };
@@ -58,6 +60,8 @@
 		D0B8633E22C8B88600A67320 /* LecturesTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturesTableViewHeader.xib; sourceTree = "<group>"; };
 		D0CD5CB222CA06C5003BDD15 /* LecturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesTableViewCell.swift; sourceTree = "<group>"; };
 		D0CD5CB322CA06C5003BDD15 /* LecturesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturesTableViewCell.xib; sourceTree = "<group>"; };
+		D0D2286B22CC8C5700519201 /* AttendenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendenceCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0D2286C22CC8C5700519201 /* AttendenceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttendenceCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0DA721F22BA387700887039 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D0DA722122BA4AA500887039 /* UITabBarItemExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarItemExtensions.swift; sourceTree = "<group>"; };
 		D0DA722322BA684E00887039 /* LecturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 			children = (
 				D00AB23B22CB78FF0077C7C5 /* OverviewCollectionViewCell.swift */,
 				D00AB23C22CB78FF0077C7C5 /* OverviewCollectionViewCell.xib */,
+				D0D2286B22CC8C5700519201 /* AttendenceCollectionViewCell.swift */,
+				D0D2286C22CC8C5700519201 /* AttendenceCollectionViewCell.xib */,
 			);
 			path = LectureDetail;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 				D00AB23E22CB78FF0077C7C5 /* OverviewCollectionViewCell.xib in Resources */,
 				D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */,
 				D0FCDF7A22BB9EDD00A23D8E /* Assets.xcassets in Resources */,
+				D0D2286E22CC8C5700519201 /* AttendenceCollectionViewCell.xib in Resources */,
 				D0FCDF8522BBA57E00A23D8E /* Maison_Neue_Demi.otf in Resources */,
 				D0FCDF8422BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf in Resources */,
 				D08B318A22BCCEB400EBA8ED /* LecturesCollectionViewCell.xib in Resources */,
@@ -386,6 +393,7 @@
 				D08B318F22BCE49300EBA8ED /* NibLoadableView.swift in Sources */,
 				D0B8633D22C8B80200A67320 /* LecturesTableViewHeader.swift in Sources */,
 				D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */,
+				D0D2286D22CC8C5700519201 /* AttendenceCollectionViewCell.swift in Sources */,
 				D0E73BAD22B2698300150481 /* AppDelegate.swift in Sources */,
 				D08B318922BCCEB400EBA8ED /* LecturesCollectionViewCell.swift in Sources */,
 			);
