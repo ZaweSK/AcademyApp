@@ -71,16 +71,22 @@
                                     <constraint firstItem="eeo-wl-Quh" firstAttribute="leading" secondItem="BJ2-Ak-d9s" secondAttribute="leading" id="uRe-JE-S8E"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5Y-jP-x1p">
+                                <rect key="frame" x="9" y="32" width="12" height="22"/>
+                                <state key="normal" image="backArrow"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="IJB-Yd-982" secondAttribute="trailing" id="AK8-wD-yg3"/>
                             <constraint firstItem="BJ2-Ak-d9s" firstAttribute="height" secondItem="1lP-fO-BeR" secondAttribute="height" multiplier="0.6" id="BUT-Eq-Fst"/>
                             <constraint firstItem="IJB-Yd-982" firstAttribute="leading" secondItem="1lP-fO-BeR" secondAttribute="leading" id="KL0-DR-n6n"/>
+                            <constraint firstItem="h5Y-jP-x1p" firstAttribute="leading" secondItem="1lP-fO-BeR" secondAttribute="leading" constant="9" id="Zrc-IH-zTV"/>
                             <constraint firstAttribute="trailing" secondItem="BJ2-Ak-d9s" secondAttribute="trailing" id="agk-1r-8Iu"/>
                             <constraint firstItem="BJ2-Ak-d9s" firstAttribute="leading" secondItem="1lP-fO-BeR" secondAttribute="leading" id="cUF-xf-Jy3"/>
                             <constraint firstAttribute="bottom" secondItem="IJB-Yd-982" secondAttribute="bottom" id="f2p-Up-qYr"/>
                             <constraint firstItem="IJB-Yd-982" firstAttribute="top" secondItem="1lP-fO-BeR" secondAttribute="top" id="gdR-0v-dCX"/>
+                            <constraint firstItem="h5Y-jP-x1p" firstAttribute="top" secondItem="1lP-fO-BeR" secondAttribute="top" constant="32" id="j2M-la-p1m"/>
                             <constraint firstAttribute="bottom" secondItem="BJ2-Ak-d9s" secondAttribute="bottom" id="jHd-fb-tul"/>
                         </constraints>
                     </view>
@@ -102,4 +108,7 @@
             <point key="canvasLocation" x="-112.31884057971016" y="41.517857142857139"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="backArrow" width="12" height="22"/>
+    </resources>
 </document>

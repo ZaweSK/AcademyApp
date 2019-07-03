@@ -164,6 +164,13 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		D0D2286F22CC9A3E00519201 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		D0E73BA022B2698300150481 = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +192,7 @@
 		D0E73BAB22B2698300150481 /* AcademyApp */ = {
 			isa = PBXGroup;
 			children = (
+				D0D2286F22CC9A3E00519201 /* Layouts */,
 				D0F20D3E22C61B2500970102 /* Model */,
 				D08B318D22BCE47800EBA8ED /* Protocols */,
 				D0E73BC722B291D300150481 /* Extensions */,
