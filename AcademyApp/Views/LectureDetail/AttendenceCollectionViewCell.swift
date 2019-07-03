@@ -30,7 +30,7 @@ private extension AttendenceCollectionViewCell {
     func setup() {
         setupAttendanceSwitch()
         setupAttendedLabel()
-    }git a
+    }
 
     func setupAttendanceSwitch() {
         attendanceSwitch.onTintColor = .pinkishRed
