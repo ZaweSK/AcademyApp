@@ -9,12 +9,9 @@
 import Foundation
 import UIKit
 
-struct Lecture {
-    var lectureName: String = ""
-    var lectureCellImage: UIImage
+// MARK: - Struct representing object of one Lecture and it's attributes - name, image etc.
 
-    init(lectureName: String, lectureCellImage: UIImage) {
-        self.lectureName = lectureName
-        self.lectureCellImage = lectureCellImage
-    }
+struct Lecture {
+    var lectureName: String
+    var lectureCellImage: UIImage
 }

@@ -70,7 +70,7 @@ private extension LecturesTableViewCell {
     }
 
     func setupGradientLayer() {
-        gradientLayer.colors = [UIColor.firstColorForGradient, UIColor.secondColorForGradient]
+        gradientLayer.colors = [UIColor.black0, UIColor.black80]
         lectureImageView.layer.addSublayer(gradientLayer)
     }
 }

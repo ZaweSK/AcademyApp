@@ -129,7 +129,6 @@
 				D00AB23A22CB77B60077C7C5 /* LectureDetail */,
 				D0F20D4422C6446E00970102 /* Lectures */,
 				D0922DC622B37181003597EF /* RoundedCornersButton.swift */,
-				D08B318722BCCEB400EBA8ED /* LecturesCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -415,7 +414,6 @@
 				D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */,
 				D0D2286D22CC8C5700519201 /* AttendenceCollectionViewCell.swift in Sources */,
 				D0E73BAD22B2698300150481 /* AppDelegate.swift in Sources */,
-				D08B318922BCCEB400EBA8ED /* LecturesCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
