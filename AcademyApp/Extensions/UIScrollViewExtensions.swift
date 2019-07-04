@@ -38,4 +38,23 @@ extension UIScrollView {
     func scrollTo(direction: ScrollDirection, animated: Bool = true) {
         setContentOffset(self.contentOffset(to: direction), animated: animated)
     }
+
+    // Method checks whether collection is scrollable. It's contentSize is bigger than
+    // it's frame.height. Should be used only once the scrollViews's content size is
+    // properly calculated.
+
+    func isScrollable() -> Bool {
+        return self.contentSize.height > self.frame.height
+    }
+
+    // Methods checks whether scrollView is scrolled to the very bottom edge or further
+
+    func isScrolledToBottom() -> Bool {
+
+        // if conentSize.height is not yet calculated (equals 0), return false
+        guard contentSize.height != 0 else {
+            return false
+        }
+        return self.contentOffset.y >= self.contentSize.height - self.frame.size.height
+    }
 }

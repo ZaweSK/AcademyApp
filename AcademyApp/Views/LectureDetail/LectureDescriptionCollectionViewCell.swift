@@ -54,4 +54,3 @@ private extension LectureDescriptionCollectionViewCell {
         descriptionLabel.setLineHeight(lineHeight: 12)
     }
 }
-

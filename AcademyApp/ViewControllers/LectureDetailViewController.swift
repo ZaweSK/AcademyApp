@@ -10,19 +10,38 @@ import UIKit
 
 class LectureDetailViewController: UIViewController {
 
+    // MARK: - Stored Properties
+
+    private var gradientLayer = CAGradientLayer()
+
+    /// Enum describing different parts of LectureDetail Screen. Each case is corresponding to one collectionView cell.
+
     private enum Sections: Int, CaseIterable {
         case header = 0
         case buttons
         case content
     }
 
+    // MARK: - @IBOutlets
+
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var maskingView: UIView!
+
+    // MARK: - LifeCycle methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        gradientLayer.frame = maskingView.bounds
+        maskingView.isHidden = !collectionView.isScrollable()
+    }
 }
+
+// MARK: - UICollectionViewDataSource methods
 
 extension LectureDetailViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -49,8 +68,13 @@ extension LectureDetailViewController: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionView Delegate methods
+
 extension LectureDetailViewController: UICollectionViewDelegate {
 
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        maskingView.isHidden = collectionView.isScrolledToBottom()
+    }
 }
 
 // MARK: - Private setup methods
@@ -58,11 +82,13 @@ extension LectureDetailViewController: UICollectionViewDelegate {
 private extension LectureDetailViewController {
     func setup() {
         setupCollectionView()
+        setupGradientLayer()
     }
 
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
+
         collectionView.register(OverviewCollectionViewCell.self)
         collectionView.register(AttendenceCollectionViewCell.self)
         collectionView.register(LectureDescriptionCollectionViewCell.self )
@@ -72,6 +98,11 @@ private extension LectureDetailViewController {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = CGSize(width: 50, height: 50)
         }
+    }
 
+    func setupGradientLayer() {
+        gradientLayer.colors = [UIColor.clear.cgColor, UIColor.almostBlack.cgColor]
+        gradientLayer.locations =  [0.5]
+        maskingView.layer.addSublayer(gradientLayer)
     }
 }
