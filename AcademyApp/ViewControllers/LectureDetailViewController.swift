@@ -57,6 +57,7 @@ extension LectureDetailViewController: UICollectionViewDataSource {
 
         case .header:
             let cell: OverviewCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
+            cell.delegate = self
             return cell
         case .buttons:
             let cell: AttendenceCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
@@ -65,6 +66,15 @@ extension LectureDetailViewController: UICollectionViewDataSource {
             let cell: LectureDescriptionCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
             return cell
         }
+    }
+}
+
+
+// MARK: - BackButtonDelegate methods
+
+extension LectureDetailViewController: BackButtonDelegate {
+    func didTapBackButton() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -80,6 +90,7 @@ extension LectureDetailViewController: UICollectionViewDelegate {
 // MARK: - Private setup methods
 
 private extension LectureDetailViewController {
+
     func setup() {
         setupCollectionView()
         setupGradientLayer()
@@ -91,8 +102,9 @@ private extension LectureDetailViewController {
 
         collectionView.register(OverviewCollectionViewCell.self)
         collectionView.register(AttendenceCollectionViewCell.self)
-        collectionView.register(LectureDescriptionCollectionViewCell.self )
+        collectionView.register(LectureDescriptionCollectionViewCell.self)
 
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = .almostBlack
 
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {

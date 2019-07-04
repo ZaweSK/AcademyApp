@@ -8,11 +8,16 @@
 
 import UIKit
 
+protocol BackButtonDelegate: class {
+    func didTapBackButton()
+}
+
 class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
     // MARK: - Stored Properties
 
     private var gradientLayer = CAGradientLayer()
+    weak var delegate: BackButtonDelegate?
 
     // MARK: - @IBOutlets
 
@@ -21,6 +26,12 @@ class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
     @IBOutlet private weak var lectureNameLabel: UILabel!
     @IBOutlet private weak var lectureImageView: UIImageView!
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
+
+    // MARK: - @IBActions
+
+    @IBAction private func backArrowButtonTapped(_ sender: UIButton) {
+        delegate?.didTapBackButton()
+    }
 
     // MARK: - LifeCycle methods
 
