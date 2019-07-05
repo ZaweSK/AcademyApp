@@ -16,8 +16,14 @@ class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
     // MARK: - Stored Properties
 
+
     private var gradientLayer = CAGradientLayer()
     weak var delegate: BackButtonDelegate?
+
+    /// ratios from original design
+    private enum UIAspectRatio {
+        static let imageViewHeightToScreenHeight: CGFloat = 0.6
+    }
 
     // MARK: - @IBOutlets
 
@@ -26,6 +32,8 @@ class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
     @IBOutlet private weak var lectureNameLabel: UILabel!
     @IBOutlet private weak var lectureImageView: UIImageView!
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
+    @IBOutlet private weak var imageViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private weak var segmentedControlHeightConstraint: NSLayoutConstraint!
 
     // MARK: - @IBActions
 
@@ -60,6 +68,12 @@ private extension OverviewCollectionViewCell {
     func setup() {
         setupSegmentedControl()
         setupGradientLayer()
+        setupAspectRatio()
+    }
+
+    // methods set's up auto layout constraint accordingly to aspect ratios from original design
+    func setupAspectRatio() {
+        imageViewHeightConstraint.constant = UIScreen.main.bounds.height * UIAspectRatio.imageViewHeightToScreenHeight
     }
 
     func fontAttributes(controlIsSelected: Bool) -> [NSAttributedString.Key: Any] {
