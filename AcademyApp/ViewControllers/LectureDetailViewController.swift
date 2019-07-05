@@ -94,6 +94,7 @@ private extension LectureDetailViewController {
     func setup() {
         setupCollectionView()
         setupGradientLayer()
+        view.backgroundColor = .almostBlack
     }
 
     func setupCollectionView() {

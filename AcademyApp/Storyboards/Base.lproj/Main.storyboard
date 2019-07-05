@@ -227,12 +227,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="PVI-8Q-J4d" secondAttribute="bottom" id="3An-2x-YFC"/>
+                            <constraint firstItem="IqW-f7-NJ5" firstAttribute="bottom" secondItem="PVI-8Q-J4d" secondAttribute="bottom" id="3An-2x-YFC"/>
                             <constraint firstItem="PVI-8Q-J4d" firstAttribute="leading" secondItem="IqW-f7-NJ5" secondAttribute="leading" id="63Y-wW-ZmR"/>
                             <constraint firstItem="MmG-QR-7gt" firstAttribute="leading" secondItem="IqW-f7-NJ5" secondAttribute="leading" id="DN7-h7-0Kl"/>
                             <constraint firstItem="IqW-f7-NJ5" firstAttribute="trailing" secondItem="PVI-8Q-J4d" secondAttribute="trailing" id="Q5O-ZF-YWH"/>
                             <constraint firstItem="PVI-8Q-J4d" firstAttribute="top" secondItem="zTd-Ds-Hph" secondAttribute="top" id="hql-Nm-qYV"/>
-                            <constraint firstAttribute="bottom" secondItem="MmG-QR-7gt" secondAttribute="bottom" id="tce-vy-F79"/>
+                            <constraint firstItem="IqW-f7-NJ5" firstAttribute="bottom" secondItem="MmG-QR-7gt" secondAttribute="bottom" id="tce-vy-F79"/>
                             <constraint firstItem="MmG-QR-7gt" firstAttribute="trailing" secondItem="IqW-f7-NJ5" secondAttribute="trailing" id="xXC-b9-X43"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IqW-f7-NJ5"/>
