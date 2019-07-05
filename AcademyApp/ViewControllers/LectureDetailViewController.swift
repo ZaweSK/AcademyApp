@@ -49,7 +49,7 @@ extension LectureDetailViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let section = Sections.init(rawValue: indexPath.row) else {
+        guard let section = Sections(rawValue: indexPath.row) else {
             fatalError("Unable to detec section from initializer ")
         }
 

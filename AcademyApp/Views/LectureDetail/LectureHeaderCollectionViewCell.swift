@@ -73,7 +73,21 @@ private extension LectureHeaderCollectionViewCell {
 
     // methods set's up auto layout constraint accordingly to aspect ratios from original design
     func setupAspectRatio() {
+
+        lectureImageView.translatesAutoresizingMaskIntoConstraints = false
+
+        lectureImageView.constraints.forEach {
+            print($0)
+        }
+
         imageViewHeightConstraint.constant = UIScreen.main.bounds.height * UIAspectRatio.imageViewHeightToScreenHeight
+
+        print("-------")
+
+        lectureImageView.constraints.forEach {
+            print($0)
+        }
+        print("---------------------------------------------- \n \n \n \n \n")
     }
 
     func fontAttributes(controlIsSelected: Bool) -> [NSAttributedString.Key: Any] {
@@ -95,6 +109,6 @@ private extension LectureHeaderCollectionViewCell {
 
     func setupGradientLayer() {
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black90.cgColor]
-        gradientLayerView.layer.insertSublayer(gradientLayer, at: 0)
+        gradientLayerView.layer.addSublayer(gradientLayer)
     }
 }
