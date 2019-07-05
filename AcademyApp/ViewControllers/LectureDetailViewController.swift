@@ -56,7 +56,7 @@ extension LectureDetailViewController: UICollectionViewDataSource {
         switch section {
 
         case .header:
-            let cell: OverviewCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
+            let cell: LectureHeaderCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
             cell.delegate = self
             return cell
         case .buttons:
@@ -100,7 +100,7 @@ private extension LectureDetailViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
 
-        collectionView.register(OverviewCollectionViewCell.self)
+        collectionView.register(LectureHeaderCollectionViewCell.self)
         collectionView.register(AttendenceCollectionViewCell.self)
         collectionView.register(LectureDescriptionCollectionViewCell.self)
 

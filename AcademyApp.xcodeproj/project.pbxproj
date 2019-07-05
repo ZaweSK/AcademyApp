@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		91936EE080C60D7885873156 /* Pods_AcademyApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC1B489AE0C61C0425DCC86 /* Pods_AcademyApp.framework */; };
 		D00AB23922CB32500077C7C5 /* LectureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AB23822CB32500077C7C5 /* LectureDetailViewController.swift */; };
-		D00AB23D22CB78FF0077C7C5 /* OverviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AB23B22CB78FF0077C7C5 /* OverviewCollectionViewCell.swift */; };
-		D00AB23E22CB78FF0077C7C5 /* OverviewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00AB23C22CB78FF0077C7C5 /* OverviewCollectionViewCell.xib */; };
-		D08B318922BCCEB400EBA8ED /* LecturesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318722BCCEB400EBA8ED /* LecturesCollectionViewCell.swift */; };
+		D00AB23D22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AB23B22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.swift */; };
+		D00AB23E22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00AB23C22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.xib */; };
 		D08B318A22BCCEB400EBA8ED /* LecturesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08B318822BCCEB400EBA8ED /* LecturesCollectionViewCell.xib */; };
 		D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */; };
 		D08B318F22BCE49300EBA8ED /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318E22BCE49300EBA8ED /* NibLoadableView.swift */; };
@@ -49,9 +48,8 @@
 		1B934978495AC9894A6754E5 /* Pods-AcademyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AcademyApp.debug.xcconfig"; path = "Target Support Files/Pods-AcademyApp/Pods-AcademyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4EC1B489AE0C61C0425DCC86 /* Pods_AcademyApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AcademyApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D00AB23822CB32500077C7C5 /* LectureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureDetailViewController.swift; sourceTree = "<group>"; };
-		D00AB23B22CB78FF0077C7C5 /* OverviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCollectionViewCell.swift; sourceTree = "<group>"; };
-		D00AB23C22CB78FF0077C7C5 /* OverviewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewCollectionViewCell.xib; sourceTree = "<group>"; };
-		D08B318722BCCEB400EBA8ED /* LecturesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesCollectionViewCell.swift; sourceTree = "<group>"; };
+		D00AB23B22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
+		D00AB23C22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LectureHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
 		D08B318822BCCEB400EBA8ED /* LecturesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturesCollectionViewCell.xib; sourceTree = "<group>"; };
 		D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		D08B318E22BCE49300EBA8ED /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
@@ -113,8 +111,8 @@
 		D00AB23A22CB77B60077C7C5 /* LectureDetail */ = {
 			isa = PBXGroup;
 			children = (
-				D00AB23B22CB78FF0077C7C5 /* OverviewCollectionViewCell.swift */,
-				D00AB23C22CB78FF0077C7C5 /* OverviewCollectionViewCell.xib */,
+				D00AB23B22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.swift */,
+				D00AB23C22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.xib */,
 				D0D2286B22CC8C5700519201 /* AttendenceCollectionViewCell.swift */,
 				D0D2286C22CC8C5700519201 /* AttendenceCollectionViewCell.xib */,
 				D0D2287422CCD98A00519201 /* LectureDescriptionCollectionViewCell.swift */,
@@ -328,7 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0CD5CB522CA06C5003BDD15 /* LecturesTableViewCell.xib in Resources */,
-				D00AB23E22CB78FF0077C7C5 /* OverviewCollectionViewCell.xib in Resources */,
+				D00AB23E22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.xib in Resources */,
 				D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */,
 				D0FCDF7A22BB9EDD00A23D8E /* Assets.xcassets in Resources */,
 				D0D2286E22CC8C5700519201 /* AttendenceCollectionViewCell.xib in Resources */,
@@ -399,7 +397,7 @@
 				D0DA722422BA684E00887039 /* LecturesViewController.swift in Sources */,
 				D0F20D4222C61C9100970102 /* MockData.swift in Sources */,
 				D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */,
-				D00AB23D22CB78FF0077C7C5 /* OverviewCollectionViewCell.swift in Sources */,
+				D00AB23D22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.swift in Sources */,
 				D0B8633B22C7933300A67320 /* UITableViewExtensions.swift in Sources */,
 				D0D2287622CCD98A00519201 /* LectureDescriptionCollectionViewCell.swift in Sources */,
 				D0F20D4022C61B5200970102 /* Lecture.swift in Sources */,

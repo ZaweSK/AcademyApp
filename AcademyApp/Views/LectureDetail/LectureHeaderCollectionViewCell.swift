@@ -12,7 +12,7 @@ protocol BackButtonDelegate: class {
     func didTapBackButton()
 }
 
-class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
+class LectureHeaderCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
     // MARK: - Stored Properties
 
@@ -63,7 +63,7 @@ class OverviewCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
 // MAKR: - Private setup methods
 
-private extension OverviewCollectionViewCell {
+private extension LectureHeaderCollectionViewCell {
 
     func setup() {
         setupSegmentedControl()
