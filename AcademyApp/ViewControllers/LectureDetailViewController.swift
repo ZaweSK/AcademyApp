@@ -60,7 +60,7 @@ extension LectureDetailViewController: UICollectionViewDataSource {
             cell.delegate = self
             return cell
         case .buttons:
-            let cell: AttendenceCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
+            let cell: LectureAttendenceCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
             return cell
         case .content:
             let cell: LectureDescriptionCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
@@ -101,7 +101,7 @@ private extension LectureDetailViewController {
         collectionView.dataSource = self
 
         collectionView.register(LectureHeaderCollectionViewCell.self)
-        collectionView.register(AttendenceCollectionViewCell.self)
+        collectionView.register(LectureAttendenceCollectionViewCell.self)
         collectionView.register(LectureDescriptionCollectionViewCell.self)
 
         collectionView.showsVerticalScrollIndicator = false

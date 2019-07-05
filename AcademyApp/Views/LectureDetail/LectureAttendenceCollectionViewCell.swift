@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AttendenceCollectionViewCell: UICollectionViewCell, NibLoadableView {
+class LectureAttendenceCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
     // MARK: - @IBOutlets
 
@@ -33,7 +33,7 @@ class AttendenceCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
 // MAKR: - Private setup methods
 
-private extension AttendenceCollectionViewCell {
+private extension LectureAttendenceCollectionViewCell {
 
     func setup() {
         setupAttendanceSwitch()
