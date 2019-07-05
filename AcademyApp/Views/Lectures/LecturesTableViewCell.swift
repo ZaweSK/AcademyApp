@@ -66,7 +66,7 @@ private extension LecturesTableViewCell {
     }
 
     func setupLectureNameLabel() {
-        lectureNameLabel.font = UIFont.lectureNameFont
+        lectureNameLabel.font = FontStyler.font(for: .lectureTableViewCellLectureNameLabel)
     }
 
     func setupGradientLayer() {

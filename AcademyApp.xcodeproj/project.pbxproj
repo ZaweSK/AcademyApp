@@ -22,6 +22,8 @@
 		D0B8633F22C8B88600A67320 /* LecturesTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B8633E22C8B88600A67320 /* LecturesTableViewHeader.xib */; };
 		D0CD5CB422CA06C5003BDD15 /* LecturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD5CB222CA06C5003BDD15 /* LecturesTableViewCell.swift */; };
 		D0CD5CB522CA06C5003BDD15 /* LecturesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CD5CB322CA06C5003BDD15 /* LecturesTableViewCell.xib */; };
+		D0CD830722CF3FA50080F2BB /* Maison_Neue_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0CD830622CF3FA50080F2BB /* Maison_Neue_Bold.otf */; };
+		D0CD830A22CF41C50080F2BB /* FontSyler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD830922CF41C50080F2BB /* FontSyler.swift */; };
 		D0D2286D22CC8C5700519201 /* LectureAttendenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D2286B22CC8C5700519201 /* LectureAttendenceCollectionViewCell.swift */; };
 		D0D2286E22CC8C5700519201 /* LectureAttendenceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D2286C22CC8C5700519201 /* LectureAttendenceCollectionViewCell.xib */; };
 		D0D2287622CCD98A00519201 /* LectureDescriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D2287422CCD98A00519201 /* LectureDescriptionCollectionViewCell.swift */; };
@@ -61,6 +63,8 @@
 		D0B8633E22C8B88600A67320 /* LecturesTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturesTableViewHeader.xib; sourceTree = "<group>"; };
 		D0CD5CB222CA06C5003BDD15 /* LecturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesTableViewCell.swift; sourceTree = "<group>"; };
 		D0CD5CB322CA06C5003BDD15 /* LecturesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturesTableViewCell.xib; sourceTree = "<group>"; };
+		D0CD830622CF3FA50080F2BB /* Maison_Neue_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Maison_Neue_Bold.otf; path = ../../../../../../../Downloads/Maison_Neue_Bold.otf; sourceTree = "<group>"; };
+		D0CD830922CF41C50080F2BB /* FontSyler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSyler.swift; sourceTree = "<group>"; };
 		D0D2286B22CC8C5700519201 /* LectureAttendenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureAttendenceCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0D2286C22CC8C5700519201 /* LectureAttendenceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LectureAttendenceCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0D2287422CCD98A00519201 /* LectureDescriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureDescriptionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -80,7 +84,6 @@
 		D0F20D4122C61C9100970102 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
 		D0FCDF7922BB9EDD00A23D8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D0FCDF7E22BBA55A00A23D8E /* Maison_Neue_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Bold.otf; sourceTree = "<group>"; };
 		D0FCDF7F22BBA57E00A23D8E /* Maison_Neue_Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Medium.otf; sourceTree = "<group>"; };
 		D0FCDF8022BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trump_Gothic_East_Bold.ttf; sourceTree = "<group>"; };
 		D0FCDF8122BBA57E00A23D8E /* Maison_Neue_Demi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Demi.otf; sourceTree = "<group>"; };
@@ -169,6 +172,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		D0CD830822CF41B50080F2BB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D0CD830922CF41C50080F2BB /* FontSyler.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		D0D2286F22CC9A3E00519201 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +208,7 @@
 		D0E73BAB22B2698300150481 /* AcademyApp */ = {
 			isa = PBXGroup;
 			children = (
+				D0CD830822CF41B50080F2BB /* Utilities */,
 				D0D2286F22CC9A3E00519201 /* Layouts */,
 				D0F20D3E22C61B2500970102 /* Model */,
 				D08B318D22BCE47800EBA8ED /* Protocols */,
@@ -249,10 +261,10 @@
 		D0FCDF7D22BBA53A00A23D8E /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				D0CD830622CF3FA50080F2BB /* Maison_Neue_Bold.otf */,
 				D0FCDF8122BBA57E00A23D8E /* Maison_Neue_Demi.otf */,
 				D0FCDF7F22BBA57E00A23D8E /* Maison_Neue_Medium.otf */,
 				D0FCDF8022BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf */,
-				D0FCDF7E22BBA55A00A23D8E /* Maison_Neue_Bold.otf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -330,6 +342,7 @@
 				D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */,
 				D0FCDF7A22BB9EDD00A23D8E /* Assets.xcassets in Resources */,
 				D0D2286E22CC8C5700519201 /* LectureAttendenceCollectionViewCell.xib in Resources */,
+				D0CD830722CF3FA50080F2BB /* Maison_Neue_Bold.otf in Resources */,
 				D0FCDF8522BBA57E00A23D8E /* Maison_Neue_Demi.otf in Resources */,
 				D0FCDF8422BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf in Resources */,
 				D08B318A22BCCEB400EBA8ED /* LecturesCollectionViewCell.xib in Resources */,
@@ -405,6 +418,7 @@
 				D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */,
 				D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */,
 				D0CD5CB422CA06C5003BDD15 /* LecturesTableViewCell.swift in Sources */,
+				D0CD830A22CF41C50080F2BB /* FontSyler.swift in Sources */,
 				D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */,
 				D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */,
 				D08B318F22BCE49300EBA8ED /* NibLoadableView.swift in Sources */,

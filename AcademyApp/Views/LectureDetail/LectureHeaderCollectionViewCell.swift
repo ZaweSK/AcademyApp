@@ -80,7 +80,7 @@ private extension LectureHeaderCollectionViewCell {
         let fontColor: UIColor = controlIsSelected ? .white : .pinkishRed
         let attributes: [NSAttributedString.Key: Any] =  [
             NSAttributedString.Key.foregroundColor: fontColor,
-            NSAttributedString.Key.font: UIFont.segmentedControlFont,
+            NSAttributedString.Key.font: FontStyler.font(for: .segmentedControl),
             NSAttributedString.Key.kern: 1
         ]
         return attributes

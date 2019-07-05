@@ -59,7 +59,7 @@ private extension TabBarViewController {
         let fontColor: UIColor = tabIsSelected ? .white : .brownGray
         let attributes: [NSAttributedString.Key: Any] =  [
             NSAttributedString.Key.foregroundColor: fontColor,
-            NSAttributedString.Key.font: UIFont.tabBarFont,
+            NSAttributedString.Key.font: FontStyler.font(for: .tabBar),
             NSAttributedString.Key.kern: 0.5
         ]
         return attributes

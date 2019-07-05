@@ -52,7 +52,7 @@ private extension LectureAttendenceCollectionViewCell {
         attendedLabel.attributedText = NSAttributedString(string: attendedLabel.text ?? "Attended", attributes: [
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.kern: -0.41,
-            NSAttributedString.Key.font: UIFont.attendedLabelFont
+            NSAttributedString.Key.font: FontStyler.font(for: .attendedLabel)
             ])
     }
 }

@@ -10,69 +10,30 @@ import Foundation
 import UIKit
 
 // MARK: - UIFont extension for handling app specific fonts
+// swiftlint:disable force_unwrapping
 
 extension UIFont {
 
     // MARK: - Static properities
 
-    static var textFieldPlaceholderFont: UIFont {
-        let fontName = "MaisonNeue-Medium"
-        let fontSize: CGFloat = 16
-        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
+    enum MaisonNeue {
+        static func medium(_ size: CGFloat) -> UIFont {
+            return UIFont(name: "MaisonNeue-Medium", size: size)!
+        }
+
+        static func demi(_ size: CGFloat) -> UIFont {
+            return UIFont(name: "MaisonNeue-Demi", size: size)!
+        }
+
+        static func bold(_ size: CGFloat) -> UIFont {
+            return UIFont(name: "MaisonNeue-Bold", size: size)!
+        }
     }
 
-    static var showLabelFont: UIFont {
-        let fontName = "MaisonNeue-Demi"
-        let fontSize: CGFloat = 13
-        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
-    }
 
-    static var doneButtonTitleFont: UIFont {
-        let fontName = "MaisonNeue-Medium"
-        let fontSize: CGFloat = 16
-        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
-    }
-
-    static var tabBarFont: UIFont {
-        let fontName = "MaisonNeue-Medium"
-        let fontSize: CGFloat = 10
-        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
-    }
-
-    static var lecturesLabelFont: UIFont {
-        let fontName = "MaisonNeue-Bold"
-        let fontSize: CGFloat = 13
-        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
-    }
-
-    static var lectureNameFont: UIFont {
-        let fontName = "TrumpGothicEast-Bold"
-        let fontSize: CGFloat = 30
-        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
-    }
-
-    static var segmentedControlFont: UIFont {
-        let fontName = "MaisonNeue-Medium"
-        let fontSize: CGFloat = 13
-        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
-    }
-
-    static var attendedLabelFont: UIFont {
-        let fontName = "MaisonNeue-Medium"
-        let fontSize: CGFloat = 16
-        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
-    }
-
-    static var descriptionLabelFont: UIFont {
-        let fontName = "MaisonNeue-Medium"
-        let fontSize: CGFloat = 13
-        return UIFont(name: fontName, size: fontSize) ?? backUpFont(size: fontSize)
-    }
-
-    // MARK: - Static methods
-
-    static func backUpFont(size: CGFloat) -> UIFont {
-        // swiftlint:disable:next force_unwrapping
-        return UIFont(name: "Helvetica", size: size)!
+    enum TrumpGothic {
+        static func bold(_ size: CGFloat) -> UIFont {
+            return UIFont(name: "TrumpGothicEast-Bold", size: size)!
+        }
     }
 }
