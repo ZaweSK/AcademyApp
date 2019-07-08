@@ -48,6 +48,14 @@ class LectureHeaderCollectionViewCell: UICollectionViewCell, NibLoadableView {
     }
 }
 
+// MARK: - Public methods
+
+extension LectureHeaderCollectionViewCell {
+    func configure(with lecture: Lecture) {
+        lectureNameLabel.text = lecture.lectureName
+    }
+}
+
 // MAKR: - Private setup methods
 
 private extension LectureHeaderCollectionViewCell {
@@ -88,6 +96,6 @@ private extension LectureHeaderCollectionViewCell {
 
     func setupLabel() {
         lectureNameLabel.font = UIFont.TrumpGothic.bold(52)
-        lectureNameLabel.textColor = .clear
+        lectureNameLabel.textColor = .white
     }
 }

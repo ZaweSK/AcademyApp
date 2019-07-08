@@ -100,10 +100,12 @@ extension LecturesViewController {
 
             // to be used later on ...
 
-//            guard let indexPath = tableView.indexPathForSelectedRow,
-//                let detailVC = segue.destination as? LectureDetailViewController else {
-//                return
-//            }
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                let detailVC = segue.destination as? LectureDetailViewController else {
+                return
+            }
+
+            detailVC.configure(with: lectures[indexPath.row])
         }
     }
 }

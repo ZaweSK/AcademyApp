@@ -13,6 +13,7 @@ class LectureDetailViewController: UIViewController {
     // MARK: - Stored Properties
 
     private var gradientLayer = CAGradientLayer()
+    private var lecture: Lecture?
 
     /// Enum describing different parts of LectureDetail Screen. Each case is corresponding to one collectionView cell.
 
@@ -49,6 +50,14 @@ class LectureDetailViewController: UIViewController {
     }
 }
 
+// MARK: - Public methods
+
+extension LectureDetailViewController {
+    func configure(with lecture: Lecture) {
+        self.lecture = lecture
+    }
+}
+
 // MARK: - UICollectionViewDataSource methods
 
 extension LectureDetailViewController: UICollectionViewDataSource {
@@ -61,10 +70,15 @@ extension LectureDetailViewController: UICollectionViewDataSource {
             fatalError("Unable to detec section from initializer ")
         }
 
+        guard let lecture = lecture else {
+            fatalError("Could not find lecture for detail")
+        }
+
         switch section {
 
         case .header:
             let cell: LectureHeaderCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
+            cell.configure(with: lecture)
             return cell
         case .buttons:
             let cell: LectureAttendenceCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
