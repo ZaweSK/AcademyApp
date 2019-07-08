@@ -15,7 +15,7 @@ class LectureHeaderCollectionViewCell: UICollectionViewCell, NibLoadableView {
     private let gradientLayer = CAGradientLayer()
 
     /// ratios from original design
-    private enum UIAspectRatio {
+    private enum AspectRatioConfig {
         static let imageViewHeightToScreenHeight: CGFloat = 0.6
         static let gradientLayerHeightToImageViewHeight: CGFloat = 0.57
     }
@@ -71,8 +71,8 @@ private extension LectureHeaderCollectionViewCell {
 
     // methods set's up auto layout constraint accordingly to aspect ratios from original design
     func setupAspectRatio() {
-        imageViewHeightConstraint.constant = UIScreen.main.bounds.height * UIAspectRatio.imageViewHeightToScreenHeight
-        gradientLayerViewHeightConstraint.constant = imageViewHeightConstraint.constant * UIAspectRatio.gradientLayerHeightToImageViewHeight
+        imageViewHeightConstraint.constant = UIScreen.main.bounds.height * AspectRatioConfig.imageViewHeightToScreenHeight
+        gradientLayerViewHeightConstraint.constant = imageViewHeightConstraint.constant * AspectRatioConfig.gradientLayerHeightToImageViewHeight
     }
 
     func fontAttributes(controlIsSelected: Bool) -> [NSAttributedString.Key: Any] {

@@ -75,7 +75,6 @@ extension LectureDetailViewController: UICollectionViewDataSource {
         }
 
         switch section {
-
         case .header:
             let cell: LectureHeaderCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
             cell.configure(with: lecture)
@@ -126,13 +125,13 @@ private extension LectureDetailViewController {
         collectionView.contentInsetAdjustmentBehavior = .never
 
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.estimatedItemSize = CGSize(width: 50, height: 50)
+            layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         }
     }
 
     func setupGradientLayer() {
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.almostBlack.cgColor]
-        gradientLayer.locations =  [0.5]
+        gradientLayer.locations = [0.5]
         maskingView.layer.addSublayer(gradientLayer)
     }
 }
