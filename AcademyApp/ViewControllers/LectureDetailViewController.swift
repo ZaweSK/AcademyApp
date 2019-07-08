@@ -37,6 +37,9 @@ class LectureDetailViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         gradientLayer.frame = maskingView.bounds
+
+        // If scroll view is scrollable (content size is bigger than frame), apply gradient layer
+        // at the bottom of the screen
         maskingView.isHidden = !collectionView.isScrollable()
     }
 
@@ -78,6 +81,8 @@ extension LectureDetailViewController: UICollectionViewDataSource {
 extension LectureDetailViewController: UICollectionViewDelegate {
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // If scroll view is scrolled to the bottom, hide gradient layer at the bottom of the screen. Otherwise
+        // show it.
         maskingView.isHidden = collectionView.isScrolledToBottom()
     }
 }
