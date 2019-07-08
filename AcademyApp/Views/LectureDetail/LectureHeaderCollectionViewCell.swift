@@ -17,16 +17,18 @@ class LectureHeaderCollectionViewCell: UICollectionViewCell, NibLoadableView {
     /// ratios from original design
     private enum UIAspectRatio {
         static let imageViewHeightToScreenHeight: CGFloat = 0.6
+        static let gradientLayerHeightToImageViewHeight: CGFloat = 0.57
     }
 
     // MARK: - @IBOutlets
 
     @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var lectureImageView: UIImageView!
-    @IBOutlet private weak var gradientLayerView: UIView!
     @IBOutlet private weak var imageViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
     @IBOutlet private weak var lectureNameLabel: UILabel!
+    @IBOutlet private weak var gradientLayerView: UIView!
+    @IBOutlet private weak var gradientLayerViewHeightConstraint: NSLayoutConstraint!
 
     // MARK: - LifeCycle methods
 
@@ -37,7 +39,7 @@ class LectureHeaderCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        gradientLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: gradientLayerView.frame.height)
+        gradientLayer.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: gradientLayerViewHeightConstraint.constant)
     }
 
     // needs to be implemented in order for autoresizing of cell to work correctly
@@ -70,6 +72,7 @@ private extension LectureHeaderCollectionViewCell {
     // methods set's up auto layout constraint accordingly to aspect ratios from original design
     func setupAspectRatio() {
         imageViewHeightConstraint.constant = UIScreen.main.bounds.height * UIAspectRatio.imageViewHeightToScreenHeight
+        gradientLayerViewHeightConstraint.constant = imageViewHeightConstraint.constant * UIAspectRatio.gradientLayerHeightToImageViewHeight
     }
 
     func fontAttributes(controlIsSelected: Bool) -> [NSAttributedString.Key: Any] {

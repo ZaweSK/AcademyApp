@@ -36,9 +36,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="146-xl-IHH">
                                 <rect key="frame" x="0.0" y="172" width="375" height="228"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="228" id="ETO-y4-9NH"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SWIFT I (PLAYGROUND)" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aib-Rl-QrY">
                                 <rect key="frame" x="20" y="218.5" width="214" height="124.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="TrumpGothicEast-Bold" family="Trump Gothic East" pointSize="52"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -96,6 +100,7 @@
             <connections>
                 <outlet property="containerView" destination="1lP-fO-BeR" id="jw8-fH-DUt"/>
                 <outlet property="gradientLayerView" destination="146-xl-IHH" id="LSR-7y-8y6"/>
+                <outlet property="gradientLayerViewHeightConstraint" destination="ETO-y4-9NH" id="hcG-Hg-cHc"/>
                 <outlet property="imageViewHeightConstraint" destination="g8p-TI-KFV" id="G5T-bZ-Wbi"/>
                 <outlet property="lectureImageView" destination="IJB-Yd-982" id="yc5-gx-5iS"/>
                 <outlet property="lectureNameLabel" destination="aib-Rl-QrY" id="9BB-2t-b0B"/>
