@@ -23,7 +23,6 @@
 		D0B8633F22C8B88600A67320 /* LecturesTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0B8633E22C8B88600A67320 /* LecturesTableViewHeader.xib */; };
 		D0CD5CB422CA06C5003BDD15 /* LecturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD5CB222CA06C5003BDD15 /* LecturesTableViewCell.swift */; };
 		D0CD5CB522CA06C5003BDD15 /* LecturesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CD5CB322CA06C5003BDD15 /* LecturesTableViewCell.xib */; };
-		D0CD830722CF3FA50080F2BB /* Maison_Neue_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0CD830622CF3FA50080F2BB /* Maison_Neue_Bold.otf */; };
 		D0D2286D22CC8C5700519201 /* LectureAttendenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D2286B22CC8C5700519201 /* LectureAttendenceCollectionViewCell.swift */; };
 		D0D2286E22CC8C5700519201 /* LectureAttendenceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D2286C22CC8C5700519201 /* LectureAttendenceCollectionViewCell.xib */; };
 		D0D2287622CCD98A00519201 /* LectureDescriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D2287422CCD98A00519201 /* LectureDescriptionCollectionViewCell.swift */; };
