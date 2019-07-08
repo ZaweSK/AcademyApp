@@ -185,7 +185,7 @@ private extension LoginViewController {
         textFields.forEach {
             $0.attributedPlaceholder = NSAttributedString(string: $0.placeholder ?? "", attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor.brownGray,
-                NSAttributedString.Key.font: FontStyler.font(for: .textFieldPlaceholder),
+                NSAttributedString.Key.font: UIFont.MaisonNeue.medium(16),
                 NSAttributedString.Key.kern: 1
                 ])
 
@@ -199,7 +199,7 @@ private extension LoginViewController {
 
         let attributedTitle = NSAttributedString(string: showButton.title(for: .normal) ?? "SHOW", attributes: [
             NSAttributedString.Key.foregroundColor: UIColor.brownGray,
-            NSAttributedString.Key.font: FontStyler.font(for: .showButton),
+            NSAttributedString.Key.font: UIFont.MaisonNeue.demi(13),
             NSAttributedString.Key.kern: 1
             ])
 
@@ -210,7 +210,7 @@ private extension LoginViewController {
         doneButton.isEnabled = false
 
         doneButton.setTitle(doneButton.titleLabel?.text ?? "Done", for: .normal)
-        doneButton.titleLabel?.font = FontStyler.font(for: .doneButtonTitle)
+        doneButton.titleLabel?.font = UIFont.MaisonNeue.medium(16)
         doneButton.titleLabel?.textColor = .white
     }
 }

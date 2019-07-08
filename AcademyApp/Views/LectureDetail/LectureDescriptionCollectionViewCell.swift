@@ -42,7 +42,7 @@ private extension LectureDescriptionCollectionViewCell {
 
     func setupDescriptionLabel() {
         descriptionLabel.textColor = .white
-        descriptionLabel.font = FontStyler.font(for: .lectureDescriptionLabel)
+        descriptionLabel.font = UIFont.MaisonNeue.medium(13)
         descriptionLabel.text = """
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

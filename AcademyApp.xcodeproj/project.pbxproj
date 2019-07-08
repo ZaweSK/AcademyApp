@@ -23,7 +23,6 @@
 		D0CD5CB422CA06C5003BDD15 /* LecturesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD5CB222CA06C5003BDD15 /* LecturesTableViewCell.swift */; };
 		D0CD5CB522CA06C5003BDD15 /* LecturesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CD5CB322CA06C5003BDD15 /* LecturesTableViewCell.xib */; };
 		D0CD830722CF3FA50080F2BB /* Maison_Neue_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0CD830622CF3FA50080F2BB /* Maison_Neue_Bold.otf */; };
-		D0CD830A22CF41C50080F2BB /* FontSyler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CD830922CF41C50080F2BB /* FontSyler.swift */; };
 		D0D2286D22CC8C5700519201 /* LectureAttendenceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D2286B22CC8C5700519201 /* LectureAttendenceCollectionViewCell.swift */; };
 		D0D2286E22CC8C5700519201 /* LectureAttendenceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D2286C22CC8C5700519201 /* LectureAttendenceCollectionViewCell.xib */; };
 		D0D2287622CCD98A00519201 /* LectureDescriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D2287422CCD98A00519201 /* LectureDescriptionCollectionViewCell.swift */; };
@@ -64,7 +63,6 @@
 		D0CD5CB222CA06C5003BDD15 /* LecturesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesTableViewCell.swift; sourceTree = "<group>"; };
 		D0CD5CB322CA06C5003BDD15 /* LecturesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturesTableViewCell.xib; sourceTree = "<group>"; };
 		D0CD830622CF3FA50080F2BB /* Maison_Neue_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Maison_Neue_Bold.otf; path = ../../../../../../../Downloads/Maison_Neue_Bold.otf; sourceTree = "<group>"; };
-		D0CD830922CF41C50080F2BB /* FontSyler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSyler.swift; sourceTree = "<group>"; };
 		D0D2286B22CC8C5700519201 /* LectureAttendenceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureAttendenceCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0D2286C22CC8C5700519201 /* LectureAttendenceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LectureAttendenceCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0D2287422CCD98A00519201 /* LectureDescriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureDescriptionCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -172,14 +170,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		D0CD830822CF41B50080F2BB /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				D0CD830922CF41C50080F2BB /* FontSyler.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		D0E73BA022B2698300150481 = {
 			isa = PBXGroup;
 			children = (
@@ -201,7 +191,6 @@
 		D0E73BAB22B2698300150481 /* AcademyApp */ = {
 			isa = PBXGroup;
 			children = (
-				D0CD830822CF41B50080F2BB /* Utilities */,
 				D0F20D3E22C61B2500970102 /* Model */,
 				D08B318D22BCE47800EBA8ED /* Protocols */,
 				D0E73BC722B291D300150481 /* Extensions */,
@@ -410,7 +399,6 @@
 				D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */,
 				D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */,
 				D0CD5CB422CA06C5003BDD15 /* LecturesTableViewCell.swift in Sources */,
-				D0CD830A22CF41C50080F2BB /* FontSyler.swift in Sources */,
 				D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */,
 				D0922DCE22B67083003597EF /* UIFontExtensions.swift in Sources */,
 				D08B318F22BCE49300EBA8ED /* NibLoadableView.swift in Sources */,
