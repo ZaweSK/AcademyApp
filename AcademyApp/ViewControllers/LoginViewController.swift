@@ -41,11 +41,6 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family : \(family) Font names: \(names)")
-        }
     }
 
     deinit {
@@ -64,7 +59,7 @@ final class LoginViewController: UIViewController {
         }
 
         UIView.animate(withDuration: 0.2) {
-            self.showButton.isHidden = passwordText.isEmpty ? true : false
+            self.showButton.alpha = passwordText.isEmpty ? 0 : 1
         }
         doneButton.isEnabled = String.isValidEmail(possibleEmail: emailText) && !passwordText.isEmpty ? true : false
     }
@@ -200,7 +195,7 @@ private extension LoginViewController {
     }
 
     func setupShowButton() {
-        showButton.isHidden = true
+        showButton.alpha = 0
 
         let attributedTitle = NSAttributedString(string: showButton.title(for: .normal) ?? "SHOW", attributes: [
             NSAttributedString.Key.foregroundColor: UIColor.brownGray,
