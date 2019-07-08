@@ -12,7 +12,7 @@ class LectureDetailViewController: UIViewController {
 
     // MARK: - Stored Properties
 
-    private var gradientLayer = CAGradientLayer()
+    private let gradientLayer = CAGradientLayer()
     private var lecture: Lecture?
 
     /// Enum describing different parts of LectureDetail Screen. Each case is corresponding to one collectionView cell.

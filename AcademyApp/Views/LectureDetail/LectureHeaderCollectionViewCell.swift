@@ -12,7 +12,7 @@ class LectureHeaderCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
     // MARK: - Stored Propertie
 
-    private var gradientLayer = CAGradientLayer()
+    private let gradientLayer = CAGradientLayer()
 
     /// ratios from original design
     private enum UIAspectRatio {
