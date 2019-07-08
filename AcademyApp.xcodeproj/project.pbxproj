@@ -11,6 +11,7 @@
 		D00AB23922CB32500077C7C5 /* LectureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AB23822CB32500077C7C5 /* LectureDetailViewController.swift */; };
 		D00AB23D22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00AB23B22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.swift */; };
 		D00AB23E22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00AB23C22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.xib */; };
+		D023B41E22D31AD7008ADCA3 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D023B41D22D31AD7008ADCA3 /* NavigationViewController.swift */; };
 		D08B318A22BCCEB400EBA8ED /* LecturesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08B318822BCCEB400EBA8ED /* LecturesCollectionViewCell.xib */; };
 		D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */; };
 		D08B318F22BCE49300EBA8ED /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318E22BCE49300EBA8ED /* NibLoadableView.swift */; };
@@ -51,6 +52,7 @@
 		D00AB23822CB32500077C7C5 /* LectureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureDetailViewController.swift; sourceTree = "<group>"; };
 		D00AB23B22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LectureHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		D00AB23C22CB78FF0077C7C5 /* LectureHeaderCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LectureHeaderCollectionViewCell.xib; sourceTree = "<group>"; };
+		D023B41D22D31AD7008ADCA3 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		D08B318822BCCEB400EBA8ED /* LecturesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturesCollectionViewCell.xib; sourceTree = "<group>"; };
 		D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		D08B318E22BCE49300EBA8ED /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
@@ -122,6 +124,15 @@
 			path = LectureDetail;
 			sourceTree = "<group>";
 		};
+		D023B41A22D316E3008ADCA3 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				D0DA721F22BA387700887039 /* TabBarViewController.swift */,
+				D023B41D22D31AD7008ADCA3 /* NavigationViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		D08921F222B915DB005A7D4E /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +173,7 @@
 		D0922DCA22B3A871003597EF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D0DA721F22BA387700887039 /* TabBarViewController.swift */,
+				D023B41A22D316E3008ADCA3 /* Navigation */,
 				D0E73BAE22B2698300150481 /* LoginViewController.swift */,
 				D0DA722322BA684E00887039 /* LecturesViewController.swift */,
 				D00AB23822CB32500077C7C5 /* LectureDetailViewController.swift */,
@@ -388,6 +399,7 @@
 				D0D2287922CD383D00519201 /* UILabelExtensions.swift in Sources */,
 				D0DA722022BA387700887039 /* TabBarViewController.swift in Sources */,
 				D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */,
+				D023B41E22D31AD7008ADCA3 /* NavigationViewController.swift in Sources */,
 				D0DA722422BA684E00887039 /* LecturesViewController.swift in Sources */,
 				D0F20D4222C61C9100970102 /* MockData.swift in Sources */,
 				D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */,

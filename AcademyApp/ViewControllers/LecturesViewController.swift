@@ -45,6 +45,11 @@ final class LecturesViewController: UIViewController {
         super.viewDidLoad()
         setup()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavBar()
+    }
 }
 
 
@@ -120,5 +125,15 @@ private extension LecturesViewController {
         tableView.separatorStyle = .none
         tableView.registerHeader(LecturesTableViewHeader.self)
         tableView.registerCell(LecturesTableViewCell.self)
+    }
+
+    func setupNavBar() {
+        // Hide navigation Bar
+        navigationController?.setNavigationBarHidden(true, animated: true)
+
+        // Set the title for back button in nav bar (is visible when there is another view controller on top of
+        // this one in navigation stack)
+        let backBarButtton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backBarButtton
     }
 }

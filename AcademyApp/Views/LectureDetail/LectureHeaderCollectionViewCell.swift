@@ -8,17 +8,11 @@
 
 import UIKit
 
-protocol BackButtonDelegate: class {
-    func didTapBackButton()
-}
-
 class LectureHeaderCollectionViewCell: UICollectionViewCell, NibLoadableView {
 
-    // MARK: - Stored Properties
-
+    // MARK: - Stored Propertie
 
     private var gradientLayer = CAGradientLayer()
-    weak var delegate: BackButtonDelegate?
 
     /// ratios from original design
     private enum UIAspectRatio {
@@ -34,12 +28,6 @@ class LectureHeaderCollectionViewCell: UICollectionViewCell, NibLoadableView {
     @IBOutlet private weak var segmentedControl: UISegmentedControl!
     @IBOutlet private weak var imageViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var segmentedControlHeightConstraint: NSLayoutConstraint!
-
-    // MARK: - @IBActions
-
-    @IBAction private func backArrowButtonTapped(_ sender: UIButton) {
-        delegate?.didTapBackButton()
-    }
 
     // MARK: - LifeCycle methods
 
@@ -68,7 +56,7 @@ private extension LectureHeaderCollectionViewCell {
     func setup() {
         setupSegmentedControl()
         setupGradientLayer()
-        setupAspectRatio()
+//        setupAspectRatio()
     }
 
     // methods set's up auto layout constraint accordingly to aspect ratios from original design

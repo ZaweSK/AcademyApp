@@ -39,6 +39,11 @@ class LectureDetailViewController: UIViewController {
         gradientLayer.frame = maskingView.bounds
         maskingView.isHidden = !collectionView.isScrollable()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
 }
 
 // MARK: - UICollectionViewDataSource methods
@@ -57,7 +62,6 @@ extension LectureDetailViewController: UICollectionViewDataSource {
 
         case .header:
             let cell: LectureHeaderCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
-            cell.delegate = self
             return cell
         case .buttons:
             let cell: LectureAttendenceCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
@@ -66,15 +70,6 @@ extension LectureDetailViewController: UICollectionViewDataSource {
             let cell: LectureDescriptionCollectionViewCell  = collectionView.dequeReusableCell(for: indexPath)
             return cell
         }
-    }
-}
-
-
-// MARK: - BackButtonDelegate methods
-
-extension LectureDetailViewController: BackButtonDelegate {
-    func didTapBackButton() {
-        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -107,6 +102,9 @@ private extension LectureDetailViewController {
 
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = .almostBlack
+
+        // Allow colelction view to go under navigation bar.
+        collectionView.contentInsetAdjustmentBehavior = .never
 
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.estimatedItemSize = CGSize(width: 50, height: 50)
