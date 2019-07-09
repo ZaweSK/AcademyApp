@@ -205,7 +205,19 @@
                     <view key="view" contentMode="scaleToFill" id="q9b-6p-da3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h38-qC-tMD">
+                                <rect key="frame" x="0.0" y="65" width="375" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h38-qC-tMD" firstAttribute="leading" secondItem="X8y-JA-vi9" secondAttribute="leading" id="9gV-pf-MbR"/>
+                            <constraint firstItem="X8y-JA-vi9" firstAttribute="trailing" secondItem="h38-qC-tMD" secondAttribute="trailing" id="SVD-2o-r5w"/>
+                            <constraint firstItem="h38-qC-tMD" firstAttribute="top" secondItem="q9b-6p-da3" secondAttribute="top" constant="65" id="bxy-xS-xhW"/>
+                            <constraint firstItem="X8y-JA-vi9" firstAttribute="bottom" secondItem="h38-qC-tMD" secondAttribute="bottom" id="c1s-Zx-3nH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="X8y-JA-vi9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="B8U-U3-HC1"/>
