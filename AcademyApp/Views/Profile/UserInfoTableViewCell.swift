@@ -12,6 +12,7 @@ final class UserInfoTableViewCell: UITableViewCell, NibLoadableView {
 
     // MARK: - @IBOutlets
 
+    @IBOutlet private weak var cellView: UIView!
     @IBOutlet private weak var userPictureImageView: UIImageView!
     @IBOutlet private weak var userNameLabel: UILabel!
     @IBOutlet private weak var pickProfilePictureButton: UIButton!
@@ -33,10 +34,21 @@ final class UserInfoTableViewCell: UITableViewCell, NibLoadableView {
 private extension UserInfoTableViewCell {
     func setup() {
         setupUserPictureImageView()
+        setupUserNameLabel()
+        cellView.backgroundColor = .almostBlack
     }
 
     func setupUserPictureImageView() {
         userPictureImageView.layer.cornerRadius = userPictureImageView.frame.width / 2
         userPictureImageView.clipsToBounds = true
+    }
+
+    func setupUserNameLabel() {
+        userNameLabel.attributedText = NSAttributedString(string: userNameLabel.text ?? "ADAM ROLLER", attributes: [
+            // TODO: Update font setting
+            NSAttributedString.Key.font: UIFont(name: "TrumpGothicEast-Bold", size: 20)!,
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.kern: 1
+            ])
     }
 }

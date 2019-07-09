@@ -67,6 +67,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cellView" destination="4dz-kA-bmL" id="HZ2-2Y-gf8"/>
                 <outlet property="pickProfilePictureButton" destination="QL0-Aj-2Tw" id="h7s-B1-DZl"/>
                 <outlet property="userNameLabel" destination="M00-Gf-Pgs" id="T12-Q6-aPV"/>
                 <outlet property="userPictureImageView" destination="Lr3-KW-SPu" id="mfE-PV-lG1"/>

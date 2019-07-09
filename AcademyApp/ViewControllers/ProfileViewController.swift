@@ -10,10 +10,10 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    private enum Sections: Int, CaseIterable {
+    private enum Section: Int, CaseIterable {
         case userInfo = 0
-        case progress
-        case lectures
+//        case progress
+//        case lectures
     }
 
     // MARK: - @IBOutlets
@@ -31,16 +31,26 @@ class ProfileViewController: UIViewController {
 
 // MARK: - UITableViewDelegate methods
 
-//extension ProfileViewController: UITableViewDataSource {
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        <#code#>
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        <#code#>
-//    }
-//}
+extension ProfileViewController: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Section.allCases.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        guard let section = Section(rawValue: indexPath.row) else {
+            fatalError("Unable to detect section from initializer index path: \(indexPath)")
+        }
+
+        switch section {
+        case .userInfo:
+            let cell: UserInfoTableViewCell = tableView.dequeReusableCell(for: indexPath)
+            cell.selectionStyle = .none
+            return cell
+        }
+    }
+}
 
 // MARK: - UITableViewDatasource methods
 
@@ -54,10 +64,14 @@ private extension ProfileViewController {
 
     func setup() {
         setupTableView()
+
+        view.backgroundColor = .almostBlack
     }
 
     func setupTableView() {
         tableView.delegate = self
-//        tableView.dataSource = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.registerCell(UserInfoTableViewCell.self)
     }
 }
