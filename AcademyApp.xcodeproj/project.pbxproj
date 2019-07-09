@@ -27,6 +27,7 @@
 		D0E73BB222B2698300150481 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB022B2698300150481 /* Main.storyboard */; };
 		D0E73BB722B2698400150481 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0E73BB522B2698400150481 /* LaunchScreen.storyboard */; };
 		D0E73BCA22B291F500150481 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0E73BC922B291F500150481 /* UIColorExtensions.swift */; };
+		D0EC0BAE22D450CC009267C2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0BAD22D450CC009267C2 /* ProfileViewController.swift */; };
 		D0F20D4022C61B5200970102 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F20D3F22C61B5200970102 /* Lecture.swift */; };
 		D0F20D4222C61C9100970102 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F20D4122C61C9100970102 /* MockData.swift */; };
 		D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */; };
@@ -60,6 +61,7 @@
 		D0E73BB622B2698400150481 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0E73BB822B2698400150481 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0E73BC922B291F500150481 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		D0EC0BAD22D450CC009267C2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D0F20D3F22C61B5200970102 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
 		D0F20D4122C61C9100970102 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				D0E73BAE22B2698300150481 /* LoginViewController.swift */,
 				D0DA722322BA684E00887039 /* LecturesViewController.swift */,
+				D0EC0BAD22D450CC009267C2 /* ProfileViewController.swift */,
 				D0DA721F22BA387700887039 /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
@@ -353,6 +356,7 @@
 				D0DA722422BA684E00887039 /* LecturesViewController.swift in Sources */,
 				D0F20D4222C61C9100970102 /* MockData.swift in Sources */,
 				D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */,
+				D0EC0BAE22D450CC009267C2 /* ProfileViewController.swift in Sources */,
 				D0B8633B22C7933300A67320 /* UITableViewExtensions.swift in Sources */,
 				D0F20D4022C61B5200970102 /* Lecture.swift in Sources */,
 				D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */,

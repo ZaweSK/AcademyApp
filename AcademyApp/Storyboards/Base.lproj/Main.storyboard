@@ -201,7 +201,7 @@
         <!--Profile-->
         <scene sceneID="XZP-2j-qXB">
             <objects>
-                <viewController id="Rqs-YZ-Blb" sceneMemberID="viewController">
+                <viewController id="Rqs-YZ-Blb" customClass="ProfileViewController" customModule="AcademyApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q9b-6p-da3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,6 +221,9 @@
                         <viewLayoutGuide key="safeArea" id="X8y-JA-vi9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="B8U-U3-HC1"/>
+                    <connections>
+                        <outlet property="tableView" destination="h38-qC-tMD" id="IGn-HQ-QqR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpX-D8-myI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
