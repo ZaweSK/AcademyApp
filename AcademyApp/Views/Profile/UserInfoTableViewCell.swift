@@ -8,11 +8,19 @@
 
 import UIKit
 
-class UserInfoTableViewCell: UITableViewCell {
+final class UserInfoTableViewCell: UITableViewCell, NibLoadableView {
+
+    // MARK: - @IBOutlets
+
+    @IBOutlet private weak var userPictureImageView: UIImageView!
+    @IBOutlet private weak var userNameLabel: UILabel!
+    @IBOutlet private weak var pickProfilePictureButton: UIButton!
+
+    // MARK: - LifeCycle methods
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setup()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -20,5 +28,15 @@ class UserInfoTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+}
+
+private extension UserInfoTableViewCell {
+    func setup() {
+        setupUserPictureImageView()
+    }
+
+    func setupUserPictureImageView() {
+        userPictureImageView.layer.cornerRadius = userPictureImageView.frame.width / 2
+        userPictureImageView.clipsToBounds = true
+    }
 }

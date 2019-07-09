@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController {
 
     // MARK: - @IBOutlets
 
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
 
     // MARK: - LifeCycle methods
 
@@ -31,16 +31,16 @@ class ProfileViewController: UIViewController {
 
 // MARK: - UITableViewDelegate methods
 
-extension ProfileViewController: UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
-}
+//extension ProfileViewController: UITableViewDataSource {
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        <#code#>
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
+//}
 
 // MARK: - UITableViewDatasource methods
 
@@ -58,6 +58,6 @@ private extension ProfileViewController {
 
     func setupTableView() {
         tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.dataSource = self
     }
 }
