@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserProgressTableViewCell: UITableViewCell {
+class UserProgressTableViewCell: UITableViewCell, NibLoadableView {
 
     override func awakeFromNib() {
         super.awakeFromNib()

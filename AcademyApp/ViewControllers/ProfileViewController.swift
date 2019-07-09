@@ -12,7 +12,7 @@ class ProfileViewController: UIViewController {
 
     private enum Section: Int, CaseIterable {
         case userInfo = 0
-//        case progress
+        case progress
 //        case lectures
     }
 
@@ -48,6 +48,11 @@ extension ProfileViewController: UITableViewDataSource {
             let cell: UserInfoTableViewCell = tableView.dequeReusableCell(for: indexPath)
             cell.selectionStyle = .none
             return cell
+
+        case .progress:
+            let cell: UserProgressTableViewCell = tableView.dequeReusableCell(for: indexPath)
+            cell.selectionStyle = .none
+            return cell
         }
     }
 }
@@ -73,5 +78,6 @@ private extension ProfileViewController {
         tableView.dataSource = self
         tableView.separatorStyle = .none
         tableView.registerCell(UserInfoTableViewCell.self)
+        tableView.registerCell(UserProgressTableViewCell.self)
     }
 }
