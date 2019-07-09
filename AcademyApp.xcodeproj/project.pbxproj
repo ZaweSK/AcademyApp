@@ -30,6 +30,8 @@
 		D0EC0BAE22D450CC009267C2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0BAD22D450CC009267C2 /* ProfileViewController.swift */; };
 		D0EC0BB222D45351009267C2 /* UserInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0BB022D45351009267C2 /* UserInfoTableViewCell.swift */; };
 		D0EC0BB322D45351009267C2 /* UserInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0EC0BB122D45351009267C2 /* UserInfoTableViewCell.xib */; };
+		D0EC0BB822D46602009267C2 /* UserProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EC0BB622D46602009267C2 /* UserProgressTableViewCell.swift */; };
+		D0EC0BB922D46602009267C2 /* UserProgressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0EC0BB722D46602009267C2 /* UserProgressTableViewCell.xib */; };
 		D0F20D4022C61B5200970102 /* Lecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F20D3F22C61B5200970102 /* Lecture.swift */; };
 		D0F20D4222C61C9100970102 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F20D4122C61C9100970102 /* MockData.swift */; };
 		D0FB592322B8B7B100280276 /* UIScrollViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */; };
@@ -66,6 +68,8 @@
 		D0EC0BAD22D450CC009267C2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D0EC0BB022D45351009267C2 /* UserInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoTableViewCell.swift; sourceTree = "<group>"; };
 		D0EC0BB122D45351009267C2 /* UserInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoTableViewCell.xib; sourceTree = "<group>"; };
+		D0EC0BB622D46602009267C2 /* UserProgressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgressTableViewCell.swift; sourceTree = "<group>"; };
+		D0EC0BB722D46602009267C2 /* UserProgressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProgressTableViewCell.xib; sourceTree = "<group>"; };
 		D0F20D3F22C61B5200970102 /* Lecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lecture.swift; sourceTree = "<group>"; };
 		D0F20D4122C61C9100970102 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		D0FB592222B8B7B100280276 /* UIScrollViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtensions.swift; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 			children = (
 				D0EC0BB022D45351009267C2 /* UserInfoTableViewCell.swift */,
 				D0EC0BB122D45351009267C2 /* UserInfoTableViewCell.xib */,
+				D0EC0BB622D46602009267C2 /* UserProgressTableViewCell.swift */,
+				D0EC0BB722D46602009267C2 /* UserProgressTableViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -309,6 +315,7 @@
 				D0FCDF8522BBA57E00A23D8E /* Maison_Neue_Demi.otf in Resources */,
 				D0FCDF8422BBA57E00A23D8E /* Trump_Gothic_East_Bold.ttf in Resources */,
 				D08B318A22BCCEB400EBA8ED /* LecturesCollectionViewCell.xib in Resources */,
+				D0EC0BB922D46602009267C2 /* UserProgressTableViewCell.xib in Resources */,
 				D0FCDF8322BBA57E00A23D8E /* Maison_Neue_Medium.otf in Resources */,
 				D0E73BB222B2698300150481 /* Main.storyboard in Resources */,
 				D0B8633F22C8B88600A67320 /* LecturesTableViewHeader.xib in Resources */,
@@ -374,6 +381,7 @@
 				D0EC0BB222D45351009267C2 /* UserInfoTableViewCell.swift in Sources */,
 				D0EC0BAE22D450CC009267C2 /* ProfileViewController.swift in Sources */,
 				D0B8633B22C7933300A67320 /* UITableViewExtensions.swift in Sources */,
+				D0EC0BB822D46602009267C2 /* UserProgressTableViewCell.swift in Sources */,
 				D0F20D4022C61B5200970102 /* Lecture.swift in Sources */,
 				D0922DC722B37181003597EF /* RoundedCornersButton.swift in Sources */,
 				D0E73BAF22B2698300150481 /* LoginViewController.swift in Sources */,
