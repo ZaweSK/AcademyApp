@@ -20,5 +20,4 @@ class UserProgressTableViewCell: UITableViewCell, NibLoadableView {
 
         // Configure the view for the selected state
     }
-    
 }

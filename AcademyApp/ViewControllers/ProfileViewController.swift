@@ -57,8 +57,6 @@ extension ProfileViewController: UITableViewDataSource {
         case .lectures:
             let cell: LecturesListTableViewCell = tableView.dequeReusableCell(for: indexPath)
             cell.selectionStyle = .none
-
-            
             return cell
         }
     }
