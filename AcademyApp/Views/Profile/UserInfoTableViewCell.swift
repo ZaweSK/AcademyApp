@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class UserInfoTableViewCell: UITableViewCell, NibLoadableView {
+final class UserInfoTableViewCell: UITableViewCell, NibLoadable {
 
     // MARK: - @IBOutlets
 

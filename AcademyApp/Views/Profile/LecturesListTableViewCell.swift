@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LecturesListTableViewCell: UITableViewCell, NibLoadableView {
+class LecturesListTableViewCell: UITableViewCell, NibLoadable {
 
     let lectures = MockData.lectures()
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LecturesTableViewCell: UITableViewCell, NibLoadableView {
+class LecturesTableViewCell: UITableViewCell, NibLoadable {
 
     // MARK: - Stored Properties
 

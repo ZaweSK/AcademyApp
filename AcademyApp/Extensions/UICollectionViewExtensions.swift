@@ -16,7 +16,7 @@ extension UICollectionView {
     // Method registers a cell for collectionView with it's nib name. Registered cell
     // must conform to NibLoadableView protocol.
 
-    func register<T: UICollectionViewCell>(_: T.Type) where T: NibLoadableView {
+    func register<T: UICollectionViewCell>(_: T.Type) where T: NibLoadable {
         let bundle = Bundle(for: T.self)
         let nib = UINib(nibName: T.nibName, bundle: bundle)
 
@@ -26,7 +26,7 @@ extension UICollectionView {
     // Method deques a reusable cell for collectionView. Cell's nib name is used as a reuse
     // identifier. Cell must conform to NibLoadableView protocol.
 
-    func dequeReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T where T: NibLoadableView {
+    func dequeReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T where T: NibLoadable {
         guard let cell = dequeueReusableCell(withReuseIdentifier: T.defaultReuseIdentifier, for: indexPath) as? T else {
             fatalError("Could not deque cell with identifier \(T.defaultReuseIdentifier)")
         }

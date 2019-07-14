@@ -206,24 +206,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h38-qC-tMD">
-                                <rect key="frame" x="0.0" y="65" width="375" height="553"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ed5-de-3nI" customClass="UserInfoView" customModule="AcademyApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="55"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="AIr-ZH-J2e"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ldc-Sz-Oqj">
+                                <rect key="frame" x="20" y="105" width="335" height="80"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8w-Fq-5kq" customClass="UserProgressView" customModule="AcademyApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="80"/>
+                                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ps0-eS-5jN" customClass="UserProgressView" customModule="AcademyApp" customModuleProvider="target">
+                                        <rect key="frame" x="182.5" y="0.0" width="152.5" height="80"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="LM5-8F-2vw"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="h38-qC-tMD" firstAttribute="leading" secondItem="X8y-JA-vi9" secondAttribute="leading" id="9gV-pf-MbR"/>
-                            <constraint firstItem="X8y-JA-vi9" firstAttribute="trailing" secondItem="h38-qC-tMD" secondAttribute="trailing" id="SVD-2o-r5w"/>
-                            <constraint firstItem="h38-qC-tMD" firstAttribute="top" secondItem="q9b-6p-da3" secondAttribute="top" constant="65" id="bxy-xS-xhW"/>
-                            <constraint firstItem="X8y-JA-vi9" firstAttribute="bottom" secondItem="h38-qC-tMD" secondAttribute="bottom" id="c1s-Zx-3nH"/>
+                            <constraint firstItem="ed5-de-3nI" firstAttribute="leading" secondItem="X8y-JA-vi9" secondAttribute="leading" id="68U-iP-eMa"/>
+                            <constraint firstItem="X8y-JA-vi9" firstAttribute="trailing" secondItem="Ldc-Sz-Oqj" secondAttribute="trailing" constant="20" id="7FD-rt-gcF"/>
+                            <constraint firstItem="X8y-JA-vi9" firstAttribute="trailing" secondItem="ed5-de-3nI" secondAttribute="trailing" id="9al-6F-6Rz"/>
+                            <constraint firstItem="Ldc-Sz-Oqj" firstAttribute="leading" secondItem="X8y-JA-vi9" secondAttribute="leading" constant="20" id="KId-nb-Twc"/>
+                            <constraint firstItem="ed5-de-3nI" firstAttribute="top" secondItem="X8y-JA-vi9" secondAttribute="top" id="KRo-TK-U4X"/>
+                            <constraint firstItem="Ldc-Sz-Oqj" firstAttribute="top" secondItem="ed5-de-3nI" secondAttribute="bottom" constant="30" id="sAk-rf-JiH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X8y-JA-vi9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="B8U-U3-HC1"/>
-                    <connections>
-                        <outlet property="tableView" destination="h38-qC-tMD" id="IGn-HQ-QqR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpX-D8-myI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
