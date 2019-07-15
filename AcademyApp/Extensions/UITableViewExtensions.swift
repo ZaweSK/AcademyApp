@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 // MARK: - UITableView extension
-/// Extension of UITableView's cell/header registering & dequeing. 
+/// Extension of UITableView's cell/header registering & dequeing.
 /// Extension is counting on cells/headers to conform to NibLoadable protocol.
 
 extension UITableView {
