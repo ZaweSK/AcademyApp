@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LectureDetailViewController: UIViewController {
+final class LectureDetailViewController: UIViewController {
 
     // MARK: - Stored Properties
 
