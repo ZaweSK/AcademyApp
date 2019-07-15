@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-// MARK: - UILabel Extension
+// MARK: - Extension of UILabel's UI setup
 
 extension UILabel {
 

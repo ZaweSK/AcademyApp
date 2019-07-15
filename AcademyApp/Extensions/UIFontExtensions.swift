@@ -16,6 +16,8 @@ extension UIFont {
 
     // MARK: - Static properities
 
+    // Font family MaisonNeue and it's sub classes
+
     enum MaisonNeue {
         static func medium(_ size: CGFloat) -> UIFont {
             return UIFont(name: "MaisonNeue-Medium", size: size)!
@@ -30,6 +32,7 @@ extension UIFont {
         }
     }
 
+    // Font family TrumpGothic and it's sub classes
 
     enum TrumpGothic {
         static func bold(_ size: CGFloat) -> UIFont {

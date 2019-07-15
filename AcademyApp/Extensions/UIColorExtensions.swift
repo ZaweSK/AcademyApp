@@ -14,6 +14,7 @@ import UIKit
 extension UIColor {
 
     // MARK: - Static properities
+    /// app specific colors received in original design
 
     static var almostBlack: UIColor {
         return UIColor(red: 17, green: 21, blue: 23)
@@ -51,7 +52,6 @@ extension UIColor {
         return UIColor(red: 0, green: 0, blue: 0, alpha: 0.9)
     }
 
-    // returns clear color
     static var black0: CGColor {
         return UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
     }
@@ -59,9 +59,12 @@ extension UIColor {
     static var black80: CGColor {
         return UIColor(red: 0, green: 0, blue: 0, alpha: 0.8).cgColor
     }
+}
 
-    // MARK: - Conveniecne initalizers
 
+// MARK: - Convenience initializers
+
+extension UIColor {
     convenience init(red: CGFloat, green: CGFloat, blue: CGFloat) {
         let redValue = red / 255
         let greenValue = green / 255

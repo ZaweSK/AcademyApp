@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// MARK: - Extension of TabBarItem UI setup process
+
 extension UITabBarItem {
 
     // Sets images for tabBaritem's states: selected & unselected

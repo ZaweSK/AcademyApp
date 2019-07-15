@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+// MARK: - Extension of ScrollView's scrolling functionality
+/// Provides wrapping methods. Wraps offset calculation.
+
 extension UIScrollView {
 
     enum ScrollDirection {
@@ -38,6 +41,14 @@ extension UIScrollView {
     func scrollTo(direction: ScrollDirection, animated: Bool = true) {
         setContentOffset(self.contentOffset(to: direction), animated: animated)
     }
+
+
+}
+
+// MARK: - Extension of ScrollView's state
+/// Mehtods check for different state of the ScrollView and return boolean value
+
+extension UIScrollView {
 
     // Method checks whether collection is scrollable. It's contentSize is bigger than
     // it's frame.height. Should be used only once the scrollViews's content size is
