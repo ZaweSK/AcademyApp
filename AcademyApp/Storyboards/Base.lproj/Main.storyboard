@@ -230,19 +230,32 @@
                                     <constraint firstAttribute="height" constant="80" id="LM5-8F-2vw"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6c-bl-fr3">
+                                <rect key="frame" x="112.5" y="293.5" width="150" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="8Ip-bK-cEU"/>
+                                    <constraint firstAttribute="width" constant="150" id="g1t-gr-guE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ed5-de-3nI" firstAttribute="leading" secondItem="X8y-JA-vi9" secondAttribute="leading" id="68U-iP-eMa"/>
                             <constraint firstItem="X8y-JA-vi9" firstAttribute="trailing" secondItem="Ldc-Sz-Oqj" secondAttribute="trailing" constant="20" id="7FD-rt-gcF"/>
                             <constraint firstItem="X8y-JA-vi9" firstAttribute="trailing" secondItem="ed5-de-3nI" secondAttribute="trailing" id="9al-6F-6Rz"/>
+                            <constraint firstItem="A6c-bl-fr3" firstAttribute="centerX" secondItem="q9b-6p-da3" secondAttribute="centerX" id="BYs-j5-d0o"/>
                             <constraint firstItem="Ldc-Sz-Oqj" firstAttribute="leading" secondItem="X8y-JA-vi9" secondAttribute="leading" constant="20" id="KId-nb-Twc"/>
                             <constraint firstItem="ed5-de-3nI" firstAttribute="top" secondItem="X8y-JA-vi9" secondAttribute="top" id="KRo-TK-U4X"/>
+                            <constraint firstItem="A6c-bl-fr3" firstAttribute="centerY" secondItem="q9b-6p-da3" secondAttribute="centerY" id="ggV-IS-B8L"/>
                             <constraint firstItem="Ldc-Sz-Oqj" firstAttribute="top" secondItem="ed5-de-3nI" secondAttribute="bottom" constant="30" id="sAk-rf-JiH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X8y-JA-vi9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="B8U-U3-HC1"/>
+                    <connections>
+                        <outlet property="userProgressViewWrapper" destination="A6c-bl-fr3" id="iFd-oS-2uk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpX-D8-myI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

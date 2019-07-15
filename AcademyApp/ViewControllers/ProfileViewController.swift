@@ -13,11 +13,14 @@ class ProfileViewController: UIViewController {
 
     // MARK: - @IBOutlets
 
+    @IBOutlet weak var userProgressViewWrapper: UIView!
+    var userProgressView = UserProgressView()
 
     // MARK: - LifeCycle methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
 
         setup()
     }
@@ -40,7 +43,7 @@ extension ProfileViewController: UITableViewDelegate {
 private extension ProfileViewController {
 
     func setup() {
-
+        userProgressViewWrapper.wrap(userProgressView)
     }
 
 }
