@@ -23,6 +23,8 @@ final class LecturesViewController: UIViewController {
 
         // aspect ratio of height to width of image in table view cell from original design
         static let imageAspectRatio: CGFloat = 0.39
+
+        static let topInset: CGFloat = 37
     }
 
     // MARK: - Stored properties
@@ -127,6 +129,7 @@ private extension LecturesViewController {
         tableView.separatorStyle = .none
         tableView.registerHeader(LecturesTableViewHeader.self)
         tableView.registerCell(LecturesTableViewCell.self)
+        tableView.contentInset = UIEdgeInsets(top: TableViewConfig.topInset, left: 0, bottom: 0, right: 0)
     }
 
     func setupNavBar() {
