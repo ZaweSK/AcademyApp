@@ -203,8 +203,8 @@
 			children = (
 				D03B1B3A22D6088D00C88D9D /* UserInfoView.swift */,
 				D03B1B3C22D6089F00C88D9D /* UserInfoView.xib */,
-				D0DDE85F22D6235F00FF0553 /* UserProgressView.xib */,
 				D009715222DB1434004851F3 /* UserProgressView.swift */,
+				D0DDE85F22D6235F00FF0553 /* UserProgressView.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";

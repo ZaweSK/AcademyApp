@@ -40,7 +40,7 @@ extension ProfileViewController: UITableViewDelegate {
 private extension ProfileViewController {
 
     func setup() {
-       
+
     }
 
 }

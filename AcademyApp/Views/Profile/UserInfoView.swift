@@ -48,7 +48,7 @@ class UserInfoView: UIView, NibLoadable {
 
     func loadViewFromNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
+        let nib = UINib(nibName: type(of: self).nibName, bundle: bundle)
 
         guard let view = nib.instantiate(withOwner: self, options: nil)[0] as? UIView else {
             fatalError("Unable to instatie nib file")

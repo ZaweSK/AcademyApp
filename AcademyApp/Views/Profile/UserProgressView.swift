@@ -10,7 +10,11 @@ import UIKit
 
 class UserProgressView: UIView, NibLoadable {
 
+    // MARK: - Stored properties
+
     var contentView = UIView()
+
+    // MARK: - LifeCycle methods
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -43,5 +47,4 @@ class UserProgressView: UIView, NibLoadable {
         }
         return view
     }
-
 }
