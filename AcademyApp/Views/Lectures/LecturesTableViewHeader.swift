@@ -8,7 +8,9 @@
 
 import UIKit
 
-class LecturesTableViewHeader: UITableViewHeaderFooterView, NibLoadable {
+
+final class LecturesTableViewHeader: UITableViewHeaderFooterView, NibLoadable {
+
 
     // MARK: - @IBOutlets
 
@@ -35,7 +37,7 @@ private extension LecturesTableViewHeader {
         lecturesLabel.attributedText = NSAttributedString(string: lecturesLabel.text ?? "LECTURES", attributes: [
             NSAttributedString.Key.foregroundColor: UIColor.brownGray,
             NSAttributedString.Key.kern: 1,
-            NSAttributedString.Key.font: UIFont.lecturesLabelFont
+            NSAttributedString.Key.font: UIFont.MaisonNeue.medium(13)
             ])
     }
 }

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Trump_Gothic_East_Bold.ttf">
+            <string>TrumpGothicEast-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LectureHeaderCollectionViewCell" customModule="AcademyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lP-fO-BeR" userLabel="Container View">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mockDetailImage" translatesAutoresizingMaskIntoConstraints="NO" id="IJB-Yd-982">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="400" id="g8p-TI-KFV"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="146-xl-IHH">
+                                <rect key="frame" x="0.0" y="172" width="375" height="228"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="228" id="ETO-y4-9NH"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SWIFT I (PLAYGROUND)" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aib-Rl-QrY">
+                                <rect key="frame" x="20" y="218.5" width="214" height="124.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="TrumpGothicEast-Bold" family="Trump Gothic East" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGZ-4k-e1X" userLabel="Segmented Control View">
+                                <rect key="frame" x="0.0" y="350" width="375" height="50"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EYJ-Cg-7oc">
+                                        <rect key="frame" x="8" y="14" width="359" height="24.5"/>
+                                        <segments>
+                                            <segment title="About"/>
+                                            <segment title="Assingment"/>
+                                        </segments>
+                                        <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EYJ-Cg-7oc" secondAttribute="trailing" constant="8" id="Qul-MH-Jn6"/>
+                                    <constraint firstItem="EYJ-Cg-7oc" firstAttribute="top" secondItem="vGZ-4k-e1X" secondAttribute="top" constant="14" id="WbO-cx-1ap"/>
+                                    <constraint firstAttribute="height" constant="50" id="p7g-OT-vcd"/>
+                                    <constraint firstItem="EYJ-Cg-7oc" firstAttribute="leading" secondItem="vGZ-4k-e1X" secondAttribute="leading" constant="8" id="uOY-LB-nzx"/>
+                                    <constraint firstAttribute="bottom" secondItem="EYJ-Cg-7oc" secondAttribute="bottom" constant="12.5" id="yz5-RW-TQh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IJB-Yd-982" firstAttribute="leading" secondItem="1lP-fO-BeR" secondAttribute="leading" id="0GL-l8-T8Z"/>
+                            <constraint firstItem="aib-Rl-QrY" firstAttribute="leading" secondItem="1lP-fO-BeR" secondAttribute="leading" constant="20" id="19l-or-fGW"/>
+                            <constraint firstItem="IJB-Yd-982" firstAttribute="top" secondItem="1lP-fO-BeR" secondAttribute="top" id="1k5-sT-z2X"/>
+                            <constraint firstItem="146-xl-IHH" firstAttribute="bottom" secondItem="vGZ-4k-e1X" secondAttribute="bottom" id="62w-YT-28r"/>
+                            <constraint firstItem="146-xl-IHH" firstAttribute="height" secondItem="IJB-Yd-982" secondAttribute="height" multiplier="0.57" id="AbY-NM-zr9"/>
+                            <constraint firstItem="vGZ-4k-e1X" firstAttribute="top" secondItem="aib-Rl-QrY" secondAttribute="bottom" constant="7" id="CuD-5Q-dCa"/>
+                            <constraint firstItem="vGZ-4k-e1X" firstAttribute="leading" secondItem="1lP-fO-BeR" secondAttribute="leading" id="EUT-Ra-WPa"/>
+                            <constraint firstItem="aib-Rl-QrY" firstAttribute="width" secondItem="IJB-Yd-982" secondAttribute="width" multiplier="0.57" id="JqN-J4-Ige"/>
+                            <constraint firstAttribute="bottom" secondItem="146-xl-IHH" secondAttribute="bottom" id="LH2-Zd-o5p"/>
+                            <constraint firstAttribute="trailing" secondItem="vGZ-4k-e1X" secondAttribute="trailing" id="OEZ-wq-yaq"/>
+                            <constraint firstAttribute="trailing" secondItem="146-xl-IHH" secondAttribute="trailing" id="PKg-Up-lpq"/>
+                            <constraint firstAttribute="trailing" secondItem="IJB-Yd-982" secondAttribute="trailing" id="YrO-gf-RdL"/>
+                            <constraint firstAttribute="bottom" secondItem="IJB-Yd-982" secondAttribute="bottom" id="egZ-Xz-ylI"/>
+                            <constraint firstItem="146-xl-IHH" firstAttribute="leading" secondItem="1lP-fO-BeR" secondAttribute="leading" id="tMz-k7-Zjx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="1lP-fO-BeR" secondAttribute="bottom" id="FSK-Ut-Adh"/>
+                <constraint firstAttribute="trailing" secondItem="1lP-fO-BeR" secondAttribute="trailing" id="P9T-gB-Wxk"/>
+                <constraint firstItem="1lP-fO-BeR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ScP-AR-Nel"/>
+                <constraint firstItem="1lP-fO-BeR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Zzy-s4-9hh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="375" height="398"/>
+            <connections>
+                <outlet property="containerView" destination="1lP-fO-BeR" id="jw8-fH-DUt"/>
+                <outlet property="gradientLayerView" destination="146-xl-IHH" id="LSR-7y-8y6"/>
+                <outlet property="gradientLayerViewHeightConstraint" destination="ETO-y4-9NH" id="hcG-Hg-cHc"/>
+                <outlet property="imageViewHeightConstraint" destination="g8p-TI-KFV" id="G5T-bZ-Wbi"/>
+                <outlet property="lectureImageView" destination="IJB-Yd-982" id="yc5-gx-5iS"/>
+                <outlet property="lectureNameLabel" destination="aib-Rl-QrY" id="9BB-2t-b0B"/>
+                <outlet property="segmentedControl" destination="EYJ-Cg-7oc" id="6Op-FL-pcF"/>
+            </connections>
+            <point key="canvasLocation" x="-112.31884057971016" y="36.830357142857139"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="mockDetailImage" width="752" height="800"/>
+    </resources>
+</document>

@@ -23,6 +23,8 @@ final class LecturesViewController: UIViewController {
 
         // aspect ratio of height to width of image in table view cell from original design
         static let imageAspectRatio: CGFloat = 0.39
+
+        static let topInset: CGFloat = 37
     }
 
     // MARK: - Stored properties
@@ -44,6 +46,11 @@ final class LecturesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavBar()
     }
 }
 
@@ -81,6 +88,28 @@ extension LecturesViewController: UITableViewDelegate {
         let cellContentHeight = cellContentWidth * TableViewConfig.imageAspectRatio
         return cellContentHeight + TableViewConfig.cellVerticalInset
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToLectureDetailViewController", sender: self)
+    }
+}
+
+// MARK: - Navigation
+
+extension LecturesViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToLectureDetailViewController" {
+
+            // to be used later on ...
+
+            guard let indexPath = tableView.indexPathForSelectedRow,
+                let detailVC = segue.destination as? LectureDetailViewController else {
+                return
+            }
+
+            detailVC.configure(with: lectures[indexPath.row])
+        }
+    }
 }
 
 
@@ -100,5 +129,16 @@ private extension LecturesViewController {
         tableView.separatorStyle = .none
         tableView.registerHeader(LecturesTableViewHeader.self)
         tableView.registerCell(LecturesTableViewCell.self)
+        tableView.contentInset = UIEdgeInsets(top: TableViewConfig.topInset, left: 0, bottom: 0, right: 0)
+    }
+
+    func setupNavBar() {
+        // Hide navigation Bar
+        navigationController?.setNavigationBarHidden(true, animated: true)
+
+        // Set the title for back button in nav bar (is visible when there is another view controller on top of
+        // this one in navigation stack)
+        let backBarButtton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backBarButtton
     }
 }

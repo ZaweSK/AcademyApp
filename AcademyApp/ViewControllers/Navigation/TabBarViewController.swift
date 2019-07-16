@@ -59,7 +59,7 @@ private extension TabBarViewController {
         let fontColor: UIColor = tabIsSelected ? .white : .brownGray
         let attributes: [NSAttributedString.Key: Any] =  [
             NSAttributedString.Key.foregroundColor: fontColor,
-            NSAttributedString.Key.font: UIFont.tabBarFont,
+            NSAttributedString.Key.font: UIFont.MaisonNeue.medium(10),
             NSAttributedString.Key.kern: 0.5
         ]
         return attributes
@@ -81,7 +81,8 @@ private extension TabBarViewController {
             let profileTabBarItem = profileTabBarItem else {
             return
         }
-        lecturesTabBarItem.setImages(selectedImageName: "components", unselectedImageName: "components_unselected")
-        profileTabBarItem.setImages(selectedImageName: "profileCircle", unselectedImageName: "profileCircle_unselected")
+
+        lecturesTabBarItem.setImages(selectedImage: #imageLiteral(resourceName: "components.pdf"), unselectedImage: #imageLiteral(resourceName: "components_unselected.pdf"))
+        profileTabBarItem.setImages(selectedImage: #imageLiteral(resourceName: "profileCircle.pdf"), unselectedImage: #imageLiteral(resourceName: "profileCircle_unselected.pdf"))
     }
 }
