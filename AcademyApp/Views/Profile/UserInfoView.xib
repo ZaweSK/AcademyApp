@@ -15,16 +15,9 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserInfoView" customModule="AcademyApp" customModuleProvider="target">
-            <connections>
-                <outlet property="cellView" destination="5Cq-WS-2il" id="TjN-CS-o1b"/>
-                <outlet property="pickProfilePictureButton" destination="92Z-Pg-Ufp" id="1ST-Ob-L0b"/>
-                <outlet property="userNameLabel" destination="f0e-7R-trE" id="b1R-y8-K8a"/>
-                <outlet property="userPictureImageView" destination="mCN-pZ-LRy" id="bbT-cA-fD7"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="ydb-7G-9bZ">
+        <view contentMode="scaleToFill" id="ydb-7G-9bZ" customClass="UserInfoView" customModule="AcademyApp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -69,6 +62,12 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="bxL-mO-sLY"/>
+            <connections>
+                <outlet property="cellView" destination="5Cq-WS-2il" id="F7a-Eo-too"/>
+                <outlet property="pickProfilePictureButton" destination="92Z-Pg-Ufp" id="fff-Id-AoS"/>
+                <outlet property="userNameLabel" destination="f0e-7R-trE" id="ttN-yR-vOm"/>
+                <outlet property="userPictureImageView" destination="mCN-pZ-LRy" id="glY-pG-4Ku"/>
+            </connections>
             <point key="canvasLocation" x="28" y="-215"/>
         </view>
     </objects>

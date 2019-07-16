@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rqs-YZ-Blb">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -254,7 +254,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ed5-de-3nI" customClass="UserInfoView" customModule="AcademyApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ed5-de-3nI">
                                 <rect key="frame" x="0.0" y="20" width="375" height="55"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -264,11 +264,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Ldc-Sz-Oqj">
                                 <rect key="frame" x="20" y="105" width="335" height="80"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8w-Fq-5kq" customClass="UserProgressView" customModule="AcademyApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8w-Fq-5kq">
                                         <rect key="frame" x="0.0" y="0.0" width="152.5" height="80"/>
                                         <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ps0-eS-5jN" customClass="UserProgressView" customModule="AcademyApp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ps0-eS-5jN">
                                         <rect key="frame" x="182.5" y="0.0" width="152.5" height="80"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
@@ -278,36 +278,28 @@
                                     <constraint firstAttribute="height" constant="80" id="LM5-8F-2vw"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6c-bl-fr3">
-                                <rect key="frame" x="112.5" y="293.5" width="150" height="80"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="8Ip-bK-cEU"/>
-                                    <constraint firstAttribute="width" constant="150" id="g1t-gr-guE"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ed5-de-3nI" firstAttribute="leading" secondItem="X8y-JA-vi9" secondAttribute="leading" id="68U-iP-eMa"/>
                             <constraint firstItem="X8y-JA-vi9" firstAttribute="trailing" secondItem="Ldc-Sz-Oqj" secondAttribute="trailing" constant="20" id="7FD-rt-gcF"/>
                             <constraint firstItem="X8y-JA-vi9" firstAttribute="trailing" secondItem="ed5-de-3nI" secondAttribute="trailing" id="9al-6F-6Rz"/>
-                            <constraint firstItem="A6c-bl-fr3" firstAttribute="centerX" secondItem="q9b-6p-da3" secondAttribute="centerX" id="BYs-j5-d0o"/>
                             <constraint firstItem="Ldc-Sz-Oqj" firstAttribute="leading" secondItem="X8y-JA-vi9" secondAttribute="leading" constant="20" id="KId-nb-Twc"/>
                             <constraint firstItem="ed5-de-3nI" firstAttribute="top" secondItem="X8y-JA-vi9" secondAttribute="top" id="KRo-TK-U4X"/>
-                            <constraint firstItem="A6c-bl-fr3" firstAttribute="centerY" secondItem="q9b-6p-da3" secondAttribute="centerY" id="ggV-IS-B8L"/>
                             <constraint firstItem="Ldc-Sz-Oqj" firstAttribute="top" secondItem="ed5-de-3nI" secondAttribute="bottom" constant="30" id="sAk-rf-JiH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X8y-JA-vi9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="B8U-U3-HC1"/>
                     <connections>
-                        <outlet property="userProgressViewWrapper" destination="A6c-bl-fr3" id="iFd-oS-2uk"/>
+                        <outlet property="assignmentsCompletionViewWrapper" destination="C8w-Fq-5kq" id="uQf-yB-Bn1"/>
+                        <outlet property="lecturesAttendanceViewWrapper" destination="Ps0-eS-5jN" id="dUq-P6-9Nz"/>
+                        <outlet property="userInfoViewWrapper" destination="ed5-de-3nI" id="RAb-xQ-E16"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpX-D8-myI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1062" y="424"/>
+            <point key="canvasLocation" x="1061.5999999999999" y="423.23838080959524"/>
         </scene>
         <!--Lectures View Controller-->
         <scene sceneID="Qx7-4X-Soq">

@@ -10,18 +10,22 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    // MARK: - Stored Properties
+
+    var lecturesAttendanceView = UserProgressView.loadFromNib()
+    var assignmentsCompletionView = UserProgressView.loadFromNib()
+    var userInfoView = UserInfoView.loadFromNib()
 
     // MARK: - @IBOutlets
 
-    @IBOutlet weak var userProgressViewWrapper: UIView!
-    var userProgressView = UserProgressView()
 
+    @IBOutlet private weak var userInfoViewWrapper: UIView!
+    @IBOutlet private weak var assignmentsCompletionViewWrapper: UIView!
+    @IBOutlet private weak var lecturesAttendanceViewWrapper: UIView!
     // MARK: - LifeCycle methods
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
         setup()
     }
 }
@@ -43,7 +47,13 @@ extension ProfileViewController: UITableViewDelegate {
 private extension ProfileViewController {
 
     func setup() {
-        userProgressViewWrapper.wrap(userProgressView)
+        setupWrappers()
+    }
+
+    func setupWrappers() {
+        lecturesAttendanceViewWrapper.wrap(lecturesAttendanceView)
+        assignmentsCompletionViewWrapper.wrap(assignmentsCompletionView)
+        userInfoViewWrapper.wrap(userInfoView)
     }
 
 }

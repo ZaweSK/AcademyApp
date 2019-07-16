@@ -23,40 +23,12 @@ class UserInfoView: UIView, NibLoadable {
 
     // MARK: - Life Cycle methods
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-
-    func setup() {
-        contentView = loadViewFromNib()
-        addSubview(contentView)
-
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
-
+    override func awakeFromNib() {
+        super.awakeFromNib()
         setupUI()
     }
 
-    func loadViewFromNib() -> UIView {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: type(of: self).nibName, bundle: bundle)
-
-        guard let view = nib.instantiate(withOwner: self, options: nil)[0] as? UIView else {
-            fatalError("Unable to instatie nib file")
-        }
-        return view
-    }
 }
-
 
 // MARK: - Private setup methods
 
