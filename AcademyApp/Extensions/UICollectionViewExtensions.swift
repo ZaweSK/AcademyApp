@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 // MARK: - UICollectionView extension
+/// Extension of UICollectionView's cell/header registering & dequeing.
+/// Extension is counting on cells/headers to conform to NibLoadable protocol.
 
 extension UICollectionView {
 

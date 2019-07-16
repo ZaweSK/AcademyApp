@@ -14,6 +14,7 @@ import UIKit
 extension UIColor {
 
     // MARK: - Static properities
+    /// app specific colors received in original design
 
     static var almostBlack: UIColor {
         return UIColor(red: 17, green: 21, blue: 23)
@@ -31,16 +32,26 @@ extension UIColor {
         return UIColor(red: 64, green: 64, blue: 64)
     }
 
+    static var greyishBrownTwo: UIColor {
+        return UIColor(red: 72, green: 72, blue: 72)
+    }
+
     static var pinkishRed: UIColor {
         return UIColor(red: 239, green: 13, blue: 51)
     }
 
-    // color for tab the tab bar shadow
+    static var black10: UIColor {
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
+    }
+
     static var black50: UIColor {
         return UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
     }
 
-    // returns clear color
+    static var black90: UIColor {
+        return UIColor(red: 0, green: 0, blue: 0, alpha: 0.9)
+    }
+
     static var black0: CGColor {
         return UIColor(red: 0, green: 0, blue: 0, alpha: 0).cgColor
     }
@@ -48,9 +59,12 @@ extension UIColor {
     static var black80: CGColor {
         return UIColor(red: 0, green: 0, blue: 0, alpha: 0.8).cgColor
     }
+}
 
-    // MARK: - Conveniecne initalizers
 
+// MARK: - Convenience initializers
+
+extension UIColor {
     convenience init(red: CGFloat, green: CGFloat, blue: CGFloat) {
         let redValue = red / 255
         let greenValue = green / 255

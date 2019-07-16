@@ -59,7 +59,7 @@ final class LoginViewController: UIViewController {
         }
 
         UIView.animate(withDuration: 0.2) {
-            self.showButton.isHidden = passwordText.isEmpty ? true : false
+            self.showButton.alpha = passwordText.isEmpty ? 0 : 1
         }
         doneButton.isEnabled = String.isValidEmail(possibleEmail: emailText) && !passwordText.isEmpty ? true : false
     }
@@ -185,7 +185,7 @@ private extension LoginViewController {
         textFields.forEach {
             $0.attributedPlaceholder = NSAttributedString(string: $0.placeholder ?? "", attributes: [
                 NSAttributedString.Key.foregroundColor: UIColor.brownGray,
-                NSAttributedString.Key.font: UIFont.showLabelFont,
+                NSAttributedString.Key.font: UIFont.MaisonNeue.medium(16),
                 NSAttributedString.Key.kern: 1
                 ])
 
@@ -195,11 +195,11 @@ private extension LoginViewController {
     }
 
     func setupShowButton() {
-        showButton.isHidden = true
+        showButton.alpha = 0
 
         let attributedTitle = NSAttributedString(string: showButton.title(for: .normal) ?? "SHOW", attributes: [
             NSAttributedString.Key.foregroundColor: UIColor.brownGray,
-            NSAttributedString.Key.font: UIFont.showLabelFont,
+            NSAttributedString.Key.font: UIFont.MaisonNeue.demi(13),
             NSAttributedString.Key.kern: 1
             ])
 
@@ -210,7 +210,7 @@ private extension LoginViewController {
         doneButton.isEnabled = false
 
         doneButton.setTitle(doneButton.titleLabel?.text ?? "Done", for: .normal)
-        doneButton.titleLabel?.font = .doneButtonTitleFont
+        doneButton.titleLabel?.font = UIFont.MaisonNeue.medium(16)
         doneButton.titleLabel?.textColor = .white
     }
 }

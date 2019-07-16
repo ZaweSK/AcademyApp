@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LecturesTableViewCell: UITableViewCell, NibLoadableView {
+final class LecturesTableViewCell: UITableViewCell, NibLoadableView {
 
     // MARK: - Stored Properties
 
@@ -66,7 +66,7 @@ private extension LecturesTableViewCell {
     }
 
     func setupLectureNameLabel() {
-        lectureNameLabel.font = UIFont.lectureNameFont
+        lectureNameLabel.font = UIFont.TrumpGothic.bold(32)
     }
 
     func setupGradientLayer() {

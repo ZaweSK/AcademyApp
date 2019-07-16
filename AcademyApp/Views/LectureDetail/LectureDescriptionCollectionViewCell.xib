@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LectureDescriptionCollectionViewCell" customModule="AcademyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="381"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="381"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRZ-kW-0sR" userLabel="Container View">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="381"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRU-iu-dJe">
+                                <rect key="frame" x="20" y="23" width="273" height="335"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WRU-iu-dJe" secondAttribute="bottom" constant="23" id="2Ld-oe-oFA"/>
+                            <constraint firstAttribute="trailing" secondItem="WRU-iu-dJe" secondAttribute="trailing" constant="50" id="F7i-ab-R9z"/>
+                            <constraint firstItem="WRU-iu-dJe" firstAttribute="leading" secondItem="FRZ-kW-0sR" secondAttribute="leading" constant="20" id="QXH-JC-JAR"/>
+                            <constraint firstItem="WRU-iu-dJe" firstAttribute="top" secondItem="FRZ-kW-0sR" secondAttribute="top" constant="23" id="jUS-ty-mpT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="FRZ-kW-0sR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="9Cq-qr-D8b"/>
+                <constraint firstItem="FRZ-kW-0sR" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HQz-Td-m4i"/>
+                <constraint firstAttribute="bottom" secondItem="FRZ-kW-0sR" secondAttribute="bottom" id="Zwp-Oy-sow"/>
+                <constraint firstAttribute="trailing" secondItem="FRZ-kW-0sR" secondAttribute="trailing" id="dub-m9-BHK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="343" height="381"/>
+            <connections>
+                <outlet property="containerView" destination="FRZ-kW-0sR" id="CGo-Ir-BAA"/>
+                <outlet property="descriptionLabel" destination="WRU-iu-dJe" id="7EL-1c-jW0"/>
+            </connections>
+            <point key="canvasLocation" x="-228.2608695652174" y="134.93303571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

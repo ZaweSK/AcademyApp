@@ -198,6 +198,54 @@
             </objects>
             <point key="canvasLocation" x="-706" y="136"/>
         </scene>
+        <!--Lecture Detail View Controller-->
+        <scene sceneID="FOr-Dd-2Jy">
+            <objects>
+                <viewController id="3zc-Gv-3eb" customClass="LectureDetailViewController" customModule="AcademyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zTd-Ds-Hph">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PVI-8Q-J4d">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="WRe-ZO-06O">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MmG-QR-7gt">
+                                <rect key="frame" x="0.0" y="538" width="375" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="zNF-v8-SCO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IqW-f7-NJ5" firstAttribute="bottom" secondItem="PVI-8Q-J4d" secondAttribute="bottom" id="3An-2x-YFC"/>
+                            <constraint firstItem="PVI-8Q-J4d" firstAttribute="leading" secondItem="IqW-f7-NJ5" secondAttribute="leading" id="63Y-wW-ZmR"/>
+                            <constraint firstItem="MmG-QR-7gt" firstAttribute="leading" secondItem="IqW-f7-NJ5" secondAttribute="leading" id="DN7-h7-0Kl"/>
+                            <constraint firstItem="IqW-f7-NJ5" firstAttribute="trailing" secondItem="PVI-8Q-J4d" secondAttribute="trailing" id="Q5O-ZF-YWH"/>
+                            <constraint firstItem="PVI-8Q-J4d" firstAttribute="top" secondItem="zTd-Ds-Hph" secondAttribute="top" id="hql-Nm-qYV"/>
+                            <constraint firstItem="IqW-f7-NJ5" firstAttribute="bottom" secondItem="MmG-QR-7gt" secondAttribute="bottom" id="tce-vy-F79"/>
+                            <constraint firstItem="MmG-QR-7gt" firstAttribute="trailing" secondItem="IqW-f7-NJ5" secondAttribute="trailing" id="xXC-b9-X43"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IqW-f7-NJ5"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="PVI-8Q-J4d" id="DUh-LG-XTk"/>
+                        <outlet property="maskingView" destination="MmG-QR-7gt" id="r20-8w-hUA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iuh-gN-lwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2916" y="-241.52923538230885"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="XZP-2j-qXB">
             <objects>
@@ -214,7 +262,7 @@
             </objects>
             <point key="canvasLocation" x="1062" y="424"/>
         </scene>
-        <!--Lectures-->
+        <!--Lectures View Controller-->
         <scene sceneID="Qx7-4X-Soq">
             <objects>
                 <viewController id="quL-XZ-SJq" customClass="LecturesViewController" customModule="AcademyApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -223,27 +271,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="cNE-Ay-cft">
-                                <rect key="frame" x="0.0" y="57" width="375" height="521"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="N9v-YS-ymv" firstAttribute="bottom" secondItem="cNE-Ay-cft" secondAttribute="bottom" constant="40" id="GMh-Dz-H8u"/>
+                            <constraint firstItem="N9v-YS-ymv" firstAttribute="bottom" secondItem="cNE-Ay-cft" secondAttribute="bottom" id="GMh-Dz-H8u"/>
                             <constraint firstItem="N9v-YS-ymv" firstAttribute="trailing" secondItem="cNE-Ay-cft" secondAttribute="trailing" id="RMV-RI-AsZ"/>
                             <constraint firstItem="cNE-Ay-cft" firstAttribute="leading" secondItem="N9v-YS-ymv" secondAttribute="leading" id="Yl3-hd-tZ0"/>
-                            <constraint firstItem="cNE-Ay-cft" firstAttribute="top" secondItem="N9v-YS-ymv" secondAttribute="top" constant="37" id="fX2-Ph-2ll"/>
+                            <constraint firstItem="cNE-Ay-cft" firstAttribute="top" secondItem="N9v-YS-ymv" secondAttribute="top" id="fX2-Ph-2ll"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N9v-YS-ymv"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Lectures" id="Z26-fD-xXF"/>
+                    <navigationItem key="navigationItem" id="qZh-qX-2HC"/>
                     <connections>
                         <outlet property="tableView" destination="cNE-Ay-cft" id="yrS-qV-zTu"/>
+                        <segue destination="3zc-Gv-3eb" kind="show" identifier="goToLectureDetailViewController" id="6zO-yT-ML0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1w-nf-w8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1062" y="-240"/>
+            <point key="canvasLocation" x="2000.8" y="-240.62968515742131"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="Iz5-d1-6i7">
@@ -255,13 +304,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="quL-XZ-SJq" kind="relationship" relationship="viewControllers" id="qJk-f3-h8w"/>
+                        <segue destination="Ayk-dm-acK" kind="relationship" relationship="viewControllers" id="qJk-f3-h8w"/>
                         <segue destination="Rqs-YZ-Blb" kind="relationship" relationship="viewControllers" id="9J4-4P-83S"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TVv-Zh-l8W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="180" y="135"/>
+        </scene>
+        <!--Lectures-->
+        <scene sceneID="8cN-q7-e22">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ayk-dm-acK" customClass="NavigationViewController" customModule="AcademyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lectures" id="Z26-fD-xXF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Jdr-yj-1sw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="quL-XZ-SJq" kind="relationship" relationship="rootViewController" id="HZv-KA-ndw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Da-2j-Xrq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1061.5999999999999" y="-240.62968515742131"/>
         </scene>
     </scenes>
     <resources>
