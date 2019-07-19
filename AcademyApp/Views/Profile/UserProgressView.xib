@@ -28,11 +28,21 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aEu-9j-gcy">
-                    <rect key="frame" x="5" y="62" width="140" height="3"/>
-                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QqH-Yp-BnG">
+                    <rect key="frame" x="5" y="68" width="140" height="3"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUl-Be-Jik">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="3"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="3" id="i62-DJ-1rD"/>
+                        <constraint firstAttribute="height" constant="3" id="2VY-dK-qrO"/>
+                        <constraint firstItem="zUl-Be-Jik" firstAttribute="top" secondItem="QqH-Yp-BnG" secondAttribute="top" id="8c5-FL-vJn"/>
+                        <constraint firstItem="zUl-Be-Jik" firstAttribute="width" secondItem="QqH-Yp-BnG" secondAttribute="width" multiplier="0.5" id="N3Z-pt-lEI"/>
+                        <constraint firstItem="zUl-Be-Jik" firstAttribute="leading" secondItem="QqH-Yp-BnG" secondAttribute="leading" id="hE9-hl-Vbb"/>
+                        <constraint firstAttribute="bottom" secondItem="zUl-Be-Jik" secondAttribute="bottom" id="tYL-cc-6bY"/>
                     </constraints>
                 </view>
             </subviews>
@@ -40,10 +50,10 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="d4w-0u-eRp" secondAttribute="trailing" id="34e-Nz-UDV"/>
                 <constraint firstItem="d4w-0u-eRp" firstAttribute="leading" secondItem="ZYB-Tg-OHA" secondAttribute="leading" id="RET-bV-EFU"/>
-                <constraint firstItem="aEu-9j-gcy" firstAttribute="leading" secondItem="ZYB-Tg-OHA" secondAttribute="leading" constant="5" id="evT-IX-UUg"/>
-                <constraint firstAttribute="trailing" secondItem="aEu-9j-gcy" secondAttribute="trailing" constant="5" id="lw6-7N-XWc"/>
+                <constraint firstItem="QqH-Yp-BnG" firstAttribute="leading" secondItem="ZYB-Tg-OHA" secondAttribute="leading" constant="5" id="Vxq-4J-ZeO"/>
+                <constraint firstItem="QqH-Yp-BnG" firstAttribute="top" secondItem="bJ0-as-PFy" secondAttribute="bottom" constant="14" id="hP5-OC-Jym"/>
+                <constraint firstAttribute="trailing" secondItem="QqH-Yp-BnG" secondAttribute="trailing" constant="5" id="m4r-NO-czg"/>
                 <constraint firstItem="bJ0-as-PFy" firstAttribute="centerX" secondItem="ZYB-Tg-OHA" secondAttribute="centerX" id="mSu-FW-U7q"/>
-                <constraint firstItem="aEu-9j-gcy" firstAttribute="top" secondItem="bJ0-as-PFy" secondAttribute="bottom" constant="8" id="oy3-UO-VJh"/>
                 <constraint firstItem="d4w-0u-eRp" firstAttribute="top" secondItem="ZYB-Tg-OHA" secondAttribute="top" constant="10" id="pm0-zs-c2i"/>
                 <constraint firstItem="bJ0-as-PFy" firstAttribute="top" secondItem="d4w-0u-eRp" secondAttribute="bottom" constant="8" id="yqr-96-1aO"/>
             </constraints>
@@ -51,7 +61,14 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="QTe-dK-npf"/>
-            <point key="canvasLocation" x="449.27536231884062" y="-503.57142857142856"/>
+            <connections>
+                <outlet property="actualProgressView" destination="zUl-Be-Jik" id="hFp-96-zGb"/>
+                <outlet property="actualProgressViewWidthConstraint" destination="N3Z-pt-lEI" id="YAp-2Z-AsQ"/>
+                <outlet property="overviewLabel" destination="d4w-0u-eRp" id="iFQ-KY-U6M"/>
+                <outlet property="possibleProgressView" destination="QqH-Yp-BnG" id="21S-JA-zo8"/>
+                <outlet property="progressNumberLabel" destination="bJ0-as-PFy" id="WgP-3E-MAZ"/>
+            </connections>
+            <point key="canvasLocation" x="280" y="-540"/>
         </view>
     </objects>
 </document>

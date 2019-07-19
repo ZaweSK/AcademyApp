@@ -17,8 +17,6 @@ class ProfileViewController: UIViewController {
     var userInfoView = UserInfoView.loadFromNib()
 
     // MARK: - @IBOutlets
-
-
     @IBOutlet private weak var userInfoViewWrapper: UIView!
     @IBOutlet private weak var assignmentsCompletionViewWrapper: UIView!
     @IBOutlet private weak var lecturesAttendanceViewWrapper: UIView!
@@ -26,6 +24,12 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
+        for family in UIFont.familyNames.sorted() {
+            let names = UIFont.fontNames(forFamilyName: family)
+            print("Family : \(family) Font names: \(names)")
+        }
         setup()
     }
 }
@@ -48,12 +52,15 @@ private extension ProfileViewController {
 
     func setup() {
         setupWrappers()
+        view.backgroundColor = .almostBlack
     }
 
     func setupWrappers() {
         lecturesAttendanceViewWrapper.wrap(lecturesAttendanceView)
         assignmentsCompletionViewWrapper.wrap(assignmentsCompletionView)
         userInfoViewWrapper.wrap(userInfoView)
+
+        lecturesAttendanceView.setProgressLevel(to: 2)
     }
 
 }
