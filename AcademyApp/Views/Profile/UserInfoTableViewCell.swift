@@ -45,8 +45,6 @@ private extension UserInfoTableViewCell {
 
     func setupUserNameLabel() {
         userNameLabel.attributedText = NSAttributedString(string: userNameLabel.text ?? "ADAM ROLLER", attributes: [
-            // TODO: Update font setting
-            NSAttributedString.Key.font: UIFont(name: "TrumpGothicEast-Bold", size: 20)!,
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.kern: 1
             ])

@@ -16,6 +16,7 @@
 		D03B1B3B22D6088D00C88D9D /* UserInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B1B3A22D6088D00C88D9D /* UserInfoView.swift */; };
 		D03B1B3D22D6089F00C88D9D /* UserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D03B1B3C22D6089F00C88D9D /* UserInfoView.xib */; };
 		D04A678C22E19E3F0043C4D2 /* Maison_Neue_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D04A678B22E19E3F0043C4D2 /* Maison_Neue_Bold.otf */; };
+		D04A679022E1AF020043C4D2 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A678F22E1AF020043C4D2 /* NSAttributedStringExtensions.swift */; };
 		D08B318A22BCCEB400EBA8ED /* LecturesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08B318822BCCEB400EBA8ED /* LecturesCollectionViewCell.xib */; };
 		D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */; };
 		D08B318F22BCE49300EBA8ED /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318E22BCE49300EBA8ED /* NibLoadable.swift */; };
@@ -64,6 +65,7 @@
 		D03B1B3A22D6088D00C88D9D /* UserInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoView.swift; sourceTree = "<group>"; };
 		D03B1B3C22D6089F00C88D9D /* UserInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserInfoView.xib; sourceTree = "<group>"; };
 		D04A678B22E19E3F0043C4D2 /* Maison_Neue_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Bold.otf; sourceTree = "<group>"; };
+		D04A678F22E1AF020043C4D2 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 		D08B318822BCCEB400EBA8ED /* LecturesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturesCollectionViewCell.xib; sourceTree = "<group>"; };
 		D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		D08B318E22BCE49300EBA8ED /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				D0B8633A22C7933300A67320 /* UITableViewExtensions.swift */,
 				D0F4CFA122DC8A2C004DCD96 /* UIViewExtensions.swift */,
 				D0F4CFA322DC9AAC004DCD96 /* NSMuttableAttributedStringExtensions.swift */,
+				D04A678F22E1AF020043C4D2 /* NSAttributedStringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				D0DA722222BA4AA500887039 /* UITabBarItemExtensions.swift in Sources */,
 				D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */,
 				D023B41E22D31AD7008ADCA3 /* NavigationViewController.swift in Sources */,
+				D04A679022E1AF020043C4D2 /* NSAttributedStringExtensions.swift in Sources */,
 				D0DA722422BA684E00887039 /* LecturesViewController.swift in Sources */,
 				D0F20D4222C61C9100970102 /* MockData.swift in Sources */,
 				D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */,

@@ -12,7 +12,7 @@ import UIKit
 
 extension NSMutableAttributedString {
 
-    // Method adds spacing attributed to NSMutableAttributedString
+    /// Method adds spacing attributed to NSMutableAttributedString
     func setLineHeight(lineHeight: CGFloat) {
 
         let paragraphStyle = NSMutableParagraphStyle()
@@ -22,14 +22,4 @@ extension NSMutableAttributedString {
                           value: paragraphStyle,
                           range: NSRange(location: 0, length: self.length))
     }
-}
-
-
-extension NSAttributedString {
-
-//    func update(to text: String) {
-//        let attributes = self.attributes(at: 0, effectiveRange: nil)
-//        let new = NSAttributedString(string: text, attributes: attributes)
-//        self = new
-//    }
 }

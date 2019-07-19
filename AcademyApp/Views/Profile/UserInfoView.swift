@@ -10,10 +10,6 @@ import UIKit
 
 class UserInfoView: UIView, NibLoadable {
 
-    // MARK: - Stored Properties
-
-    var contentView = UIView()
-
     // MARK: - @IBOutlets
 
     @IBOutlet private weak var pickProfilePictureButton: UIButton!

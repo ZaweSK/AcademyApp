@@ -13,13 +13,23 @@ class UserProgressView: UIView, NibLoadable {
     // MARK: - Stored Properis
 
     /// Scale range of progress bar
-    private var scale: ClosedRange = 0...10
+    private var progressScale: ClosedRange = 0...10
+
+    var maxProgress: Int? {
+        return progressScale.max()
+    }
+
+    private var progressLevel: Int = 0 {
+        didSet {
+            progressNumberLabel.attributedText = progressNumberLabel.attributedText?.update(to: "\(progressLevel)/\(maxProgress ?? 10)")
+            updateProgressBar()
+        }
+    }
 
     // MARK: - @IBOutlets
 
     @IBOutlet private weak var overviewLabel: UILabel!
     @IBOutlet private weak var progressNumberLabel: UILabel!
-
     @IBOutlet private weak var possibleProgressView: UIView!
     @IBOutlet private weak var actualProgressView: UIView!
     @IBOutlet private weak var actualProgressViewWidthConstraint: NSLayoutConstraint!
@@ -38,24 +48,14 @@ class UserProgressView: UIView, NibLoadable {
 extension UserProgressView {
 
     func setProgressLevel(to level: Int) {
-        guard scale ~= level else {
-            fatalError("Level of progress is out of scale")
+        guard progressScale ~= level else {
+            fatalError("Level of progress is out of possible scale")
         }
-
-        let newWidth = CGFloat(level) * 0.1
-        actualProgressViewWidthConstraint.isActive = false
-        let newWidthConstraint = actualProgressView.widthAnchor.constraint(equalTo: possibleProgressView.widthAnchor, multiplier: newWidth)
-        actualProgressViewWidthConstraint = newWidthConstraint
-        actualProgressViewWidthConstraint.isActive = true
-        layoutIfNeeded()
+        progressLevel = level
     }
 
     func setLabel(to text: String) {
-        let attributes = overviewLabel.attributedText?.attributes(at: 0, effectiveRange: nil)
-        let new = NSAttributedString(string: text, attributes: attributes)
-        overviewLabel.attributedText = new
-
-        // overviewLavel.attributedText.update(to: text)
+        overviewLabel.attributedText = overviewLabel.attributedText?.update(to: text)
     }
 }
 
@@ -92,5 +92,14 @@ private extension UserProgressView {
         actualProgressView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
         possibleProgressView.backgroundColor = .darkGray
         actualProgressView.backgroundColor = .pinkishRed
+    }
+
+    func updateProgressBar() {
+        let newWidth = CGFloat(progressLevel) * 0.1
+        actualProgressViewWidthConstraint.isActive = false
+        let newWidthConstraint = actualProgressView.widthAnchor.constraint(equalTo: possibleProgressView.widthAnchor, multiplier: newWidth)
+        actualProgressViewWidthConstraint = newWidthConstraint
+        actualProgressViewWidthConstraint.isActive = true
+        layoutIfNeeded()
     }
 }

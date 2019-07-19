@@ -30,7 +30,7 @@ class ProfileViewController: UIViewController {
 
 // MARK: - UITableViewDelegate methods
 
-//extension ProfileViewController: UITableViewDataSource {
+// extension ProfileViewController: UITableViewDataSource {
 //
 //}
 
