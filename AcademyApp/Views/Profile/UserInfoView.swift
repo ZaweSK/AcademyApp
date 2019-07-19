@@ -8,7 +8,15 @@
 
 import UIKit
 
+protocol PickProfilePictureDelegate: class {
+    func pickProfilePicture()
+}
+
 class UserInfoView: UIView, NibLoadable {
+
+    // MARK: - Stored Properties
+
+    weak var pickProfilePictureDelegate: PickProfilePictureDelegate?
 
     // MARK: - @IBOutlets
 
@@ -17,13 +25,25 @@ class UserInfoView: UIView, NibLoadable {
     @IBOutlet private weak var userPictureImageView: UIImageView!
     @IBOutlet private weak var cellView: UIView!
 
+    @IBAction private func didTapPickProfilePictureButton(_ sender: Any) {
+        pickProfilePictureDelegate?.pickProfilePicture()
+    }
+
     // MARK: - Life Cycle methods
 
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
+}
 
+// MARK: Public methods
+
+extension UserInfoView {
+
+    func setImage(_ image: UIImage) {
+        userPictureImageView.image = image
+    }
 }
 
 // MARK: - Private setup methods

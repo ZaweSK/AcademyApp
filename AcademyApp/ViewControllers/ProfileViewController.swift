@@ -30,8 +30,7 @@ class ProfileViewController: UIViewController {
     }
 
     // MARK: - Stored Properties
-    private var lectures = MockData.lectures()
-
+    private var imagePicker = UIImagePickerController()
     private var dataSource = LecturesDataSource()
 
     private var lecturesAttendanceView = UserProgressView.loadFromNib()
@@ -70,6 +69,40 @@ extension ProfileViewController: UITableViewDelegate {
     }
 }
 
+
+// MARK: - PickProfilePictureDelegate methods
+
+extension ProfileViewController: PickProfilePictureDelegate {
+
+    func pickProfilePicture() {
+
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let uploadPictureAction = UIAlertAction(title: "Upload Profile Picture", style: .default) { _ in
+            self.present(self.imagePicker, animated: true, completion: nil)
+        }
+        let signOutAction = UIAlertAction(title: "Sign Out", style: .destructive, handler: nil)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        alertController.addAction(uploadPictureAction)
+        alertController.addAction(signOutAction)
+        alertController.addAction(cancelAction)
+
+        self.present(alertController, animated: true, completion: nil)
+    }
+}
+
+// MARK: - UIImagePicker delegate methods
+
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+        if let userPickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            userInfoView.setImage(userPickedImage)
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+}
+
 // MARK: - Private setup methods
 
 private extension ProfileViewController {
@@ -78,7 +111,10 @@ private extension ProfileViewController {
         setupWrappers()
         setupTableView()
         setupProgressViews()
+        setupImagePicker()
         view.backgroundColor = .almostBlack
+
+        userInfoView.pickProfilePictureDelegate = self
     }
 
     func setupWrappers() {
@@ -89,6 +125,12 @@ private extension ProfileViewController {
         userInfoViewWrapper.backgroundColor = .clear
         lecturesAttendanceViewWrapper.backgroundColor = .clear
         assignmentsCompletionViewWrapper.backgroundColor = .clear
+    }
+
+    func setupImagePicker() {
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = false
     }
 
     func setupProgressViews() {
