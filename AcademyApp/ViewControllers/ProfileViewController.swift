@@ -24,12 +24,6 @@ class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family : \(family) Font names: \(names)")
-        }
         setup()
     }
 }
@@ -59,8 +53,11 @@ private extension ProfileViewController {
         lecturesAttendanceViewWrapper.wrap(lecturesAttendanceView)
         assignmentsCompletionViewWrapper.wrap(assignmentsCompletionView)
         userInfoViewWrapper.wrap(userInfoView)
+        userInfoViewWrapper.backgroundColor = .clear
 
         lecturesAttendanceView.setProgressLevel(to: 2)
+        lecturesAttendanceView.setLabel(to: "LECTURES ATTEDNED")
+        assignmentsCompletionView.setLabel(to: "ASSIGNMENTS COMPLETED")
     }
 
 }

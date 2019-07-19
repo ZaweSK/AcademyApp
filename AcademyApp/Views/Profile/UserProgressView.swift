@@ -19,6 +19,7 @@ class UserProgressView: UIView, NibLoadable {
 
     @IBOutlet private weak var overviewLabel: UILabel!
     @IBOutlet private weak var progressNumberLabel: UILabel!
+
     @IBOutlet private weak var possibleProgressView: UIView!
     @IBOutlet private weak var actualProgressView: UIView!
     @IBOutlet private weak var actualProgressViewWidthConstraint: NSLayoutConstraint!
@@ -48,27 +49,29 @@ extension UserProgressView {
         actualProgressViewWidthConstraint.isActive = true
         layoutIfNeeded()
     }
+
+    func setLabel(to text: String) {
+        let attributes = overviewLabel.attributedText?.attributes(at: 0, effectiveRange: nil)
+        let new = NSAttributedString(string: text, attributes: attributes)
+        overviewLabel.attributedText = new
+
+        // overviewLavel.attributedText.update(to: text)
+    }
 }
 
 // MARK: - Private setup methods
 private extension UserProgressView {
 
     func setup() {
-
-        for family in UIFont.familyNames.sorted() {
-            let names = UIFont.fontNames(forFamilyName: family)
-            print("Family : \(family) Font names: \(names)")
-        }
         setupOverviewLabel()
         setupProgressNumberLabel()
         setupProgressBar()
-
         backgroundColor = .almostBlack
     }
 
 
     func setupOverviewLabel() {
-        overviewLabel.attributedText = NSAttributedString(string: overviewLabel.text ?? "LECTURES ATTENDED", attributes: [
+        overviewLabel.attributedText = NSMutableAttributedString(string: overviewLabel.text ?? "LECTURES ATTENDED", attributes: [
             NSAttributedString.Key.font: UIFont.MaisonNeue.bold(10),
             NSAttributedString.Key.foregroundColor: UIColor.brownGray,
             NSAttributedString.Key.kern: 1
@@ -76,7 +79,7 @@ private extension UserProgressView {
     }
 
     func setupProgressNumberLabel() {
-        overviewLabel.attributedText = NSAttributedString(string: progressNumberLabel.text ?? "5/10", attributes: [
+        progressNumberLabel.attributedText = NSMutableAttributedString(string: progressNumberLabel.text ?? "5/10", attributes: [
             NSAttributedString.Key.font: UIFont.TrumpGothic.bold(20),
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.kern: 1
@@ -87,7 +90,6 @@ private extension UserProgressView {
         possibleProgressView.layer.cornerRadius = 3
         actualProgressView.layer.cornerRadius = 3
         actualProgressView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMinXMinYCorner]
-
         possibleProgressView.backgroundColor = .darkGray
         actualProgressView.backgroundColor = .pinkishRed
     }
