@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol PickProfilePictureDelegate: class {
-    func pickProfilePicture()
-}
-
 class UserInfoView: UIView, NibLoadable {
 
     // MARK: - Stored Properties

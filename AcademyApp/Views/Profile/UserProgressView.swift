@@ -10,7 +10,7 @@ import UIKit
 
 class UserProgressView: UIView, NibLoadable {
 
-    // MARK: - Stored Properis
+    // MARK: - Stored & Computed Propertiese
 
     /// Scale range of progress bar
     private var progressScale: ClosedRange = 0...10

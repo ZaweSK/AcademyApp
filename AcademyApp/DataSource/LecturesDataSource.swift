@@ -9,9 +9,15 @@
 import Foundation
 import UIKit
 
+// Serves as a data source for Table View containing lectures
+
 final class LecturesDataSource: NSObject, UITableViewDataSource {
 
+    // MARK: - Stored Properties
+
     var lectures = MockData.lectures()
+
+    // MARK: - Data source methods
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return lectures.count

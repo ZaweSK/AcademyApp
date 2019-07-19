@@ -18,6 +18,7 @@
 		D04A678C22E19E3F0043C4D2 /* Maison_Neue_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D04A678B22E19E3F0043C4D2 /* Maison_Neue_Bold.otf */; };
 		D04A679022E1AF020043C4D2 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A678F22E1AF020043C4D2 /* NSAttributedStringExtensions.swift */; };
 		D04A679422E1BBE00043C4D2 /* LecturesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A679322E1BBE00043C4D2 /* LecturesDataSource.swift */; };
+		D04A679A22E1E3280043C4D2 /* PickProfilePictureDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04A679922E1E3280043C4D2 /* PickProfilePictureDelegate.swift */; };
 		D08B318A22BCCEB400EBA8ED /* LecturesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08B318822BCCEB400EBA8ED /* LecturesCollectionViewCell.xib */; };
 		D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */; };
 		D08B318F22BCE49300EBA8ED /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08B318E22BCE49300EBA8ED /* NibLoadable.swift */; };
@@ -68,6 +69,7 @@
 		D04A678B22E19E3F0043C4D2 /* Maison_Neue_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Maison_Neue_Bold.otf; sourceTree = "<group>"; };
 		D04A678F22E1AF020043C4D2 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 		D04A679322E1BBE00043C4D2 /* LecturesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturesDataSource.swift; sourceTree = "<group>"; };
+		D04A679922E1E3280043C4D2 /* PickProfilePictureDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickProfilePictureDelegate.swift; sourceTree = "<group>"; };
 		D08B318822BCCEB400EBA8ED /* LecturesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturesCollectionViewCell.xib; sourceTree = "<group>"; };
 		D08B318B22BCDE6900EBA8ED /* UICollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtensions.swift; sourceTree = "<group>"; };
 		D08B318E22BCE49300EBA8ED /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 			children = (
 				D08B318E22BCE49300EBA8ED /* NibLoadable.swift */,
 				D0F4CF9F22DC821C004DCD96 /* ViewWrapping.swift */,
+				D04A679922E1E3280043C4D2 /* PickProfilePictureDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				D0922DD022B789BB003597EF /* StringExtensions.swift in Sources */,
 				D023B41E22D31AD7008ADCA3 /* NavigationViewController.swift in Sources */,
 				D04A679022E1AF020043C4D2 /* NSAttributedStringExtensions.swift in Sources */,
+				D04A679A22E1E3280043C4D2 /* PickProfilePictureDelegate.swift in Sources */,
 				D0DA722422BA684E00887039 /* LecturesViewController.swift in Sources */,
 				D0F20D4222C61C9100970102 /* MockData.swift in Sources */,
 				D08B318C22BCDE6900EBA8ED /* UICollectionViewExtensions.swift in Sources */,
