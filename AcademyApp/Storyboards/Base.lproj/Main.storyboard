@@ -278,15 +278,23 @@
                                     <constraint firstAttribute="height" constant="80" id="LM5-8F-2vw"/>
                                 </constraints>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="ARQ-3T-P3H">
+                                <rect key="frame" x="0.0" y="267" width="375" height="351"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ed5-de-3nI" firstAttribute="leading" secondItem="X8y-JA-vi9" secondAttribute="leading" id="68U-iP-eMa"/>
                             <constraint firstItem="X8y-JA-vi9" firstAttribute="trailing" secondItem="Ldc-Sz-Oqj" secondAttribute="trailing" constant="20" id="7FD-rt-gcF"/>
                             <constraint firstItem="X8y-JA-vi9" firstAttribute="trailing" secondItem="ed5-de-3nI" secondAttribute="trailing" id="9al-6F-6Rz"/>
+                            <constraint firstItem="X8y-JA-vi9" firstAttribute="bottom" secondItem="ARQ-3T-P3H" secondAttribute="bottom" id="Fij-cv-4Wc"/>
                             <constraint firstItem="Ldc-Sz-Oqj" firstAttribute="leading" secondItem="X8y-JA-vi9" secondAttribute="leading" constant="20" id="KId-nb-Twc"/>
                             <constraint firstItem="ed5-de-3nI" firstAttribute="top" secondItem="X8y-JA-vi9" secondAttribute="top" constant="45" id="KRo-TK-U4X"/>
+                            <constraint firstItem="X8y-JA-vi9" firstAttribute="trailing" secondItem="ARQ-3T-P3H" secondAttribute="trailing" id="eUO-jk-x8V"/>
+                            <constraint firstItem="ARQ-3T-P3H" firstAttribute="top" secondItem="Ldc-Sz-Oqj" secondAttribute="bottom" constant="37" id="i9P-1t-lKu"/>
                             <constraint firstItem="Ldc-Sz-Oqj" firstAttribute="top" secondItem="ed5-de-3nI" secondAttribute="bottom" constant="30" id="sAk-rf-JiH"/>
+                            <constraint firstItem="ARQ-3T-P3H" firstAttribute="leading" secondItem="X8y-JA-vi9" secondAttribute="leading" id="y0l-nd-GL3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X8y-JA-vi9"/>
                     </view>
@@ -294,6 +302,7 @@
                     <connections>
                         <outlet property="assignmentsCompletionViewWrapper" destination="C8w-Fq-5kq" id="uQf-yB-Bn1"/>
                         <outlet property="lecturesAttendanceViewWrapper" destination="Ps0-eS-5jN" id="dUq-P6-9Nz"/>
+                        <outlet property="tableView" destination="ARQ-3T-P3H" id="W4N-7V-18T"/>
                         <outlet property="userInfoViewWrapper" destination="ed5-de-3nI" id="RAb-xQ-E16"/>
                     </connections>
                 </viewController>
