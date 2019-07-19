@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZYB-Tg-OHA" customClass="UserProgressView" customModule="AcademyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4w-0u-eRp">
+                    <rect key="frame" x="0.0" y="10" width="150" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJ0-as-PFy">
+                    <rect key="frame" x="54.5" y="30" width="41" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QqH-Yp-BnG">
+                    <rect key="frame" x="5" y="68" width="140" height="3"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUl-Be-Jik">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="3"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="2VY-dK-qrO"/>
+                        <constraint firstItem="zUl-Be-Jik" firstAttribute="top" secondItem="QqH-Yp-BnG" secondAttribute="top" id="8c5-FL-vJn"/>
+                        <constraint firstItem="zUl-Be-Jik" firstAttribute="width" secondItem="QqH-Yp-BnG" secondAttribute="width" multiplier="0.5" id="N3Z-pt-lEI"/>
+                        <constraint firstItem="zUl-Be-Jik" firstAttribute="leading" secondItem="QqH-Yp-BnG" secondAttribute="leading" id="hE9-hl-Vbb"/>
+                        <constraint firstAttribute="bottom" secondItem="zUl-Be-Jik" secondAttribute="bottom" id="tYL-cc-6bY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="d4w-0u-eRp" secondAttribute="trailing" id="34e-Nz-UDV"/>
+                <constraint firstItem="d4w-0u-eRp" firstAttribute="leading" secondItem="ZYB-Tg-OHA" secondAttribute="leading" id="RET-bV-EFU"/>
+                <constraint firstItem="QqH-Yp-BnG" firstAttribute="leading" secondItem="ZYB-Tg-OHA" secondAttribute="leading" constant="5" id="Vxq-4J-ZeO"/>
+                <constraint firstItem="QqH-Yp-BnG" firstAttribute="top" secondItem="bJ0-as-PFy" secondAttribute="bottom" constant="14" id="hP5-OC-Jym"/>
+                <constraint firstAttribute="trailing" secondItem="QqH-Yp-BnG" secondAttribute="trailing" constant="5" id="m4r-NO-czg"/>
+                <constraint firstItem="bJ0-as-PFy" firstAttribute="centerX" secondItem="ZYB-Tg-OHA" secondAttribute="centerX" id="mSu-FW-U7q"/>
+                <constraint firstItem="d4w-0u-eRp" firstAttribute="top" secondItem="ZYB-Tg-OHA" secondAttribute="top" constant="10" id="pm0-zs-c2i"/>
+                <constraint firstItem="bJ0-as-PFy" firstAttribute="top" secondItem="d4w-0u-eRp" secondAttribute="bottom" constant="8" id="yqr-96-1aO"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="QTe-dK-npf"/>
+            <connections>
+                <outlet property="actualProgressView" destination="zUl-Be-Jik" id="hFp-96-zGb"/>
+                <outlet property="actualProgressViewWidthConstraint" destination="N3Z-pt-lEI" id="YAp-2Z-AsQ"/>
+                <outlet property="overviewLabel" destination="d4w-0u-eRp" id="iFQ-KY-U6M"/>
+                <outlet property="possibleProgressView" destination="QqH-Yp-BnG" id="21S-JA-zo8"/>
+                <outlet property="progressNumberLabel" destination="bJ0-as-PFy" id="WgP-3E-MAZ"/>
+            </connections>
+            <point key="canvasLocation" x="280" y="-540"/>
+        </view>
+    </objects>
+</document>

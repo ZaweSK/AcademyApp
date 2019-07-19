@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class LectureAttendenceCollectionViewCell: UICollectionViewCell, NibLoadableView {
+final class LectureAttendenceCollectionViewCell: UICollectionViewCell, NibLoadable {
 
     // MARK: - @IBOutlets
 

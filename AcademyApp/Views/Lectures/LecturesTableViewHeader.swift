@@ -8,7 +8,9 @@
 
 import UIKit
 
-final class LecturesTableViewHeader: UITableViewHeaderFooterView, NibLoadableView {
+
+final class LecturesTableViewHeader: UITableViewHeaderFooterView, NibLoadable {
+
 
     // MARK: - @IBOutlets
 

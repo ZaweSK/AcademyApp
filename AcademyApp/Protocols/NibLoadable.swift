@@ -11,12 +11,12 @@ import UIKit
 
 // MARK: - NibLoadableView protocol
 
-protocol NibLoadableView: class {
+protocol NibLoadable: class {
     static var nibName: String { get }
     static var defaultReuseIdentifier: String { get }
 }
 
-extension NibLoadableView where Self: UIView {
+extension NibLoadable where Self: UIView {
 
     // Static methods which return the name of the xib file - name. This name serves as a
     // cell identifier later on.
@@ -28,4 +28,16 @@ extension NibLoadableView where Self: UIView {
     static var defaultReuseIdentifier: String {
         return nibName
     }
+
+    static var nib: UINib {
+        return UINib(nibName: nibName, bundle: nil)
+    }
+
+    static func loadFromNib() -> Self {
+        guard let view = nib.instantiate(withOwner: nil, options: nil).first as? Self else {
+            fatalError("The nib \(nib) expected its root view to be of type \(self)")
+        }
+        return view
+    }
+
 }

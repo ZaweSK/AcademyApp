@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class LectureHeaderCollectionViewCell: UICollectionViewCell, NibLoadableView {
+final class LectureHeaderCollectionViewCell: UICollectionViewCell, NibLoadable {
 
     // MARK: - Stored Propertie
 
