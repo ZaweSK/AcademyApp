@@ -28,8 +28,7 @@ final class LecturesViewController: UIViewController {
     }
 
     // MARK: - Stored properties
-
-    private var lectures = MockData.lectures()
+    private var dataSource = LecturesDataSource()
 
     // MARK: - Computed Properities
 
@@ -45,6 +44,8 @@ final class LecturesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        dataSource = LecturesDataSource()
+
         setup()
     }
 
@@ -52,23 +53,6 @@ final class LecturesViewController: UIViewController {
         super.viewWillAppear(animated)
         setupNavBar()
     }
-}
-
-
-// MARK: - UITableViewDataSource methods
-
-extension LecturesViewController: UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lectures.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: LecturesTableViewCell = tableView.dequeReusableCell(for: indexPath)
-        cell.configure(with: lectures[indexPath.row])
-        return cell
-    }
-
 }
 
 // MARK: - UITableViewDelegate methods
@@ -107,7 +91,7 @@ extension LecturesViewController {
                 return
             }
 
-            detailVC.configure(with: lectures[indexPath.row])
+            detailVC.configure(with: dataSource.lectures[indexPath.row])
         }
     }
 }
@@ -123,7 +107,7 @@ private extension LecturesViewController {
     }
 
     func setupTableView() {
-        tableView.dataSource = self
+        tableView.dataSource = dataSource
         tableView.delegate = self
         tableView.backgroundColor = .almostBlack
         tableView.separatorStyle = .none

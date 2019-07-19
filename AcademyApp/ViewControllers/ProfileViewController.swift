@@ -32,6 +32,8 @@ class ProfileViewController: UIViewController {
     // MARK: - Stored Properties
     private var lectures = MockData.lectures()
 
+    private var dataSource = LecturesDataSource()
+
     private var lecturesAttendanceView = UserProgressView.loadFromNib()
     private var assignmentsCompletionView = UserProgressView.loadFromNib()
     private var userInfoView = UserInfoView.loadFromNib()
@@ -47,21 +49,6 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-    }
-}
-
-// MARK: - UITableViewDelegate methods
-
-extension ProfileViewController: UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lectures.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: LecturesTableViewCell = tableView.dequeReusableCell(for: indexPath)
-        cell.configure(with: lectures[indexPath.row])
-        return cell
     }
 }
 
@@ -111,7 +98,7 @@ private extension ProfileViewController {
     }
 
     func setupTableView() {
-        tableView.dataSource = self
+        tableView.dataSource = dataSource
         tableView.delegate = self
         tableView.backgroundColor = .almostBlack
         tableView.separatorStyle = .none
